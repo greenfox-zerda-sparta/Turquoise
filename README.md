@@ -1,11 +1,4 @@
-# Turquoise 
-Smart Home UI project (C#)
+# Turquoise
+Smart Home UI project
 
-# Team members:
-Ferencz Éva Médea,
-Kovács Blanka,
-Módis Ákos
-
-Green Fox Academy, 2017.
-
-
+Green Fox Academy - Sparta Class

@@ -1,15 +1,11 @@
-# Turquoise
-Smart Home UI project
+# Turquoise 
+Smart Home UI project (C#)
 
-<<<<<<< HEAD
-2017.01.19.
-=======
-<<<<<<< HEAD
-Hello
-=======
+# Team members:
+Ferencz Éva Médea
+Kovács Blanka
+Módis Ákos
 
-Ezt nézd Süvi!
+Green Fox Academy, 2017.
 
-Hello World!
->>>>>>> bebf69ed168ac1adafa35f4fa8bb580b559a1571
->>>>>>> 6f76349a3ebc06f83b24c137a926ca874c49aa64
+

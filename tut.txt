@@ -7,3 +7,5 @@ git checkout newImage; git commit
 git checkout -b [yourbranchname]
 // create a new branch AND check it out at the same time
 
+MI A FAAAAAASZ???
+

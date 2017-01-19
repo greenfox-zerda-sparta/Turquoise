@@ -4,9 +4,9 @@ D:\__Projects\C#\Practice\ToDo\ToDo\bin\Debug\ToDo.pdb
 D:\__Projects\C#\Practice\ToDo\ToDo\obj\Debug\ToDo.csprojResolveAssemblyReference.cache
 D:\__Projects\C#\Practice\ToDo\ToDo\obj\Debug\ToDo.exe
 D:\__Projects\C#\Practice\ToDo\ToDo\obj\Debug\ToDo.pdb
-d:\__Projects\Turquoise\ToDo\ToDo\bin\Debug\ToDo.exe.config
-d:\__Projects\Turquoise\ToDo\ToDo\obj\Debug\ToDo.exe
-d:\__Projects\Turquoise\ToDo\ToDo\obj\Debug\ToDo.pdb
-d:\__Projects\Turquoise\ToDo\ToDo\bin\Debug\ToDo.exe
-d:\__Projects\Turquoise\ToDo\ToDo\bin\Debug\ToDo.pdb
-d:\__Projects\Turquoise\ToDo\ToDo\obj\Debug\ToDo.csprojResolveAssemblyReference.cache
+C:\Users\Blanka\Documents\Turquoise\ToDo\ToDo\bin\Debug\ToDo.exe.config
+C:\Users\Blanka\Documents\Turquoise\ToDo\ToDo\bin\Debug\ToDo.exe
+C:\Users\Blanka\Documents\Turquoise\ToDo\ToDo\bin\Debug\ToDo.pdb
+C:\Users\Blanka\Documents\Turquoise\ToDo\ToDo\obj\Debug\ToDo.csprojResolveAssemblyReference.cache
+C:\Users\Blanka\Documents\Turquoise\ToDo\ToDo\obj\Debug\ToDo.exe
+C:\Users\Blanka\Documents\Turquoise\ToDo\ToDo\obj\Debug\ToDo.pdb

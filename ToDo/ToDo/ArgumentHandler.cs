@@ -62,6 +62,10 @@ namespace ToDoApplication
                         taskmanager.PrintInstructions();
                     }
                     break;
+                default:
+                    Console.Error.WriteLine("\nToo many arguments provided! Try again!\n");
+                    taskmanager.PrintInstructions();
+                    break;
             }
         }
     }

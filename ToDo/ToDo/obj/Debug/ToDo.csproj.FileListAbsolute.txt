@@ -1,0 +1,6 @@
+D:\__Projects\C#\Practice\ToDo\ToDo\bin\Debug\ToDo.exe.config
+D:\__Projects\C#\Practice\ToDo\ToDo\bin\Debug\ToDo.exe
+D:\__Projects\C#\Practice\ToDo\ToDo\bin\Debug\ToDo.pdb
+D:\__Projects\C#\Practice\ToDo\ToDo\obj\Debug\ToDo.csprojResolveAssemblyReference.cache
+D:\__Projects\C#\Practice\ToDo\ToDo\obj\Debug\ToDo.exe
+D:\__Projects\C#\Practice\ToDo\ToDo\obj\Debug\ToDo.pdb

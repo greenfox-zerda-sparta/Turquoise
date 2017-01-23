@@ -1,0 +1,174 @@
+﻿<Window x:Class="SmartHomeUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartHomeUI"
+        mc:Ignorable="d"
+        ResizeMode="NoResize" Title="MainWindow" Height="720" Width="1280" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#00000000" AllowsTransparency="True">
+
+    <Window.Resources>
+        <Storyboard x:Key="HomeMouseEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="home">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="HomeMouseLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="home">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="ListMouseEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="list">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="ListMouseLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="list">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="HistMouseEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="hist">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="HistMouseLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="hist">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="TempMouseEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="temp">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="TempMouseLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="temp">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="LockMouseEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="lock">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="LockMouseLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="lock">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="GearMouseEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="gear">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="GearMouseLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="gear">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="home">
+            <BeginStoryboard Storyboard="{StaticResource HomeMouseEnter}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="home">
+            <BeginStoryboard Storyboard="{StaticResource HomeMouseLeave}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="list">
+            <BeginStoryboard Storyboard="{StaticResource ListMouseEnter}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="list">
+            <BeginStoryboard Storyboard="{StaticResource ListMouseLeave}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="hist">
+            <BeginStoryboard Storyboard="{StaticResource HistMouseEnter}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="hist">
+            <BeginStoryboard Storyboard="{StaticResource HistMouseLeave}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="temp">
+            <BeginStoryboard Storyboard="{StaticResource TempMouseEnter}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="temp">
+            <BeginStoryboard Storyboard="{StaticResource TempMouseLeave}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="lock">
+            <BeginStoryboard Storyboard="{StaticResource LockMouseEnter}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="lock">
+            <BeginStoryboard Storyboard="{StaticResource LockMouseLeave}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="gear">
+            <BeginStoryboard Storyboard="{StaticResource GearMouseEnter}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="gear">
+            <BeginStoryboard Storyboard="{StaticResource GearMouseLeave}"/>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Grid>
+        <Grid x:Name="CustomWindowControls">
+            <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="720" Stroke="Black" VerticalAlignment="Top" Width="1280" RadiusX="25" RadiusY="25"/>
+            <Rectangle HorizontalAlignment="Left" Width="100" Fill="#FF262626" RadiusX="25" RadiusY="25"/>
+            <Rectangle HorizontalAlignment="Left" Width="75" Fill="#FF262626" Margin="33,0,0,0"/>
+            <Rectangle Fill="#FF262626" HorizontalAlignment="Left" Height="720" Margin="1222,0,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="58" RadiusX="25" RadiusY="25"/>
+            <Rectangle Fill="#FF262626" HorizontalAlignment="Left" Height="720" Margin="1184,0,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="65"/>
+            <Rectangle x:Name="DragWindow" Fill="#00000000" Height="16" Stroke="#00000000" VerticalAlignment="Top" MouseDown="DragWindow_MouseDown"/>
+            <Label x:Name="CloseButton" Content="x" HorizontalAlignment="Left" Height="27" Margin="1235,6,0,0" VerticalAlignment="Top" Width="20" FontSize="16" FontFamily="Arial" FontWeight="Bold" MouseLeftButtonUp="CloseButton_MouseLeftButtonUp" Foreground="#FFFFFFFF"/>
+            <Label x:Name="MinimizeButton" Content="_" HorizontalAlignment="Left" Height="33" Margin="1216,-1,0,0" VerticalAlignment="Top" Width="19" FontSize="20" FontFamily="Arial" FontWeight="Bold" MouseLeftButtonUp="MinimizeButton_MouseLeftButtonUp" Foreground="#FFFFFFFF"/>
+        </Grid>
+
+        <Grid x:Name="MenuBar">
+            <Grid x:Name="home" Background="#FF262626" Height="101" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,47,0,0" MouseLeftButtonDown="home_MouseLeftButtonDown" ToolTip="Home"/>
+            <Grid x:Name="list" Background="#FF262626" Height="108.0" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,148,0,0" MouseLeftButtonDown="list_MouseLeftButtonDown" ToolTip="Scenarios"/>
+            <Grid x:Name="hist" Background="#FF262626" Height="103.0" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,256,0,0" MouseLeftButtonDown="hist_MouseLeftButtonDown" ToolTip="History"/>
+            <Grid x:Name="temp" Background="#FF262626" Height="105" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,359,0,0" MouseLeftButtonDown="temp_MouseLeftButtonDown" ToolTip="Temperature"/>
+            <Grid x:Name="lock" Background="#FF262626" Height="105" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,464,0,0" MouseLeftButtonDown="lock_MouseLeftButtonDown" ToolTip="Alarm"/>
+            <Grid x:Name="gear" Background="#FF262626" Height="97" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,569,0,0" MouseLeftButtonDown="gear_MouseLeftButtonDown" ToolTip="Settings"/>
+
+            <Grid x:Name="home_indicator" Background="#FF008000" Height="101" Width="13" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,47,0,0" IsHitTestVisible="False" MouseLeftButtonDown="home_MouseLeftButtonDown"/>
+            <Grid x:Name="list_indicator" Background="#00000000" Height="108.0" Width="13" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,148,0,0" IsHitTestVisible="False" MouseLeftButtonDown="list_MouseLeftButtonDown"/>
+            <Grid x:Name="hist_indicator" Background="#00000000" Height="103.0" Width="13" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,256,0,0" IsHitTestVisible="False" MouseLeftButtonDown="hist_MouseLeftButtonDown"/>
+            <Grid x:Name="temp_indicator" Background="#00000000" Height="105" Width="13" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,359,0,0" IsHitTestVisible="False" MouseLeftButtonDown="temp_MouseLeftButtonDown"/>
+            <Grid x:Name="lock_indicator" Background="#00000000" Height="105" Width="13" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,464,0,0" IsHitTestVisible="False" MouseLeftButtonDown="lock_MouseLeftButtonDown"/>
+            <Grid x:Name="gear_indicator" Background="#00000000" Height="97" Width="13" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,569,0,0" IsHitTestVisible="False" MouseLeftButtonDown="gear_MouseLeftButtonDown"/>
+
+            <Image x:Name="img_home" Height="65" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="19,64,0,0"  Source="Images/whouse.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_list" Height="70.00" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="19,167,0,0" Source="Images/wlist.png"  IsHitTestVisible="False"/>
+            <Image x:Name="img_hist" Height="70" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="19,273,0,0" Source="Images/wclock.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_temp" Height="86" Width="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="43,368,0,0" Source="Images/wtemp.png"  IsHitTestVisible="False"/>
+            <Image x:Name="img_lock" Height="80.00" Width="55" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="27,476,0,0" Source="Images/wlock.png"  IsHitTestVisible="False"/>
+            <Image x:Name="img_gear" Height="52.00" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="19,592,0,0" Source="Images/wgear.png"  IsHitTestVisible="False"/>
+        </Grid>
+
+        <Grid x:Name="InfoBar">
+            <Rectangle Fill="#FF7F7F7F" HorizontalAlignment="Left" Height="188" Margin="107,0,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="225"/>
+            <Rectangle Fill="#FF008000" HorizontalAlignment="Left" Height="536" Margin="107,184,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="225"/>
+            <Image x:Name="img_home_border" Height="192" Width="206" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="116,11,0,0"  Source="Images/whouse_border.png" IsHitTestVisible="False"/>
+        </Grid>
+
+        <Grid x:Name="Frame">
+            <Frame x:Name="frame" HorizontalAlignment="Left" Height="720" Margin="331,0,0,0" VerticalAlignment="Top" Width="853" NavigationUIVisibility="Hidden" Source="Pages/home.xaml"/>
+        </Grid>
+    </Grid>
+</Window>

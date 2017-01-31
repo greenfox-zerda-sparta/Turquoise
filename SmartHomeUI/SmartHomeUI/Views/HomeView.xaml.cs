@@ -24,7 +24,6 @@ namespace SmartHomeUI
         {
             InitializeComponent();
             HomeViewModel HVM = new HomeViewModel();
-            HVM.LoadDevices();
             this.DataContext = HVM;
         }
     }

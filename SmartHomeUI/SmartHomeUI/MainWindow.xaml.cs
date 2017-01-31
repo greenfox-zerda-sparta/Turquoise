@@ -15,15 +15,16 @@ using System.Windows.Shapes;
 
 namespace SmartHomeUI
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new NavigationViewModel();
+            this.DataContext = new
+            {
+                IB = new InfoBar(),
+                NAV = new MainWindowViewModel(),
+            };
         }
 
         private void DragWindow_MouseDown(object sender, MouseButtonEventArgs e)

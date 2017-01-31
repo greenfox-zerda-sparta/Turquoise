@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace SmartHomeUI
 {
-    class NavigationViewModel : INotifyPropertyChanged
+    class MainWindowViewModel : INotifyPropertyChanged
     {
         public ICommand HomeCommand { get; set; }
         public ICommand ListCommand { get; set; }
@@ -16,6 +16,8 @@ namespace SmartHomeUI
         public ICommand TempCommand { get; set; }
         public ICommand LockCommand { get; set; }
         public ICommand GearCommand { get; set; }
+
+        public List<object> ViewModels;
 
         private object selectedViewModel;
 
@@ -25,7 +27,13 @@ namespace SmartHomeUI
             set { selectedViewModel = value; OnPropertyChanged("SelectedViewModel"); }
         }
 
-        public NavigationViewModel()
+        public MainWindowViewModel()
+        {
+            InstantiateViewModels();
+            InstantiateBaseCommands();
+        }
+
+        private void InstantiateBaseCommands()
         {
             HomeCommand = new BaseCommand(OpenHome);
             ListCommand = new BaseCommand(OpenList);
@@ -35,37 +43,50 @@ namespace SmartHomeUI
             GearCommand = new BaseCommand(OpenGear);
         }
 
+        private void InstantiateViewModels()
+        {
+            ViewModels = new List<object>();
+            ViewModels.Add(new HomeViewModel());
+            ViewModels.Add(new ListViewModel());
+            ViewModels.Add(new HistViewModel());
+            ViewModels.Add(new TempViewModel());
+            ViewModels.Add(new LockViewModel());
+            ViewModels.Add(new GearViewModel());
+            SelectedViewModel = ViewModels[0];
+        }
+
         private void OpenHome(object obj)
         {
-            SelectedViewModel = new HomeViewModel();
+            SelectedViewModel = ViewModels[0];
         }
 
         private void OpenList(object obj)
         {
-            SelectedViewModel = new ListViewModel();
+            SelectedViewModel = ViewModels[1];
         }
 
         private void OpenHist(object obj)
         {
-            SelectedViewModel = new HistViewModel();
+            SelectedViewModel = ViewModels[2];
         }
 
         private void OpenTemp(object obj)
         {
-            SelectedViewModel = new TempViewModel();
+            SelectedViewModel = ViewModels[3];
         }
 
         private void OpenLock(object obj)
         {
-            SelectedViewModel = new LockViewModel();
+            SelectedViewModel = ViewModels[4];
         }
 
         private void OpenGear(object obj)
         {
-            SelectedViewModel = new GearViewModel();
+            SelectedViewModel = ViewModels[5];
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
         private void OnPropertyChanged(string propName)
         {
             if (PropertyChanged != null)
@@ -81,10 +102,7 @@ namespace SmartHomeUI
         private Action<object> _method;
         public event EventHandler CanExecuteChanged;
 
-        public BaseCommand(Action<object> method)
-            : this(method, null)
-        {
-        }
+        public BaseCommand(Action<object> method) : this(method, null) { }
 
         public BaseCommand(Action<object> method, Predicate<object> canExecute)
         {

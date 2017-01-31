@@ -41,10 +41,10 @@
         </Style>
 
         <Storyboard x:Key="HomeMouseEnter">
-        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="home">
-            <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
-            <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
-        </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="home">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
+            </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="HomeMouseLeave">
             <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="home">
@@ -168,15 +168,16 @@
             <Rectangle x:Name="DragWindow" Fill="#00000000" Height="16" Stroke="#00000000" VerticalAlignment="Top" MouseDown="DragWindow_MouseDown"/>
             <Label x:Name="CloseButton" Content="x" HorizontalAlignment="Left" Height="27" Margin="1235,6,0,0" VerticalAlignment="Top" Width="20" FontSize="16" FontFamily="Arial" FontWeight="Bold" MouseLeftButtonUp="CloseButton_MouseLeftButtonUp" Foreground="#FFFFFFFF"/>
             <Label x:Name="MinimizeButton" Content="_" HorizontalAlignment="Left" Height="33" Margin="1216,-1,0,0" VerticalAlignment="Top" Width="19" FontSize="20" FontFamily="Arial" FontWeight="Bold" MouseLeftButtonUp="MinimizeButton_MouseLeftButtonUp" Foreground="#FFFFFFFF"/>
+            <Image x:Name="hippolyt" Height="104" Width="83" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1191,606,0,0"  Source="Images/whippolyt.png" IsHitTestVisible="False"/>
         </Grid>
 
         <Grid x:Name="MenuBar">
-            <Button x:Name="home" Style="{StaticResource ButtonStyle}" Command="{Binding HomeCommand}" Height="101" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,47,0,0" ToolTip="Home"/>
-            <Button x:Name="list" Style="{StaticResource ButtonStyle}" Command="{Binding ListCommand}" Height="108.0" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,148,0,0" ToolTip="ToDo List"/>
-            <Button x:Name="hist" Style="{StaticResource ButtonStyle}" Command="{Binding HistCommand}" Height="103.0" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,256,0,0" ToolTip="History"/>
-            <Button x:Name="temp" Style="{StaticResource ButtonStyle}" Command="{Binding TempCommand}" Height="105" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,359,0,0" ToolTip="Temperature"/>
-            <Button x:Name="lock" Style="{StaticResource ButtonStyle}" Command="{Binding LockCommand}" Height="105" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,464,0,0" ToolTip="Alarm"/>
-            <Button x:Name="gear" Style="{StaticResource ButtonStyle}" Command="{Binding GearCommand}" Height="97" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,569,0,0" ToolTip="Settings"/>
+            <Button x:Name="home" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Height="101" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,47,0,0" ToolTip="Home"/>
+            <Button x:Name="list" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.ListCommand}" Height="108.0" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,148,0,0" ToolTip="ToDo List"/>
+            <Button x:Name="hist" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HistCommand}" Height="103.0" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,256,0,0" ToolTip="History"/>
+            <Button x:Name="temp" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.TempCommand}" Height="105" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,359,0,0" ToolTip="Temperature"/>
+            <Button x:Name="lock" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.LockCommand}" Height="105" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,464,0,0" ToolTip="Alarm"/>
+            <Button x:Name="gear" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.GearCommand}" Height="97" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,569,0,0" ToolTip="Settings"/>
 
             <Image x:Name="img_home" Height="65" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="19,64,0,0"  Source="Images/whouse.png" IsHitTestVisible="False"/>
             <Image x:Name="img_list" Height="70.00" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="19,167,0,0" Source="Images/wlist.png"  IsHitTestVisible="False"/>
@@ -188,13 +189,14 @@
 
         <Grid x:Name="InfoBar">
             <Rectangle Fill="#FF7F7F7F" HorizontalAlignment="Left" Height="188" Margin="107,0,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="225"/>
-            <Rectangle Fill="#FF008000" HorizontalAlignment="Left" Height="536" Margin="107,184,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="225"/>
+            <Rectangle Fill="#FF20B2AA" HorizontalAlignment="Left" Height="536" Margin="107,184,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="225"/>
             <Image x:Name="img_home_border" Height="192" Width="206" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="116,11,0,0"  Source="Images/whouse_border.png" IsHitTestVisible="False"/>
+            <TextBlock Text="{Binding IB.temperature}" Foreground="White" FontSize="120" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="107,168,948,373" Width="225" Height="179"/>
         </Grid>
-        
-        <Grid x:Name="Frame" Margin="333,0,98,0" >
-            <ContentControl x:Name="Pages" Content="{Binding SelectedViewModel}"/>
+
+        <Grid x:Name="Frame" Margin="333,0,98,0">
+            <ContentControl x:Name="Pages" Content="{Binding NAV.SelectedViewModel}"/>
         </Grid>
-        
+
     </Grid>
 </Window>

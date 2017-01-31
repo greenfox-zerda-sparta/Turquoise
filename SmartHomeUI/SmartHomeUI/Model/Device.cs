@@ -44,7 +44,7 @@ namespace SmartHomeUI
                 if (DeviceType != value)
                 {
                     DeviceType = value;
-                    RaisePropertyChanged("DeviceType");
+                    this.RaisePropertyChanged("DeviceType");
                 }
             }
         }
@@ -107,8 +107,8 @@ namespace SmartHomeUI
             {
                 if (OnOff != value)
                 {
-                    Status = value;
-                    RaisePropertyChanged("Status");
+                    OnOff = value;
+                    RaisePropertyChanged("OnOff");
                 }
             }
         }

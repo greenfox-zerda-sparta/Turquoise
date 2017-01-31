@@ -15,6 +15,11 @@ namespace SmartHomeUI
             set;
         }
 
+        public HomeViewModel()
+        {
+            LoadDevices();
+        }
+
         public void LoadDevices()
         {
             ObservableCollection<Device> devices = new ObservableCollection<Device>();

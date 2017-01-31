@@ -8,8 +8,13 @@
       d:DesignHeight="720" d:DesignWidth="890">
 
     <Grid>
+<<<<<<< HEAD
+        <Ellipse Fill="Blue" HorizontalAlignment="Center" Height="261" Stroke="Black" VerticalAlignment="Center" Width="641"/>
+        <TextBlock Text="{Binding Devices[1].deviceType}" Foreground="White" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+=======
         <Ellipse Fill="Turquoise" HorizontalAlignment="Center" Height="261" Stroke="Black" VerticalAlignment="Center" Width="641"/>
         <TextBlock Text="{Binding Devices[1].floor}" Foreground="White" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+>>>>>>> f06a5a0a43f357de994d86eb4f5e753fe308a717
     </Grid>
 
 </UserControl>

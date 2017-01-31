@@ -25,3 +25,6 @@ D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\Views\ListView
 D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\Views\LockView.baml
 D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\Views\TempView.baml
 D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\feren\Documents\SmartHome\Turquoise\SmartHomeUI\SmartHomeUI\bin\Debug\SmartHomeUI.exe.config
+C:\Users\feren\Documents\SmartHome\Turquoise\SmartHomeUI\SmartHomeUI\obj\Debug\SmartHomeUI.exe
+C:\Users\feren\Documents\SmartHome\Turquoise\SmartHomeUI\SmartHomeUI\obj\Debug\SmartHomeUI.pdb

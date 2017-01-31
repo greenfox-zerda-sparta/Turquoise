@@ -8,8 +8,8 @@
       d:DesignHeight="720" d:DesignWidth="890">
 
     <Grid>
-        <Ellipse Fill="Turquoise" HorizontalAlignment="Center" Height="261" Stroke="Black" VerticalAlignment="Center" Width="641"/>
-        <TextBlock Text="{Binding Path = Temperature}" Foreground="White" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Ellipse Fill="Blue" HorizontalAlignment="Center" Height="261" Stroke="Black" VerticalAlignment="Center" Width="641"/>
+        <TextBlock Text="{Binding Devices[1].floor}" Foreground="White" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 
 </UserControl>

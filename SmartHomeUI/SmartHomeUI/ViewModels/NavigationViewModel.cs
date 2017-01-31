@@ -25,7 +25,6 @@ namespace SmartHomeUI
             set { selectedViewModel = value; OnPropertyChanged("SelectedViewModel"); }
         }
 
-
         public NavigationViewModel()
         {
             HomeCommand = new BaseCommand(OpenHome);

@@ -179,3 +179,7 @@ UpgradeLog*.htm
 *.bim_*.settings
 # Microsoft Fakes
 FakesAssemblies/
+bin/
+obj/
+*.suo
+*.user

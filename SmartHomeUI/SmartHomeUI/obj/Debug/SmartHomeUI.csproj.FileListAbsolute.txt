@@ -27,39 +27,10 @@ d:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\SmartHomeUI.ex
 d:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\SmartHomeUI.pdb
 d:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\SmartHomeUI.csprojResolveAssemblyReference.cache
 =======
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\bin\Debug\SmartHomeUI.exe.config
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\bin\Debug\SmartHomeUI.exe
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\bin\Debug\SmartHomeUI.pdb
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\SmartHomeUI.csprojResolveAssemblyReference.cache
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\MainWindow.g.cs
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\App.g.cs
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\SmartHomeUI_MarkupCompile.cache
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\SmartHomeUI_MarkupCompile.lref
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\MainWindow.baml
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\SmartHomeUI.g.resources
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\SmartHomeUI.Properties.Resources.resources
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\SmartHomeUI.csproj.GenerateResource.Cache
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\SmartHomeUI.exe
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\SmartHomeUI.pdb
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\Views\GearView.g.cs
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\Views\HistView.g.cs
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\Views\HomeView.g.cs
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\Views\ListView.g.cs
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\Views\LockView.g.cs
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\Views\TempView.g.cs
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\Views\GearView.baml
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\Views\HistView.baml
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\Views\HomeView.baml
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\Views\ListView.baml
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\Views\LockView.baml
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\Views\TempView.baml
-D:\__Projects\C#\_Smart Home UI\SmartHomeUI\SmartHomeUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\feren\Documents\SmartHome\Turquoise\SmartHomeUI\SmartHomeUI\bin\Debug\SmartHomeUI.exe.config
 C:\Users\feren\Documents\SmartHome\Turquoise\SmartHomeUI\SmartHomeUI\obj\Debug\SmartHomeUI.exe
 C:\Users\feren\Documents\SmartHome\Turquoise\SmartHomeUI\SmartHomeUI\obj\Debug\SmartHomeUI.pdb
-<<<<<<< HEAD
 >>>>>>> f06a5a0a43f357de994d86eb4f5e753fe308a717
-=======
 C:\Users\feren\Documents\SmartHome\Turquoise\SmartHomeUI\SmartHomeUI\obj\Debug\SmartHomeUI.csprojResolveAssemblyReference.cache
 C:\Users\feren\Documents\SmartHome\Turquoise\SmartHomeUI\SmartHomeUI\bin\Debug\SmartHomeUI.exe
 C:\Users\feren\Documents\SmartHome\Turquoise\SmartHomeUI\SmartHomeUI\bin\Debug\SmartHomeUI.pdb

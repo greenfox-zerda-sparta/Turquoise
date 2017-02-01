@@ -80,6 +80,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\Communication.cs" />
     <Compile Include="Model\Device.cs" />
     <Compile Include="Model\InfoBar.cs" />
     <Compile Include="ViewModels\GearViewModel.cs" />

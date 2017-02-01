@@ -188,13 +188,14 @@
         </Grid>
 
         <Grid x:Name="InfoBar">
-            <Rectangle Fill="#FF7F7F7F" HorizontalAlignment="Left" Height="188" Margin="107,0,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="225"/>
-            <Rectangle Fill="#FF20B2AA" HorizontalAlignment="Left" Height="536" Margin="107,184,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="225"/>
-            <Image x:Name="img_home_border" Height="192" Width="206" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="116,11,0,0"  Source="Images/whouse_border.png" IsHitTestVisible="False"/>
-            <TextBlock Text="{Binding IB.temperature}" Foreground="White" FontSize="120" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="107,168,948,373" Width="225" Height="179"/>
+            <Rectangle Fill="#FFDDDDDD" HorizontalAlignment="Left" Height="718" Margin="107,1,0,1" Stroke="#00000000" VerticalAlignment="Center" Width="231" IsHitTestVisible="False"/>
+            <Rectangle Fill="#FF7F7F7F" HorizontalAlignment="Left" Height="184" Margin="117,11,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="221" IsHitTestVisible="False"/>
+            <Rectangle Fill="#FF20B2AA" HorizontalAlignment="Left" Height="508" Margin="117,204,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="221"/>
+            <Image x:Name="img_home_border" Height="161" Width="201" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="126,23,0,0"  Source="Images/whouse_border.png" IsHitTestVisible="False"/>
+            <TextBlock Text="{Binding IB.temperature}" Foreground="White" FontSize="80" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,207,942,334" Width="221" Height="179"/>
         </Grid>
 
-        <Grid x:Name="Frame" Margin="333,0,98,0">
+        <Grid x:Name="Frame" Width="847" Height="718" HorizontalAlignment="Right" Margin="0,0,96,0">
             <ContentControl x:Name="Pages" Content="{Binding NAV.SelectedViewModel}"/>
         </Grid>
 

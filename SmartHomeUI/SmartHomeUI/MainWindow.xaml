@@ -183,7 +183,7 @@
             <Image x:Name="img_rooms" Height="65" Width="63" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,167,0,0"  Source="wrooms2.png" IsHitTestVisible="False"/>
             <Image x:Name="img_list" Height="70.00" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="18,263.5,0,0" Source="Images/wlist.png"  IsHitTestVisible="False"/>
             <Image x:Name="img_hist" Width="70" HorizontalAlignment="Left" Margin="19,0,0,285" Source="Images/wclock.png" IsHitTestVisible="False" Height="70" VerticalAlignment="Bottom"/>
-            <Image x:Name="img_lock" Height="80.00" Width="55" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="27,470,0,0" Source="Images/wlock.png"  IsHitTestVisible="False"/>
+            <Image x:Name="img_lock" Height="78" Width="55" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="27,470,0,0" Source="Images/wlock.png"  IsHitTestVisible="False"/>
             <Image x:Name="img_gear" Height="52.00" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="19,586,0,0" Source="Images/wgear.png"  IsHitTestVisible="False"/>
         </Grid>
 

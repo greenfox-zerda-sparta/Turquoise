@@ -172,6 +172,33 @@
   <ItemGroup>
     <Resource Include="Images\whippolyt.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FavMode másolata.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LockMode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="VacationMode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SunMode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NightMode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="whouse_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="wrooms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="wrooms2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="whippolyt.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

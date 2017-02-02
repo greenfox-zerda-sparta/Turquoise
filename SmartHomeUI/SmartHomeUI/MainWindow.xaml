@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SmartHomeUI"
         mc:Ignorable="d"
-        ResizeMode="NoResize" Title="MainWindow" Height="720" Width="1280" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#00000000" AllowsTransparency="True">
+        ResizeMode="NoResize" Title="Hippolyt Smart Home" Height="720" Width="1280" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#00000000" AllowsTransparency="True">
 
     <Window.Resources>
 
@@ -54,39 +54,39 @@
         </Storyboard>
 
         <Storyboard x:Key="ListMouseEnter">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="list">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="rooms">
                 <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="ListMouseLeave">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="list">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="rooms">
                 <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
 
         <Storyboard x:Key="HistMouseEnter">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="hist">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="calendar">
                 <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="HistMouseLeave">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="hist">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="calendar">
                 <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
 
         <Storyboard x:Key="TempMouseEnter">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="temp">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="history">
                 <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="TempMouseLeave">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="temp">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="history">
                 <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
             </ColorAnimationUsingKeyFrames>
@@ -126,22 +126,22 @@
         <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="home">
             <BeginStoryboard Storyboard="{StaticResource HomeMouseLeave}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="list">
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="rooms">
             <BeginStoryboard Storyboard="{StaticResource ListMouseEnter}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="list">
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="rooms">
             <BeginStoryboard Storyboard="{StaticResource ListMouseLeave}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="hist">
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="calendar">
             <BeginStoryboard Storyboard="{StaticResource HistMouseEnter}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="hist">
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="calendar">
             <BeginStoryboard Storyboard="{StaticResource HistMouseLeave}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="temp">
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="history">
             <BeginStoryboard Storyboard="{StaticResource TempMouseEnter}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="temp">
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="history">
             <BeginStoryboard Storyboard="{StaticResource TempMouseLeave}"/>
         </EventTrigger>
         <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="lock">
@@ -168,7 +168,6 @@
             <Rectangle x:Name="DragWindow" Fill="#00000000" Height="16" Stroke="#00000000" VerticalAlignment="Top" MouseDown="DragWindow_MouseDown"/>
             <Label x:Name="CloseButton" Content="x" HorizontalAlignment="Left" Height="27" Margin="1235,6,0,0" VerticalAlignment="Top" Width="20" FontSize="16" FontFamily="Arial" FontWeight="Bold" MouseLeftButtonUp="CloseButton_MouseLeftButtonUp" Foreground="#FFFFFFFF"/>
             <Label x:Name="MinimizeButton" Content="_" HorizontalAlignment="Left" Height="33" Margin="1216,-1,0,0" VerticalAlignment="Top" Width="19" FontSize="20" FontFamily="Arial" FontWeight="Bold" MouseLeftButtonUp="MinimizeButton_MouseLeftButtonUp" Foreground="#FFFFFFFF"/>
-            <Image x:Name="hippolyt" Height="104" Width="83" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1191,606,0,0"  Source="Images/whippolyt.png" IsHitTestVisible="False"/>
         </Grid>
 
         <Grid x:Name="MenuBar">
@@ -185,6 +184,23 @@
             <Image x:Name="img_temp" Height="86" Width="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="43,368,0,0" Source="Images/wtemp.png"  IsHitTestVisible="False"/>
             <Image x:Name="img_lock" Height="80.00" Width="55" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="27,476,0,0" Source="Images/wlock.png"  IsHitTestVisible="False"/>
             <Image x:Name="img_gear" Height="52.00" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="19,592,0,0" Source="Images/wgear.png"  IsHitTestVisible="False"/>
+            <Image x:Name="hippolyt" Height="104" Width="83" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="363,21,0,0"  Source="Images/whippolyt.png" IsHitTestVisible="False" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment"/>
+        </Grid>
+
+        <Grid x:Name="MenuBar">
+            <Button x:Name="home" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,52,0,0" ToolTip="Home"/>
+            <Button x:Name="rooms" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.ListCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,152,0,0" ToolTip="ToDo List"/>
+            <Button x:Name="calendar" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HistCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,252,0,0" ToolTip="History"/>
+            <Button x:Name="history" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.TempCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,352,0,0" ToolTip="Temperature"/>
+            <Button x:Name="lock" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.LockCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,464,0,0" ToolTip="Alarm"/>
+            <Button x:Name="gear" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.GearCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,564,0,0" ToolTip="Settings"/>
+
+            <Image x:Name="img_home" Height="65" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="18,64,0,0"  Source="whouse_full.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_rooms" Height="65" Width="63" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,167,0,0"  Source="wrooms2.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_list" Height="70.00" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="18,263.5,0,0" Source="Images/wlist.png"  IsHitTestVisible="False"/>
+            <Image x:Name="img_hist" Width="70" HorizontalAlignment="Left" Margin="19,0,0,285" Source="Images/wclock.png" IsHitTestVisible="False" Height="70" VerticalAlignment="Bottom"/>
+            <Image x:Name="img_lock" Height="78" Width="55" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="27,470,0,0" Source="Images/wlock.png"  IsHitTestVisible="False"/>
+            <Image x:Name="img_gear" Height="52.00" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="19,586,0,0" Source="Images/wgear.png"  IsHitTestVisible="False"/>
         </Grid>
 
         <Grid x:Name="InfoBar">
@@ -193,10 +209,28 @@
             <Rectangle Fill="#FF20B2AA" HorizontalAlignment="Left" Height="508" Margin="117,204,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="221"/>
             <Image x:Name="img_home_border" Height="161" Width="201" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="126,23,0,0"  Source="Images/whouse_border.png" IsHitTestVisible="False"/>
             <TextBlock Text="{Binding IB.temperature}" Foreground="White" FontSize="80" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,207,942,334" Width="221" Height="179"/>
+
         </Grid>
 
         <Grid x:Name="Frame" Width="847" Height="718" HorizontalAlignment="Right" Margin="0,0,96,0">
             <ContentControl x:Name="Pages" Content="{Binding NAV.SelectedViewModel}"/>
+        </Grid>
+
+        <Grid x:Name="Frame" Width="847" Height="718" HorizontalAlignment="Right" Margin="0,0,96,0">
+            <ContentControl x:Name="Pages" Content="{Binding NAV.SelectedViewModel}"/>
+        </Grid>
+        <Grid x:Name="ScenarioControl">
+            <Image x:Name="hippolyt1" Height="104" Width="83" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="363,21,0,0"  Source="Images/whippolyt.png" IsHitTestVisible="False" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment"/>
+            <Button x:Name="Scenario_Vac" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="94" HorizontalAlignment="Right" Margin="0,0,0,252" ToolTip="Home" Height="72" VerticalAlignment="Bottom"/>
+            <Button x:Name="Scenario_Lock" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,324" ToolTip="Home"/>
+            <Button x:Name="Scenario_Night" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,256,0,0" ToolTip="Home" Height="72" VerticalAlignment="Top"/>
+            <Button x:Name="Scenario_Sun" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,179,0,0" ToolTip="Home" Height="72" VerticalAlignment="Top"/>
+            <Button x:Name="Scenario_Fav" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,0,0,172" ToolTip="Home" Height="72" VerticalAlignment="Bottom"/>
+            <Image x:Name="img_scen_fav" Height="63" Width="62.1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,16.5,186"  Source="FavMode másolata.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_scen_lock" Width="62.6" HorizontalAlignment="Right" Margin="0,328,16.5,329"  Source="LockMode.png" IsHitTestVisible="False" Height="63"/>
+            <Image x:Name="img_scen_vac" Width="83" HorizontalAlignment="Right" Margin="0,0,16.5,257"  Source="VacationMode.png" IsHitTestVisible="False" Height="63" VerticalAlignment="Bottom" d:LayoutOverrides="Height"/>
+            <Image x:Name="img_scen_sun" Height="63" Width="83" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,183,16.5,0"  Source="SunMode.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_scen_night" Height="63" Width="83" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,256,16.5,0"  Source="NightMode.png" IsHitTestVisible="False"/>
         </Grid>
 
     </Grid>

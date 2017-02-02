@@ -12,6 +12,7 @@ namespace SmartHomeUI
     class HomeViewModel
     {
         public static string test;
+
         public ObservableCollection<Device> Devices
         {
             get;
@@ -21,6 +22,7 @@ namespace SmartHomeUI
         public HomeViewModel()
         {
             LoadDevices();
+
             Communication();
         }
 

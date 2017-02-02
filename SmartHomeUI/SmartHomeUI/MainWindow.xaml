@@ -28,6 +28,7 @@
             <local:GearView/>
         </DataTemplate>
 
+
         <Style TargetType="Button" x:Key="ButtonStyle">
             <Setter Property="OverridesDefaultStyle" Value="True" />
             <Setter Property="Background" Value="#FF262626" />
@@ -168,7 +169,6 @@
             <Rectangle x:Name="DragWindow" Fill="#00000000" Height="16" Stroke="#00000000" VerticalAlignment="Top" MouseDown="DragWindow_MouseDown"/>
             <Label x:Name="CloseButton" Content="x" HorizontalAlignment="Left" Height="27" Margin="1235,6,0,0" VerticalAlignment="Top" Width="20" FontSize="16" FontFamily="Arial" FontWeight="Bold" MouseLeftButtonUp="CloseButton_MouseLeftButtonUp" Foreground="#FFFFFFFF"/>
             <Label x:Name="MinimizeButton" Content="_" HorizontalAlignment="Left" Height="33" Margin="1216,-1,0,0" VerticalAlignment="Top" Width="19" FontSize="20" FontFamily="Arial" FontWeight="Bold" MouseLeftButtonUp="MinimizeButton_MouseLeftButtonUp" Foreground="#FFFFFFFF"/>
-            <Image x:Name="hippolyt" Height="104" Width="83" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="363,21,0,0"  Source="Images/whippolyt.png" IsHitTestVisible="False" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment"/>
         </Grid>
 
         <Grid x:Name="MenuBar">
@@ -199,7 +199,7 @@
             <ContentControl x:Name="Pages" Content="{Binding NAV.SelectedViewModel}"/>
         </Grid>
         <Grid x:Name="Scenario_Control">
-            <Image x:Name="hippolyt1" Height="104" Width="83" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="363,21,0,0"  Source="Images/whippolyt.png" IsHitTestVisible="False" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment"/>
+            <Image x:Name="hippolyt1" Height="104" Width="83" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="185.4,67.4,0,0"  Source="Images/whippolyt.png" IsHitTestVisible="False" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment"/>
             <Button x:Name="Scenario_Vac" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="94" HorizontalAlignment="Right" Margin="0,0,0,252" ToolTip="Home" Height="72" VerticalAlignment="Bottom"/>
             <Button x:Name="Scenario_Lock" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,324" ToolTip="Home"/>
             <Button x:Name="Scenario_Night" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,256,0,0" ToolTip="Home" Height="72" VerticalAlignment="Top"/>

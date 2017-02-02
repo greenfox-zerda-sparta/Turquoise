@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="SmartHomeUI.ListView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SmartHomeUI"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="850">
+
+    <Grid>
+        <Rectangle Fill="#FFDDDDDD" IsHitTestVisible="False"/>
+        <Rectangle Fill="#FFFE4A49" HorizontalAlignment="Left" Height="234" Margin="9,10,0,0" VerticalAlignment="Top" Width="202"/>
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="350" Margin="216,10,0,0" VerticalAlignment="Top" Width="205"/>
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="234" Margin="426,10,0,0" VerticalAlignment="Top" Width="414"/>
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="298" Margin="652,249,0,0" VerticalAlignment="Top" Width="188"/>
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="298" Margin="426,249,0,0" VerticalAlignment="Top" Width="221"/>
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="182" Margin="216,365,0,0" VerticalAlignment="Top" Width="205"/>
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="298" Margin="9,249,0,0" VerticalAlignment="Top" Width="202"/>
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="158" Margin="9,552,0,0" VerticalAlignment="Top" Width="831"/>
+    </Grid>
+
+</UserControl>

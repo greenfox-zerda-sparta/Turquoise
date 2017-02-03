@@ -9,13 +9,13 @@
 
     <Grid>
         <Rectangle Fill="#FFDDDDDD" IsHitTestVisible="False"/>
-        <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="234" Margin="9,10,0,0" VerticalAlignment="Top" Width="202"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="350" Margin="216,10,0,0" VerticalAlignment="Top" Width="205"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="234" Margin="426,10,0,0" VerticalAlignment="Top" Width="414"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="298" Margin="652,249,0,0" VerticalAlignment="Top" Width="188"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="298" Margin="426,249,0,0" VerticalAlignment="Top" Width="221"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="182" Margin="216,365,0,0" VerticalAlignment="Top" Width="205"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="298" Margin="9,249,0,0" VerticalAlignment="Top" Width="202"/>
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Margin="10,10,0,0" Width="405" Height="253" VerticalAlignment="Top"/>
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Margin="425,10,0,193" Width="405
+                   "/>
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="158" Margin="9,552,0,0" VerticalAlignment="Top" Width="831"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="66" Margin="74,28,0,0" TextWrapping="Wrap" Text="Alarm system" VerticalAlignment="Top" Width="304" FontFamily="Microsoft YaHei UI Light" FontSize="36"/>
+        <Rectangle Fill="#FFFFFFFF" Margin="9,274,0,193" HorizontalAlignment="Left" Width="405"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="74,306,0,348" TextWrapping="Wrap" Text="Garage door" Width="304" FontFamily="Microsoft YaHei UI Light" FontSize="36" RenderTransformOrigin="1.789,0.758"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Right" Height="66" Margin="0,28,68,0" TextWrapping="Wrap" Text="CCTV feed" VerticalAlignment="Top" Width="304" FontFamily="Microsoft YaHei UI Light" FontSize="36" RenderTransformOrigin="1.789,0.758"/>
     </Grid>
 </UserControl>

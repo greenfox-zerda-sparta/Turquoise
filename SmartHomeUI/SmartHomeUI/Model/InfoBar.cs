@@ -8,7 +8,7 @@ namespace SmartHomeUI
 {
     class InfoBar
     {
-        private string Temperature = "23°C";
+        private string Temperature = "22°C";
 
         public string temperature
         {

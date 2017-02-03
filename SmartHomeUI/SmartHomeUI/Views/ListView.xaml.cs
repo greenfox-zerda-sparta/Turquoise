@@ -35,14 +35,5 @@ namespace SmartHomeUI
     }*/
 
 
-    private void HandleCheck(object sender, RoutedEventArgs e)
-    {
-      text2.Text = "Light is ON.";
-    }
-
-    private void HandleUnchecked(object sender, RoutedEventArgs e)
-    {
-      text2.Text = "Light is OFF.";
-    }
   }
 }

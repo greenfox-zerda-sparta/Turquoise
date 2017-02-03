@@ -17,7 +17,7 @@ namespace SmartHomeUI {
 
     public HomeViewModel() {
       LoadDevices();
-      Communication();
+      //Communication();
     }
 
     public void Communication() {

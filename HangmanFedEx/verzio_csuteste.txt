@@ -1,0 +1,215 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using Microsoft.Speech.Recognition;
+using Microsoft.Speech.Synthesis;
+using System.Globalization;
+
+namespace HangmanFedEx {
+  public partial class MainWindow:Window {
+
+    // VARIABLES:
+
+    private SpeechSynthesizer ss = new SpeechSynthesizer();
+    private SpeechRecognitionEngine sre = new SpeechRecognitionEngine(
+          new CultureInfo("en-US"));
+    private List<Label> Labels = new List<Label>();
+
+    private int Tries = 10;
+    private string ShownWord;
+    private string HiddenWord;
+
+    // MAIN:
+
+    public MainWindow() {
+
+      InitializeComponent();
+      InitializeElements();
+    }
+
+    // INITIALIZE NEW GAME:
+
+    public void InitializeElements() {
+      InitializeLabels();
+      InitializeVoiceRecognition();
+      GenerateHiddenWord();
+      GenerateShownWord();
+      PrintShownWord();
+    }
+
+    public void ResetVariables() {
+      ShownWord = "";
+      HiddenWord = "";
+      Tries = 10;
+      for(int i = 0; i < 10; i++) {
+        Labels[i].Content = "";
+      }
+      foreach(FrameworkElement item in (grid.Children)) {
+        item.IsEnabled = true;
+      }
+    }
+
+    // GAME LOGIC:
+
+    public void GenerateHiddenWord() {
+      List<string> WordsFromFile = System.IO.File.ReadAllLines(@"words.txt").ToList();
+      WordsFromFile.RemoveAll(x => x.Length < 4);
+      WordsFromFile.RemoveAll(x => x.Length > 10);
+      Random Rnd = new Random();
+      HiddenWord = WordsFromFile[Rnd.Next(WordsFromFile.Count)];
+    }
+
+    public void GenerateShownWord() {
+      for(int i = 0; i < HiddenWord.Length; i++) {
+        ShownWord += "_";
+      }
+    }
+
+    public void PrintShownWord() {
+      for(int i = 0; i < HiddenWord.Length; i++) {
+        Labels[i].Content = ShownWord[i];
+      }
+    }
+
+    public void CheckGuess(string letter) {
+      int MatchCounter = 0;
+      for(int i = 0; i < HiddenWord.Length; i++) {
+        if(HiddenWord[i] == letter[0]) {
+          ShownWord = ShownWord.Remove(i, 1).Insert(i, letter);
+          MatchCounter++;
+        }
+      }
+      if(MatchCounter == 0) {
+        Tries--;
+      }
+    }
+
+    public void GameOver() {
+      if(ShownWord == HiddenWord) {
+        ss.SelectVoice("Microsoft Server Speech Text to Speech Voice (en-US, Helen)");
+        ss.SpeakAsync("Congratulations, you won!");        
+      }
+      if(Tries == 0) {
+        ss.SpeakAsync("Game over! You lost!");
+      }
+    }
+
+    // EVENT HANDLING:
+
+    private void InitializeLabels() {
+      Labels.Add(label1);
+      Labels.Add(label2);
+      Labels.Add(label3);
+      Labels.Add(label4);
+      Labels.Add(label5);
+      Labels.Add(label6);
+      Labels.Add(label7);
+      Labels.Add(label8);
+      Labels.Add(label9);
+      Labels.Add(label10);
+    }
+
+    public void SpeechRecognition(object sender, SpeechRecognizedEventArgs e) {
+      string RecognizedSpeech = e.Result.Text;
+      float Confidence = e.Result.Confidence;
+
+      if(Confidence < 0.50)
+        return;
+
+      if(RecognizedSpeech.IndexOf("New game") >= 0 || RecognizedSpeech.IndexOf("Restart") >= 0 || RecognizedSpeech.IndexOf("Start over") >= 0) {
+        ResetVariables();
+        InitializeElements();
+      }
+
+      if(RecognizedSpeech.IndexOf("letter A") >= 0) {
+        MessageBox.Show("A");
+      }
+
+      if(RecognizedSpeech.IndexOf("letter B") >= 0) {
+        MessageBox.Show("B");
+      }
+
+
+      if(RecognizedSpeech.IndexOf("exit") >= 0) {
+        ((SpeechRecognitionEngine)sender).RecognizeAsyncCancel();
+        ss.Speak("Farewell");
+        Environment.Exit(0);
+      }
+    }
+
+    private void ClickOnLetter(object sender, RoutedEventArgs e) {
+      Button LetterButton = (Button)sender;
+      LetterButton.IsEnabled = false;
+      string ClickedLetter = LetterButton.Name.ToString();
+      CheckGuess(ClickedLetter);
+      PrintShownWord();
+      GameOver();
+    }
+
+    private void ClickOnNewGame(object sender, RoutedEventArgs e) {
+      ResetVariables();
+      InitializeElements();
+    }
+
+    // VOICE RECOGNITION:
+
+    private void InitializeVoiceRecognition() {
+      CultureInfo CI = new CultureInfo("en-us");
+      sre = new SpeechRecognitionEngine(CI);
+      sre.SetInputToDefaultAudioDevice();
+      ss.SetOutputToDefaultAudioDevice();
+      sre.SpeechRecognized += SpeechRecognition;
+
+
+      Choices CHGuesses = new Choices();
+      //for (int i = 65; i <= 90; i++)
+      //{
+      //    char character = (char)i;
+      //    string temp = "letter " + character.ToString();
+      //    MessageBox.Show(temp);
+      //    CHLetters.Add(temp);
+      //}
+
+      CHGuesses.Add("Is the word include");
+      CHGuesses.Add("Does it have");
+      CHGuesses.Add("What about");
+
+      CHGuesses.Add("letter A");
+      CHGuesses.Add("letter B");
+      CHGuesses.Add("letter C");
+      CHGuesses.Add("letter D");
+
+      GrammarBuilder GBGuesses = new GrammarBuilder();
+      GBGuesses.Append(CHGuesses);
+      Grammar GGuesses = new Grammar(GBGuesses);
+      sre.LoadGrammarAsync(GGuesses);
+
+      Choices CHCommands = new Choices();
+      CHCommands.Add("Start game");
+      CHCommands.Add("New game");
+      CHCommands.Add("Restart");
+      CHCommands.Add("Start over");
+      CHCommands.Add("I give up");
+      CHCommands.Add("exit");
+
+      GrammarBuilder GBCommands = new GrammarBuilder();
+      GBCommands.Append(CHCommands);
+      Grammar GCommands = new Grammar(GBCommands);
+      sre.LoadGrammarAsync(GCommands);
+
+      sre.RecognizeAsync(RecognizeMode.Multiple);
+    }
+  }
+}

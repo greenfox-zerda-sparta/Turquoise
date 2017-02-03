@@ -25,7 +25,7 @@ namespace SmartHomeUI {
       comLink.connectToBroadcast();
       comLink.send("00000000");
       comLink.send("Hello Evosoft!");
-      test = comLink.recieve();
+      test = comLink.receive();
     }
 
     public void LoadDevices() {

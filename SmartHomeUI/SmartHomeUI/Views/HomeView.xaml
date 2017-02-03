@@ -18,6 +18,7 @@
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="298" Margin="9,249,0,0" VerticalAlignment="Top" Width="202"/>
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="158" Margin="9,552,0,0" VerticalAlignment="Top" Width="831"/>
         <TextBlock Text="{Binding Devices[1].deviceType}" Foreground="Black" TextAlignment="Center" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="55,600,60,40" Width="735"/>
+        <TextBlock Text="Hello Evosoft!" Foreground="Black" TextAlignment="Center" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="55,600,60,40" Width="735"/>
     </Grid>
 
 </UserControl>

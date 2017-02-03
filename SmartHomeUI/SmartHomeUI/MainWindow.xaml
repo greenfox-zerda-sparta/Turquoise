@@ -173,9 +173,9 @@
 
         <Grid x:Name="MenuBar">
             <Button x:Name="home" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,52,0,0" ToolTip="Home"/>
-            <Button x:Name="rooms" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.ListCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,152,0,0" ToolTip="ToDo List"/>
-            <Button x:Name="calendar" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HistCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,252,0,0" ToolTip="History"/>
-            <Button x:Name="history" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.TempCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,352,0,0" ToolTip="Temperature"/>
+            <Button x:Name="rooms" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.ListCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,152,0,0" ToolTip="Rooms"/>
+            <Button x:Name="calendar" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HistCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,252,0,0" ToolTip="Family Calendar"/>
+            <Button x:Name="history" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.TempCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,352,0,0" ToolTip="History"/>
             <Button x:Name="lock" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.LockCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,464,0,0" ToolTip="Alarm"/>
             <Button x:Name="gear" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.GearCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,564,0,0" ToolTip="Settings"/>
 

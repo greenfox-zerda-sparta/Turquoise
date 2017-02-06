@@ -184,4 +184,4 @@ obj/
 *.suo
 *.user
 /SmartHomeUI/SmartHomeUI/Model/Communication.cs
-.db
+*.db

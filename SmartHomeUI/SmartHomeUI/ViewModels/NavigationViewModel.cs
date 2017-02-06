@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace SmartHomeUI
 {
-    class MainWindowViewModel : INotifyPropertyChanged
+    public class NavigationViewModel : INotifyPropertyChanged
     {
         public ICommand HomeCommand { get; set; }
         public ICommand ListCommand { get; set; }
@@ -17,9 +17,7 @@ namespace SmartHomeUI
         public ICommand LockCommand { get; set; }
         public ICommand GearCommand { get; set; }
 
-        public List<object> ViewModels;
-
-        private object selectedViewModel;
+        private object selectedViewModel = Instances.ViewModels[(int)ViewModels.HomeVM];
 
         public object SelectedViewModel
         {
@@ -27,9 +25,8 @@ namespace SmartHomeUI
             set { selectedViewModel = value; OnPropertyChanged("SelectedViewModel"); }
         }
 
-        public MainWindowViewModel()
+        public NavigationViewModel()
         {
-            InstantiateViewModels();
             InstantiateBaseCommands();
         }
 
@@ -43,46 +40,34 @@ namespace SmartHomeUI
             GearCommand = new BaseCommand(OpenGear);
         }
 
-        private void InstantiateViewModels()
-        {
-            ViewModels = new List<object>();
-            ViewModels.Add(new HomeViewModel());
-            ViewModels.Add(new ListViewModel());
-            ViewModels.Add(new HistViewModel());
-            ViewModels.Add(new TempViewModel());
-            ViewModels.Add(new LockViewModel());
-            ViewModels.Add(new GearViewModel());
-            SelectedViewModel = ViewModels[0];
-        }
-
         private void OpenHome(object obj)
         {
-            SelectedViewModel = ViewModels[0];
+            SelectedViewModel = Instances.ViewModels[(int)ViewModels.HomeVM];
         }
 
         private void OpenList(object obj)
         {
-            SelectedViewModel = ViewModels[1];
+            SelectedViewModel = Instances.ViewModels[(int)ViewModels.ListVM];
         }
 
         private void OpenHist(object obj)
         {
-            SelectedViewModel = ViewModels[2];
+            SelectedViewModel = Instances.ViewModels[(int)ViewModels.HistVM];
         }
 
         private void OpenTemp(object obj)
         {
-            SelectedViewModel = ViewModels[3];
+            SelectedViewModel = Instances.ViewModels[(int)ViewModels.TempVM];
         }
 
         private void OpenLock(object obj)
         {
-            SelectedViewModel = ViewModels[4];
+            SelectedViewModel = Instances.ViewModels[(int)ViewModels.LockVM];
         }
 
         private void OpenGear(object obj)
         {
-            SelectedViewModel = ViewModels[5];
+            SelectedViewModel = Instances.ViewModels[(int)ViewModels.GearVM];
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

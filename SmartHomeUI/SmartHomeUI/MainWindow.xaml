@@ -28,7 +28,6 @@
             <local:GearView/>
         </DataTemplate>
 
-
         <Style TargetType="Button" x:Key="ButtonStyle">
             <Setter Property="OverridesDefaultStyle" Value="True" />
             <Setter Property="Background" Value="#FF262626" />
@@ -42,120 +41,215 @@
         </Style>
 
         <Storyboard x:Key="HomeMouseEnter">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="home">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="MenuBarHome">
                 <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="HomeMouseLeave">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="home">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="MenuBarHome">
                 <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
 
         <Storyboard x:Key="ListMouseEnter">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="rooms">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="MenuBarRooms">
                 <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="ListMouseLeave">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="rooms">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="MenuBarRooms">
                 <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
 
         <Storyboard x:Key="HistMouseEnter">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="calendar">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="MenuBarCalendar">
                 <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="HistMouseLeave">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="calendar">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="MenuBarCalendar">
                 <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
 
         <Storyboard x:Key="TempMouseEnter">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="history">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="MenuBarHistory">
                 <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="TempMouseLeave">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="history">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="MenuBarHistory">
                 <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
 
         <Storyboard x:Key="LockMouseEnter">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="lock">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="MenuBarLock">
                 <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="LockMouseLeave">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="lock">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="MenuBarLock">
                 <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
 
         <Storyboard x:Key="GearMouseEnter">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="gear">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="MenuBarGear">
                 <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="GearMouseLeave">
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="gear">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="MenuBarGear">
                 <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
 
+        <Storyboard x:Key="ScenarioSunMouseEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="ScenarioSun">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="ScenarioSunMouseLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="ScenarioSun">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="ScenarioNightMouseEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="ScenarioNight">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="ScenarioNightMouseLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="ScenarioNight">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="ScenarioLockMouseEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="ScenarioLock">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="ScenarioLockMouseLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="ScenarioLock">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="ScenarioVacMouseEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="ScenarioVac">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="ScenarioVacMouseLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="ScenarioVac">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="ScenarioFavMouseEnter">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="ScenarioFav">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF262626"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF474646"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="ScenarioFavMouseLeave">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="ScenarioFav">
+                <SplineColorKeyFrame KeyTime="0" Value="#FF474646"/>
+                <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
+    
     <Window.Triggers>
-        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="home">
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="MenuBarHome">
             <BeginStoryboard Storyboard="{StaticResource HomeMouseEnter}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="home">
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="MenuBarHome">
             <BeginStoryboard Storyboard="{StaticResource HomeMouseLeave}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="rooms">
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="MenuBarRooms">
             <BeginStoryboard Storyboard="{StaticResource ListMouseEnter}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="rooms">
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="MenuBarRooms">
             <BeginStoryboard Storyboard="{StaticResource ListMouseLeave}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="calendar">
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="MenuBarCalendar">
             <BeginStoryboard Storyboard="{StaticResource HistMouseEnter}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="calendar">
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="MenuBarCalendar">
             <BeginStoryboard Storyboard="{StaticResource HistMouseLeave}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="history">
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="MenuBarHistory">
             <BeginStoryboard Storyboard="{StaticResource TempMouseEnter}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="history">
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="MenuBarHistory">
             <BeginStoryboard Storyboard="{StaticResource TempMouseLeave}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="lock">
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="MenuBarLock">
             <BeginStoryboard Storyboard="{StaticResource LockMouseEnter}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="lock">
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="MenuBarLock">
             <BeginStoryboard Storyboard="{StaticResource LockMouseLeave}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="gear">
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="MenuBarGear">
             <BeginStoryboard Storyboard="{StaticResource GearMouseEnter}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="gear">
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="MenuBarGear">
             <BeginStoryboard Storyboard="{StaticResource GearMouseLeave}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="ScenarioSun">
+            <BeginStoryboard Storyboard="{StaticResource ScenarioSunMouseEnter}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="ScenarioSun">
+            <BeginStoryboard Storyboard="{StaticResource ScenarioSunMouseLeave}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="ScenarioNight">
+            <BeginStoryboard Storyboard="{StaticResource ScenarioNightMouseEnter}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="ScenarioNight">
+            <BeginStoryboard Storyboard="{StaticResource ScenarioNightMouseLeave}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="ScenarioLock">
+            <BeginStoryboard Storyboard="{StaticResource ScenarioLockMouseEnter}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="ScenarioLock">
+            <BeginStoryboard Storyboard="{StaticResource ScenarioLockMouseLeave}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="ScenarioVac">
+            <BeginStoryboard Storyboard="{StaticResource ScenarioVacMouseEnter}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="ScenarioVac">
+            <BeginStoryboard Storyboard="{StaticResource ScenarioVacMouseLeave}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="ScenarioFav">
+            <BeginStoryboard Storyboard="{StaticResource ScenarioFavMouseEnter}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="ScenarioFav">
+            <BeginStoryboard Storyboard="{StaticResource ScenarioFavMouseLeave}"/>
         </EventTrigger>
     </Window.Triggers>
 
@@ -172,19 +266,19 @@
         </Grid>
 
         <Grid x:Name="MenuBar">
-            <Button x:Name="home" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,52,0,0" ToolTip="Home"/>
-            <Button x:Name="rooms" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.ListCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,152,0,0" ToolTip="ToDo List"/>
-            <Button x:Name="calendar" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HistCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,252,0,0" ToolTip="History"/>
-            <Button x:Name="history" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.TempCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,352,0,0" ToolTip="Temperature"/>
-            <Button x:Name="lock" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.LockCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,464,0,0" ToolTip="Alarm"/>
-            <Button x:Name="gear" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.GearCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,564,0,0" ToolTip="Settings"/>
+            <Button x:Name="MenuBarHome" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,52,0,0" ToolTip="Home"/>
+            <Button x:Name="MenuBarRooms" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.ListCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,152,0,0" ToolTip="Rooms"/>
+            <Button x:Name="MenuBarCalendar" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HistCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,252,0,0" ToolTip="Family Calendar"/>
+            <Button x:Name="MenuBarHistory" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.TempCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,352,0,0" ToolTip="History"/>
+            <Button x:Name="MenuBarLock" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.LockCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,464,0,0" ToolTip="Alarm"/>
+            <Button x:Name="MenuBarGear" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.GearCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,564,0,0" ToolTip="Settings"/>
 
-            <Image x:Name="img_home" Height="65" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="18,64,0,0"  Source="whouse_full.png" IsHitTestVisible="False"/>
-            <Image x:Name="img_rooms" Height="65" Width="63" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,167,0,0"  Source="wrooms2.png" IsHitTestVisible="False"/>
-            <Image x:Name="img_list" Height="70.00" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="18,263.5,0,0" Source="Images/wlist.png"  IsHitTestVisible="False"/>
-            <Image x:Name="img_hist" Width="70" HorizontalAlignment="Left" Margin="19,0,0,285" Source="Images/wclock.png" IsHitTestVisible="False" Height="70" VerticalAlignment="Bottom"/>
-            <Image x:Name="img_lock" Height="78" Width="55" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="27,470,0,0" Source="Images/wlock.png"  IsHitTestVisible="False"/>
-            <Image x:Name="img_gear" Height="52.00" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="19,586,0,0" Source="Images/wgear.png"  IsHitTestVisible="False"/>
+            <Image x:Name="img_home" Height="65" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="18,69,0,0"  Source="Images/whouse_full.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_rooms" Height="65" Width="63" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,172,0,0"  Source="Images/wrooms2.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_list" Height="70.00" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="18,268,0,0" Source="Images/wlist.png"  IsHitTestVisible="False"/>
+            <Image x:Name="img_hist" Width="70" HorizontalAlignment="Left" Margin="19,0,0,283" Source="Images/wclock.png" IsHitTestVisible="False" Height="70" VerticalAlignment="Bottom"/>
+            <Image x:Name="img_lock" Height="78" Width="55" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="27,474,0,0" Source="Images/wlock.png"  IsHitTestVisible="False"/>
+            <Image x:Name="img_gear" Height="52.00" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="19,589,0,0" Source="Images/wgear.png"  IsHitTestVisible="False"/>
         </Grid>
 
         <Grid x:Name="InfoBar">
@@ -195,21 +289,24 @@
             <TextBlock Text="{Binding IB.temperature}" Foreground="White" FontSize="80" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,207,942,334" Width="221" Height="179"/>
         </Grid>
 
+        <Grid x:Name="ScenarioBar">
+            <Button x:Name="ScenarioSun" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,150,0,0" ToolTip="Home Mode" Height="72" VerticalAlignment="Top"/>
+            <Button x:Name="ScenarioNight" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,223,0,0" ToolTip="Night Mode" Height="72" VerticalAlignment="Top"/>
+            <Button x:Name="ScenarioLock" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,296,0,352" ToolTip="Away Mode"/>
+            <Button x:Name="ScenarioVac" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="94" HorizontalAlignment="Right" Margin="0,0,0,280" ToolTip="Vacation Mode" Height="72" VerticalAlignment="Bottom"/>
+            <Button x:Name="ScenarioFav" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,0,0,207" ToolTip="Favorite Mode" Height="72" VerticalAlignment="Bottom"/>
+
+            <Image x:Name="img_scen_sun" Height="63" Width="63" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,153,16,0"  Source="Images/sunmode.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_scen_night" Height="63" Width="63" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,226,16,0"  Source="Images/nightmode.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_scen_lock" Width="63" HorizontalAlignment="Right" Margin="0,298,16,359"  Source="Images/lockmode.png" IsHitTestVisible="False" Height="63"/>
+            <Image x:Name="img_scen_vac" Width="63" HorizontalAlignment="Right" Margin="0,0,16,287"  Source="Images/vacationmode.png" IsHitTestVisible="False" Height="63" VerticalAlignment="Bottom"/>
+            <Image x:Name="img_scen_fav" Height="63" Width="63" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,16,214"  Source="Images/favmode.png" IsHitTestVisible="False"/>
+
+            <Image x:Name="hippolyt1" Height="104" Width="83" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1191,607,0,0"  Source="Images/whippolyt.png" IsHitTestVisible="False"/>
+        </Grid>
+
         <Grid x:Name="Frame" Width="847" Height="718" HorizontalAlignment="Right" Margin="0,0,96,0">
             <ContentControl x:Name="Pages" Content="{Binding NAV.SelectedViewModel}"/>
-        </Grid>
-        <Grid x:Name="Scenario_Control">
-            <Image x:Name="hippolyt1" Height="104" Width="83" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="185.4,67.4,0,0"  Source="Images/whippolyt.png" IsHitTestVisible="False" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment"/>
-            <Button x:Name="Scenario_Vac" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="94" HorizontalAlignment="Right" Margin="0,0,0,252" ToolTip="Home" Height="72" VerticalAlignment="Bottom"/>
-            <Button x:Name="Scenario_Lock" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,324" ToolTip="Home"/>
-            <Button x:Name="Scenario_Night" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,256,0,0" ToolTip="Home" Height="72" VerticalAlignment="Top"/>
-            <Button x:Name="Scenario_Sun" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,179,0,0" ToolTip="Home" Height="72" VerticalAlignment="Top"/>
-            <Button x:Name="Scenario_Fav" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,0,0,172" ToolTip="Home" Height="72" VerticalAlignment="Bottom"/>
-            <Image x:Name="img_scen_fav" Height="63" Width="62.1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,16.5,186"  Source="FavMode másolata.png" IsHitTestVisible="False"/>
-            <Image x:Name="img_scen_lock" Width="62.6" HorizontalAlignment="Right" Margin="0,328,16.5,329"  Source="LockMode.png" IsHitTestVisible="False" Height="63"/>
-            <Image x:Name="img_scen_vac" Width="83" HorizontalAlignment="Right" Margin="0,0,16.5,257"  Source="VacationMode.png" IsHitTestVisible="False" Height="63" VerticalAlignment="Bottom" d:LayoutOverrides="Height"/>
-            <Image x:Name="img_scen_sun" Height="63" Width="83" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,183,16.5,0"  Source="SunMode.png" IsHitTestVisible="False"/>
-            <Image x:Name="img_scen_night" Height="63" Width="83" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,256,16.5,0"  Source="NightMode.png" IsHitTestVisible="False"/>
         </Grid>
 
     </Grid>

@@ -12,8 +12,8 @@
         <DataTemplate DataType="{x:Type local:HomeViewModel}">
             <local:HomeView/>
         </DataTemplate>
-        <DataTemplate DataType="{x:Type local:ListViewModel}">
-            <local:ListView/>
+        <DataTemplate DataType="{x:Type local:RoomViewModel}">
+            <local:RoomView/>
         </DataTemplate>
         <DataTemplate DataType="{x:Type local:HistViewModel}">
             <local:HistView/>
@@ -182,8 +182,8 @@
                 <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF262626"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
-
     </Window.Resources>
+    
     <Window.Triggers>
         <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="MenuBarHome">
             <BeginStoryboard Storyboard="{StaticResource HomeMouseEnter}"/>
@@ -267,7 +267,7 @@
 
         <Grid x:Name="MenuBar">
             <Button x:Name="MenuBarHome" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,52,0,0" ToolTip="Home"/>
-            <Button x:Name="MenuBarRooms" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.ListCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,152,0,0" ToolTip="Rooms"/>
+            <Button x:Name="MenuBarRooms" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.RoomCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,152,0,0" ToolTip="Rooms"/>
             <Button x:Name="MenuBarCalendar" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HistCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,252,0,0" ToolTip="Family Calendar"/>
             <Button x:Name="MenuBarHistory" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.TempCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,352,0,0" ToolTip="History"/>
             <Button x:Name="MenuBarLock" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.LockCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,464,0,0" ToolTip="Alarm"/>
@@ -292,14 +292,14 @@
         <Grid x:Name="ScenarioBar">
             <Button x:Name="ScenarioSun" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,150,0,0" ToolTip="Home Mode" Height="72" VerticalAlignment="Top"/>
             <Button x:Name="ScenarioNight" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,223,0,0" ToolTip="Night Mode" Height="72" VerticalAlignment="Top"/>
-            <Button x:Name="ScenarioLock" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,296,0,352" ToolTip="Away Mode"/>
+            <Button x:Name="ScenarioLock" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,296,0,352" ToolTip="Away Mode" Height="72" VerticalAlignment="Top"/>
             <Button x:Name="ScenarioVac" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="94" HorizontalAlignment="Right" Margin="0,0,0,280" ToolTip="Vacation Mode" Height="72" VerticalAlignment="Bottom"/>
             <Button x:Name="ScenarioFav" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,0,0,207" ToolTip="Favorite Mode" Height="72" VerticalAlignment="Bottom"/>
 
-            <Image x:Name="img_scen_sun" Height="63" Width="84" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,153,16,0"  Source="Images/sunmode.png" IsHitTestVisible="False"/>
-            <Image x:Name="img_scen_night" Height="63" Width="84" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,226,16,0"  Source="Images/nightmode.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_scen_sun" Height="63" Width="63" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,153,16,0"  Source="Images/sunmode.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_scen_night" Height="63" Width="63" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,226,16,0"  Source="Images/nightmode.png" IsHitTestVisible="False"/>
             <Image x:Name="img_scen_lock" Width="63" HorizontalAlignment="Right" Margin="0,298,16,359"  Source="Images/lockmode.png" IsHitTestVisible="False" Height="63"/>
-            <Image x:Name="img_scen_vac" Width="84" HorizontalAlignment="Right" Margin="0,0,16,287"  Source="Images/vacationmode.png" IsHitTestVisible="False" Height="63" VerticalAlignment="Bottom"/>
+            <Image x:Name="img_scen_vac" Width="63" HorizontalAlignment="Right" Margin="0,0,16,287"  Source="Images/vacationmode.png" IsHitTestVisible="False" Height="63" VerticalAlignment="Bottom"/>
             <Image x:Name="img_scen_fav" Height="63" Width="63" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,16,214"  Source="Images/favmode.png" IsHitTestVisible="False"/>
 
             <Image x:Name="hippolyt1" Height="104" Width="83" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1191,607,0,0"  Source="Images/whippolyt.png" IsHitTestVisible="False"/>

@@ -11,13 +11,13 @@ namespace SmartHomeUI
     public class NavigationViewModel : INotifyPropertyChanged
     {
         public ICommand HomeCommand { get; set; }
-        public ICommand ListCommand { get; set; }
+        public ICommand RoomCommand { get; set; }
         public ICommand HistCommand { get; set; }
         public ICommand TempCommand { get; set; }
         public ICommand LockCommand { get; set; }
         public ICommand GearCommand { get; set; }
 
-        private object selectedViewModel = Instances.ViewModels[0];
+        private object selectedViewModel = Instances.ViewModels[(int)ViewModels.HomeVM];
 
         public object SelectedViewModel
         {
@@ -33,7 +33,7 @@ namespace SmartHomeUI
         private void InstantiateBaseCommands()
         {
             HomeCommand = new BaseCommand(OpenHome);
-            ListCommand = new BaseCommand(OpenList);
+            RoomCommand = new BaseCommand(OpenRoom);
             HistCommand = new BaseCommand(OpenHist);
             TempCommand = new BaseCommand(OpenTemp);
             LockCommand = new BaseCommand(OpenLock);
@@ -42,32 +42,32 @@ namespace SmartHomeUI
 
         private void OpenHome(object obj)
         {
-            SelectedViewModel = Instances.ViewModels[0];
+            SelectedViewModel = Instances.ViewModels[(int)ViewModels.HomeVM];
         }
 
-        private void OpenList(object obj)
+        private void OpenRoom(object obj)
         {
-            SelectedViewModel = Instances.ViewModels[1];
+            SelectedViewModel = Instances.ViewModels[(int)ViewModels.RoomVM];
         }
 
         private void OpenHist(object obj)
         {
-            SelectedViewModel = Instances.ViewModels[2];
+            SelectedViewModel = Instances.ViewModels[(int)ViewModels.HistVM];
         }
 
         private void OpenTemp(object obj)
         {
-            SelectedViewModel = Instances.ViewModels[3];
+            SelectedViewModel = Instances.ViewModels[(int)ViewModels.TempVM];
         }
 
         private void OpenLock(object obj)
         {
-            SelectedViewModel = Instances.ViewModels[4];
+            SelectedViewModel = Instances.ViewModels[(int)ViewModels.LockVM];
         }
 
         private void OpenGear(object obj)
         {
-            SelectedViewModel = Instances.ViewModels[5];
+            SelectedViewModel = Instances.ViewModels[(int)ViewModels.GearVM];
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

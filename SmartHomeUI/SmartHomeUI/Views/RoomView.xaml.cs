@@ -15,12 +15,12 @@ using System.Windows.Shapes;
 
 namespace SmartHomeUI
 {
-    public partial class HomeView : UserControl
+    public partial class RoomView : UserControl
     {
-        public HomeView()
-        {
-            InitializeComponent();
-            this.DataContext = Instances.ViewModels[(int)ViewModels.HomeVM];
-        }
+    public RoomView()
+    {
+        InitializeComponent();
+        this.DataContext = Instances.ViewModels[(int)ViewModels.RoomVM];
     }
+  }
 }

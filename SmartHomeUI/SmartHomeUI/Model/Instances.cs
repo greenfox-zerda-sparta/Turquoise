@@ -6,6 +6,16 @@ using System.Threading.Tasks;
 
 namespace SmartHomeUI
 {
+    public enum ViewModels
+    {
+        HomeVM, RoomVM, HistVM, TempVM, LockVM, GearVM, NavVM
+    }
+
+    public enum Models
+    {
+        InfoBar, Communication
+    }
+
     static class Instances
     {
         static public List<object> ViewModels;
@@ -15,7 +25,7 @@ namespace SmartHomeUI
         {
             ViewModels = new List<object>();
             ViewModels.Add(new HomeViewModel());
-            ViewModels.Add(new ListViewModel());
+            ViewModels.Add(new RoomViewModel());
             ViewModels.Add(new HistViewModel());
             ViewModels.Add(new TempViewModel());
             ViewModels.Add(new LockViewModel());

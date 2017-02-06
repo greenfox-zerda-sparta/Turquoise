@@ -22,8 +22,8 @@ namespace SmartHomeUI
             InitializeComponent();
             this.DataContext = new
             {
-                IB = new InfoBar(),
-                NAV = new MainWindowViewModel(),
+                IB = Instances.Models[0],
+                NAV = Instances.ViewModels[6],
             };
         }
 

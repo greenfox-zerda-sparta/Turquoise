@@ -11,7 +11,7 @@
         <Rectangle Fill="#FFDDDDDD" IsHitTestVisible="False"/>
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Margin="10,10,0,0" Width="410" Height="259" VerticalAlignment="Top"/>
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Margin="425,10,0,193" Width="415"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="178" Margin="9,532,0,0" VerticalAlignment="Top" Width="831"/>
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="180" Margin="9,530,0,0" VerticalAlignment="Top" Width="831"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="66" Margin="16,14,0,0" TextWrapping="Wrap" Text="Alarm system" VerticalAlignment="Top" Width="304" FontFamily="Microsoft YaHei UI Light" FontSize="30"/>
         <Rectangle Fill="#FFFFFFFF" Margin="9,274,0,193" HorizontalAlignment="Left" Width="411"/>
         <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="16,278,0,0" TextWrapping="Wrap" Text="Garage door" Width="304" FontFamily="Microsoft YaHei UI Light" FontSize="30" RenderTransformOrigin="1.789,0.758" Height="66" VerticalAlignment="Top"/>

@@ -15,25 +15,11 @@ using System.Windows.Shapes;
 
 namespace SmartHomeUI
 {
-    /// <summary>
-    /// Interaction logic for list.xaml
-    /// </summary>
     public partial class ListView : UserControl
     {
     public ListView()
-        {
-            InitializeComponent();
-        }
-    /*private void HandleCheck(object sender, RoutedEventArgs e)
     {
-      toggleButton.Text = "Button is Checked";
+        InitializeComponent();
     }
-
-    private void HandleUnchecked(object sender, RoutedEventArgs e)
-    {
-      toggleButton.Text = "Button is unchecked.";
-    }*/
-
-
   }
 }

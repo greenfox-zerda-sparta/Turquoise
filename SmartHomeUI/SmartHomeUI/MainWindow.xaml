@@ -12,8 +12,8 @@
         <DataTemplate DataType="{x:Type local:HomeViewModel}">
             <local:HomeView/>
         </DataTemplate>
-        <DataTemplate DataType="{x:Type local:RoomViewModel}">
-            <local:RoomView/>
+        <DataTemplate DataType="{x:Type local:RoomNavigationViewModel}">
+            <local:RoomNavigationView/>
         </DataTemplate>
         <DataTemplate DataType="{x:Type local:HistViewModel}">
             <local:HistView/>
@@ -183,7 +183,7 @@
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
-    
+
     <Window.Triggers>
         <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="MenuBarHome">
             <BeginStoryboard Storyboard="{StaticResource HomeMouseEnter}"/>
@@ -286,7 +286,18 @@
             <Rectangle Fill="#FF7F7F7F" HorizontalAlignment="Left" Height="184" Margin="117,11,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="221" IsHitTestVisible="False"/>
             <Rectangle Fill="#FF20B2AA" HorizontalAlignment="Left" Height="508" Margin="117,204,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="221"/>
             <Image x:Name="img_home_border" Height="161" Width="201" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="126,23,0,0"  Source="Images/whouse_border.png" IsHitTestVisible="False"/>
-            <TextBlock Text="{Binding IB.temperature}" Foreground="White" FontSize="80" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,207,942,334" Width="221" Height="179"/>
+            <TextBlock Text="{Binding IB.CurrentTime}" Foreground="White" FontSize="60" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,206,942,448" Width="221" Height="66"/>
+            <TextBlock Text="{Binding IB.CurrentDate}" Foreground="White" FontSize="20" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,276,942,411" Width="221" Height="33"/>
+            <TextBlock Text="Weather Condition" Foreground="White" FontSize="20" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,315,942,377" Width="221" Height="28"/>
+            <Image x:Name="conditions" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="167,342,993,258" Width="120" Height="120" Source="Images/few_clouds.png" ToolTip="{Binding IB.Conditions}"/>
+            <TextBlock Text="Temperature" Foreground="White" FontSize="20" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,468,942,224" Width="221" Height="28"/>
+            <TextBlock Text="{Binding IB.OutdoorTemperature}" Foreground="White" FontSize="60" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,484,942,167" Width="221" Height="69"/>
+            <TextBlock Text="Humidity" Foreground="White" FontSize="20" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,570,942,122" Width="221" Height="28"/>
+            <TextBlock Text="{Binding IB.Humidity}" Foreground="White" FontSize="30" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,593,942,57" Width="221" Height="70"/>
+            <TextBlock Text="{Binding IB.City}" Foreground="White" FontSize="30" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,648,942,22" Width="221" Height="50"/>
+            <TextBlock Text="Last Updated:" Foreground="White" FontSize="12" TextAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="139,688,940,10" Width="201" Height="22"/>
+            <TextBlock Text="{Binding IB.LastUpdate}" Foreground="White" FontSize="12" TextAlignment="Right" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="105,688,962,10" Width="213" Height="22"/>
+
         </Grid>
 
         <Grid x:Name="ScenarioBar">

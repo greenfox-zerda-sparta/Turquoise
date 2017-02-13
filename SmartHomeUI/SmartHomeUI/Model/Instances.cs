@@ -9,12 +9,12 @@ namespace SmartHomeUI
 {
     public enum ViewModels
     {
-        HomeVM, RoomVM, HistVM, TempVM, LockVM, GearVM, NavVM
+        HomeVM, RoomVM, HistVM, TempVM, LockVM, GearVM, RoomNavVM, NavVM
     }
 
     public enum Models
     {
-        InfoBar, Communication
+        InfoBar, Communication, Log
     }
 
     static class Instances
@@ -37,7 +37,8 @@ namespace SmartHomeUI
             ViewModels.Add(new TempViewModel());
             ViewModels.Add(new LockViewModel());
             ViewModels.Add(new GearViewModel());
-            ViewModels.Add(new NavigationViewModel());
+            ViewModels.Add(new RoomNavigationViewModel());
+            ViewModels.Add(new MainNavigationViewModel());
         }
 
         private static void InstantiateModels()
@@ -45,6 +46,7 @@ namespace SmartHomeUI
             Models = new List<object>();
             Models.Add(new InfoBar());
             Models.Add(new Communication());
+            Models.Add(new Logger());
         }
     }
 }

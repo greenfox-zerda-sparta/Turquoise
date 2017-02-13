@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace SmartHomeUI
 {
-    public class NavigationViewModel : INotifyPropertyChanged
+    public class MainNavigationViewModel : INotifyPropertyChanged
     {
         public ICommand HomeCommand { get; set; }
         public ICommand RoomCommand { get; set; }
@@ -25,29 +25,30 @@ namespace SmartHomeUI
             set { selectedViewModel = value; OnPropertyChanged("SelectedViewModel"); }
         }
 
-        public NavigationViewModel()
+        public MainNavigationViewModel()
         {
-            InstantiateBaseCommands();
+            InstantiateNavigationCommands();
         }
 
-        private void InstantiateBaseCommands()
+        private void InstantiateNavigationCommands()
         {
-            HomeCommand = new BaseCommand(OpenHome);
-            RoomCommand = new BaseCommand(OpenRoom);
-            HistCommand = new BaseCommand(OpenHist);
-            TempCommand = new BaseCommand(OpenTemp);
-            LockCommand = new BaseCommand(OpenLock);
-            GearCommand = new BaseCommand(OpenGear);
+            HomeCommand = new NavigationCommands(OpenHome);
+            RoomCommand = new NavigationCommands(OpenRoom);
+            HistCommand = new NavigationCommands(OpenHist);
+            TempCommand = new NavigationCommands(OpenTemp);
+            LockCommand = new NavigationCommands(OpenLock);
+            GearCommand = new NavigationCommands(OpenGear);
         }
 
         private void OpenHome(object obj)
         {
             SelectedViewModel = Instances.ViewModels[(int)ViewModels.HomeVM];
+            (Instances.Models[(int)Models.Log] as Logger).logToFile("Changed to Home screen");
         }
 
         private void OpenRoom(object obj)
         {
-            SelectedViewModel = Instances.ViewModels[(int)ViewModels.RoomVM];
+            SelectedViewModel = Instances.ViewModels[(int)ViewModels.RoomNavVM];
         }
 
         private void OpenHist(object obj)
@@ -78,36 +79,6 @@ namespace SmartHomeUI
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propName));
             }
-        }
-    }
-
-    public class BaseCommand : ICommand
-    {
-        private Predicate<object> _canExecute;
-        private Action<object> _method;
-        public event EventHandler CanExecuteChanged;
-
-        public BaseCommand(Action<object> method) : this(method, null) { }
-
-        public BaseCommand(Action<object> method, Predicate<object> canExecute)
-        {
-            _method = method;
-            _canExecute = canExecute;
-        }
-
-        public bool CanExecute(object parameter)
-        {
-            if (_canExecute == null)
-            {
-                return true;
-            }
-
-            return _canExecute(parameter);
-        }
-
-        public void Execute(object parameter)
-        {
-            _method.Invoke(parameter);
         }
     }
 }

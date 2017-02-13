@@ -68,7 +68,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\RoomView.xaml">
+    <Page Include="Views\RoomNavigationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -84,12 +84,15 @@
     <Compile Include="Model\Device.cs" />
     <Compile Include="Model\InfoBar.cs" />
     <Compile Include="Model\Instances.cs" />
+    <Compile Include="Model\Logger.cs" />
+    <Compile Include="Model\NavigationCommands.cs" />
     <Compile Include="ViewModels\GearViewModel.cs" />
     <Compile Include="ViewModels\HistViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\RoomNavigationViewModel.cs" />
     <Compile Include="ViewModels\RoomViewModel.cs" />
     <Compile Include="ViewModels\LockViewModel.cs" />
-    <Compile Include="ViewModels\NavigationViewModel.cs" />
+    <Compile Include="ViewModels\MainNavigationViewModel.cs" />
     <Compile Include="ViewModels\TempViewModel.cs" />
     <Compile Include="Views\GearView.xaml.cs">
       <DependentUpon>GearView.xaml</DependentUpon>
@@ -100,8 +103,8 @@
     <Compile Include="Views\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\RoomView.xaml.cs">
-      <DependentUpon>RoomView.xaml</DependentUpon>
+    <Compile Include="Views\RoomNavigationView.xaml.cs">
+      <DependentUpon>RoomNavigationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -196,6 +199,19 @@
     <Resource Include="Images\livingroom.png" />
     <Resource Include="Images\livingroom2.png" />
     <Resource Include="Images\temp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\snow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\broken_clouds.png" />
+    <Resource Include="Images\few_clouds.png" />
+    <Resource Include="Images\mist.png" />
+    <Resource Include="Images\rain.png" />
+    <Resource Include="Images\scattered_clouds.png" />
+    <Resource Include="Images\shower_rain.png" />
+    <Resource Include="Images\sunny.png" />
+    <Resource Include="Images\thunderstorm.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

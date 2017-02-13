@@ -8,5 +8,6 @@ namespace SmartHomeUI
 {
     class RoomViewModel
     {
+
     }
 }

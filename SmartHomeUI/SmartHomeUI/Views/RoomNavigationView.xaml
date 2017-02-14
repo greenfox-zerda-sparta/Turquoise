@@ -6,22 +6,37 @@
       xmlns:local="clr-namespace:SmartHomeUI"
       mc:Ignorable="d" 
       d:DesignHeight="720" d:DesignWidth="850">
+
     <UserControl.Resources>
-        <Style TargetType="Button">
+        <Style TargetType="{x:Type Button}">
             <Setter Property="Background" Value="#20B2AC"/>
             <Setter Property="Foreground" Value="#FFFFFF"/>
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="25" BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF7F7F7F"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
     </UserControl.Resources>
-    
+
     <Grid>
         <Rectangle Fill="#FFDDDDDD" IsHitTestVisible="False"/>
 
         <Grid x:Name="RoomPicker" Background="White" HorizontalAlignment="Left" Margin="10,10,0,0" Width="198" Height="700" VerticalAlignment="Top">
             <Label x:Name="floor" Content="Floor" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="178"/>
-            <Button x:Name="bedroom1"  Command="{Binding NBedroomCommand}" Content="North Bedroom" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="178" Height="50"/>
+            <Button x:Name="bedroom1" Command="{Binding NBedroomCommand}" Content="North Bedroom" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="178" Height="50"/>
             <Button x:Name="bedroom2" Command="{Binding SBedroomCommand}" Content="South Bedroom" HorizontalAlignment="Left" Margin="10,95,0,0" VerticalAlignment="Top" Width="178" Height="50"/>
             <Button x:Name="kidroom" Command="{Binding KidRoomCommand}" Content="Kid's Room" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="178" Height="50"/>
             <Button x:Name="bathroom_fl" Command="{Binding FloorBathroomCommand}" Content="Bathroom" HorizontalAlignment="Left" Margin="10,205,0,0" VerticalAlignment="Top" Width="178" Height="50"/>

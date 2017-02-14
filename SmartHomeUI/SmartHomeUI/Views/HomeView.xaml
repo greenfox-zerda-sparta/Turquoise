@@ -9,15 +9,26 @@
 
     <Grid>
         <Rectangle Fill="#FFDDDDDD" IsHitTestVisible="False"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="234" Margin="9,10,0,0" VerticalAlignment="Top" Width="202"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="350" Margin="216,10,0,0" VerticalAlignment="Top" Width="205"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="234" Margin="426,10,0,0" VerticalAlignment="Top" Width="414"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="298" Margin="652,249,0,0" VerticalAlignment="Top" Width="188"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="298" Margin="426,249,0,0" VerticalAlignment="Top" Width="221"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="182" Margin="216,365,0,0" VerticalAlignment="Top" Width="205"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="298" Margin="9,249,0,0" VerticalAlignment="Top" Width="202"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="158" Margin="9,552,0,0" VerticalAlignment="Top" Width="831"/>
-        <TextBlock Text="{Binding Devices[0].deviceID}" Foreground="Black" TextAlignment="Center" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="55,600,60,40" Width="735"/>
+        <Viewbox Margin="288,0,-0.4,205">
+            <Calendar Height="169" Width="181"/>
+        </Viewbox>
+
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="234" Margin="9,10,0,0" VerticalAlignment="Top" Width="283"/>
+
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="250" Margin="9,249,0,0" VerticalAlignment="Top" Width="283"/>
+
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="206" Margin="9,504,0,0" VerticalAlignment="Top" Width="283"/>
+        <Image x:Name="water_consumption" HorizontalAlignment="Left" Height="115" Margin="90,521,0,0" VerticalAlignment="Top" Width="115" Source="../Images/HomeIcons/water_consumption.png"/>
+        <TextBlock Text="{Binding Consumptions[0], StringFormat='\{0\} m3'}" Foreground="Black" TextAlignment="Center" FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="39,632,589.6,22" Width="221" Height="66"/>
+
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="206" Margin="297,504,0,0" VerticalAlignment="Top" Width="265"/>
+        <Image x:Name="month_electricity" HorizontalAlignment="Left" Height="115" Margin="389,517,0,0" VerticalAlignment="Top" Width="89" Source="../Images/HomeIcons/month_electricity.png"/>
+        <TextBlock Text="{Binding Consumptions[1], StringFormat='\{0\} kWh'}" Foreground="Black" TextAlignment="Center" FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="327,632,317.6,22" Width="205" Height="66"/>
+
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="206" Margin="566,504,0,0" VerticalAlignment="Top" Width="274"/>
+        <Image x:Name="actual_electricity" HorizontalAlignment="Left" Height="115" Margin="642,519,0,0" VerticalAlignment="Top" Width="115" Source="../Images/HomeIcons/actual_electricity.png"/>
+        <TextBlock Text="{Binding Consumptions[2], StringFormat='\{0\} Wh'}" Foreground="Black" TextAlignment="Center" FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="586,632,14.6,22" Width="249" Height="66"/>
+
     </Grid>
 
 </UserControl>

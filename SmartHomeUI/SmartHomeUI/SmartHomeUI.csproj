@@ -282,7 +282,12 @@
     <Resource Include="Images\WeatherIcons\night_shower_rain.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\HomeIcons\" />
+    <Resource Include="Images\RoomIcons\workshop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HomeIcons\actual_electricity.png" />
+    <Resource Include="Images\HomeIcons\month_electricity.png" />
+    <Resource Include="Images\HomeIcons\water_consumption.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

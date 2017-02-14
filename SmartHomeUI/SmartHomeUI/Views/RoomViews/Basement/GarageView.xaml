@@ -8,6 +8,9 @@
              d:DesignHeight="718" d:DesignWidth="640">
     <Grid>
         <Label x:Name="garage" Content="Garage" FontWeight="Bold" FontSize="30" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Height="52" Width="620" IsHitTestVisible="False"/>
-
+        <Rectangle Fill="#FFDDDDDD" IsHitTestVisible="False" Grid.RowSpan="2"/>
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="200" Margin="10,10,0,0" VerticalAlignment="Top" Width="200"/>
+        <Image x:Name="garageDoor" Height="200" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0"  Source="Images/DeviceIcons/e_light2.png" IsHitTestVisible="False"/>
+        <TextBlock x:Name="Status_Garagedoor" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Status" Width="175" Margin="270,0,0,650" FontSize="30" FontFamily="Microsoft YaHei UI Light" Height="41" VerticalAlignment="Bottom"/>
     </Grid>
 </UserControl>

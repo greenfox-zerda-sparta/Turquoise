@@ -12,7 +12,7 @@ namespace SmartHomeUI
 {
     class InfoBar : INotifyPropertyChanged
     {
-        private string currentTime = DateTime.Now.ToString("HH:mm"), currentDate = DateTime.Now.ToString("yyyy-MM-dd"), city = "Budapest", outdoorTemperature, conditions, humidity, lastUpdate;
+        private string currentTime = DateTime.Now.ToString("HH:mm"), currentDate = DateTime.Now.ToString("yyyy-MM-dd"), city = "City", outdoorTemperature, conditions, humidity, lastUpdate;
         private const string CurrentUrl = "http://api.openweathermap.org/data/2.5/weather?" + "q=@LOC@&mode=xml&units=metric&APPID=943e2efdf23a6323a04150361b9aeca7";
 
         public InfoBar()
@@ -37,7 +37,7 @@ namespace SmartHomeUI
         public string City
         {
             get { return city; }
-            set { city = value; RaisePropertyChanged("City"); }
+            set { city = (Instances.ViewModels[(int)ViewModels.GearVM] as GearViewModel).Town ; }
         }
 
         public string OutdoorTemperature

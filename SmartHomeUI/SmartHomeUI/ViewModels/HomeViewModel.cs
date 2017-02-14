@@ -12,24 +12,10 @@ namespace SmartHomeUI {
     class HomeViewModel
     {
         public ObservableCollection<double> Consumptions { get; set; }
-        bool first_try = true;
 
         public HomeViewModel()
         {
-            RefreshDatas();
-        }
-
-        private void RefreshDatas()
-        {
-            if (first_try == true)
-            {
-                getConsumptions();
-                first_try = false;
-            }
-            DispatcherTimer timer = new DispatcherTimer(DispatcherPriority.Background);
-            timer.Interval = TimeSpan.FromMinutes(0.5);
-            timer.IsEnabled = true;
-            timer.Tick += (s, e) => { Consumptions[0] = 4.1; };
+            Instances.refreshData(getConsumptions, Consumptions, (int)Timers.halfHour);
         }
 
         public void getConsumptions()

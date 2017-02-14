@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Threading;
 
 namespace SmartHomeUI
 {
@@ -20,6 +21,11 @@ namespace SmartHomeUI
     public enum Models
     {
         InfoBar, Communication, Log
+    }
+
+    public enum Timers
+    {
+        oneSecond = 1, oneMinute = 60, halfHour = 1800, oneHour = 3600, oneDay = 86400
     }
 
     static class Instances
@@ -69,6 +75,18 @@ namespace SmartHomeUI
             Models.Add(new InfoBar());
             Models.Add(new Communication());
             Models.Add(new Logger());
+        }
+
+        public static void refreshData(Action timedMethod, object targetData, int waitSeconds)
+        {
+            if (targetData == null)
+            {
+                timedMethod();
+            }
+            DispatcherTimer timer = new DispatcherTimer(DispatcherPriority.Background);
+            timer.Interval = TimeSpan.FromSeconds(waitSeconds);
+            timer.IsEnabled = true;
+            timer.Tick += (s, e) => { timedMethod(); };
         }
     }
 }

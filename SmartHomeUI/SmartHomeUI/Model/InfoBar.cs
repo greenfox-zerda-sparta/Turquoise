@@ -17,9 +17,9 @@ namespace SmartHomeUI
 
         public InfoBar()
         {
-            RefreshWeather();
-            Clock();
-            Date();
+            Instances.refreshData(WeatherConditions, OutdoorTemperature, (int)Timers.halfHour);
+            Instances.refreshData(Clock, CurrentTime, (int)Timers.oneSecond);
+            Instances.refreshData(Date, CurrentDate, (int)Timers.oneDay);
         }
 
         public string CurrentTime
@@ -64,9 +64,9 @@ namespace SmartHomeUI
             set { lastUpdate = value; RaisePropertyChanged("LastUpdate"); }
         }
 
-        private void WeatherConditions(string location)
+        private void WeatherConditions()
         {
-            string url = CurrentUrl.Replace("@LOC@", location);
+            string url = CurrentUrl.Replace("@LOC@", City);
             using (WebClient client = new WebClient())
             {
                 var xml_document = XDocument.Load(url);
@@ -80,30 +80,12 @@ namespace SmartHomeUI
 
         private void Clock()
         {
-            DispatcherTimer timer = new DispatcherTimer(DispatcherPriority.Background);
-            timer.Interval = TimeSpan.FromSeconds(1);
-            timer.IsEnabled = true;
-            timer.Tick += (s, e) => { CurrentTime = DateTime.Now.ToString("HH:mm"); };
+            CurrentTime = DateTime.Now.ToString("HH:mm");
         }
 
         private void Date()
         {
-            DispatcherTimer timer = new DispatcherTimer(DispatcherPriority.Background);
-            timer.Interval = TimeSpan.FromDays(1);
-            timer.IsEnabled = true;
-            timer.Tick += (s, e) => { CurrentDate = DateTime.Now.ToString("yyyy-MM-dd"); };
-        }
-
-        private void RefreshWeather()
-        {
-            if (outdoorTemperature == null)
-            {
-                WeatherConditions(City);
-            }
-            DispatcherTimer timer = new DispatcherTimer(DispatcherPriority.Background);
-            timer.Interval = TimeSpan.FromMinutes(30);
-            timer.IsEnabled = true;
-            timer.Tick += (s, e) => { WeatherConditions(City); };
+            CurrentDate = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

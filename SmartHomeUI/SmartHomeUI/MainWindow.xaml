@@ -270,15 +270,15 @@
             <Button x:Name="MenuBarRooms" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.RoomCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,152,0,0" ToolTip="Rooms"/>
             <Button x:Name="MenuBarCalendar" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HistCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,252,0,0" ToolTip="Family Calendar"/>
             <Button x:Name="MenuBarHistory" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.TempCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,352,0,0" ToolTip="History"/>
-            <Button x:Name="MenuBarLock" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.LockCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,464,0,0" ToolTip="Alarm"/>
-            <Button x:Name="MenuBarGear" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.GearCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,564,0,0" ToolTip="Settings"/>
+            <Button x:Name="MenuBarLock" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.LockCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,450,0,0" ToolTip="Alarm"/>
+            <Button x:Name="MenuBarGear" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.GearCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,552,0,0" ToolTip="Settings"/>
 
             <Image x:Name="img_home" Height="65" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="18,69,0,0"  Source="Images/MenuBarIcons/whouse.png" IsHitTestVisible="False"/>
             <Image x:Name="img_rooms" Height="65" Width="63" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,172,0,0"  Source="Images/MenuBarIcons/wrooms.png" IsHitTestVisible="False"/>
-            <Image x:Name="img_list" Height="70" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,268,0,0" Source="Images/MenuBarIcons/wlist.png"  IsHitTestVisible="False"/>
+            <Image x:Name="img_list" Height="70" Width="64" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,268,0,0" Source="Images/MenuBarIcons/wlist.png"  IsHitTestVisible="False"/>
             <Image x:Name="img_hist" Height="70" Width="70" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="21,0,0,283" Source="Images/MenuBarIcons/wclock.png" IsHitTestVisible="False"/>
-            <Image x:Name="img_lock" Height="78" Width="55" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="27,474,0,0" Source="Images/MenuBarIcons/wlock.png"  IsHitTestVisible="False"/>
-            <Image x:Name="img_gear" Height="52.00" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="19,589,0,0" Source="Images/MenuBarIcons/wgear.png"  IsHitTestVisible="False"/>
+            <Image x:Name="img_lock" Height="73" Width="52" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="27,463,0,0" Source="Images/MenuBarIcons/wlock.png"  IsHitTestVisible="False"/>
+            <Image x:Name="img_gear" Height="52.00" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="19,577,0,0" Source="Images/MenuBarIcons/wgear.png"  IsHitTestVisible="False"/>
         </Grid>
 
         <Grid x:Name="InfoBar">

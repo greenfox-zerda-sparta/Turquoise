@@ -17,7 +17,6 @@ namespace SmartHomeUI
 
         public InfoBar()
         {
-
             RefreshWeather();
             Clock();
             Date();
@@ -71,7 +70,7 @@ namespace SmartHomeUI
             using (WebClient client = new WebClient())
             {
                 var xml_document = XDocument.Load(url);
-                OutdoorTemperature = ((double)xml_document.Root.Element("temperature").Attribute("value")).ToString() + "°C";
+                OutdoorTemperature = (Math.Round((double)xml_document.Root.Element("temperature").Attribute("value"))).ToString() + "°C";
                 Conditions = (xml_document.Root.Element("weather").Attribute("value")).ToString().Replace("value=", null).Replace("\"", "");       
                 Conditions = (char.ToUpper(Conditions[0]) + Conditions.Substring(1)).ToString();
                 Humidity = ((double)xml_document.Root.Element("humidity").Attribute("value")).ToString() + "%";

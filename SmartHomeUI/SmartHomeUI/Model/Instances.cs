@@ -12,6 +12,11 @@ namespace SmartHomeUI
         HomeVM, RoomVM, HistVM, TempVM, LockVM, GearVM, RoomNavVM, NavVM
     }
 
+    public enum RoomViews
+    {
+        NorthBedroom, SouthBedroom, KidRoom, FloorBathroom, LivingRoom, Kitchen, GroundfloorBathroom, Garage, Workshop
+    }
+
     public enum Models
     {
         InfoBar, Communication, Log
@@ -20,12 +25,14 @@ namespace SmartHomeUI
     static class Instances
     {
         static public List<object> ViewModels;
+        static public List<object> RoomViews;
         static public List<object> Models;
 
         static Instances()
         {
-            InstantiateViewModels();
             InstantiateModels();
+            InstantiateRoomViews();
+            InstantiateViewModels();
         }
 
         private static void InstantiateViewModels()
@@ -39,6 +46,21 @@ namespace SmartHomeUI
             ViewModels.Add(new GearViewModel());
             ViewModels.Add(new RoomNavigationViewModel());
             ViewModels.Add(new MainNavigationViewModel());
+            ViewModels.Add(new NorthBedroomView());
+        }
+
+        private static void InstantiateRoomViews()
+        {
+            RoomViews = new List<object>();
+            RoomViews.Add(new NorthBedroomView());
+            RoomViews.Add(new SouthBedroomView());
+            RoomViews.Add(new KidRoomView());
+            RoomViews.Add(new FloorBathroomView());
+            RoomViews.Add(new LivingRoomView());
+            RoomViews.Add(new KitchenView());
+            RoomViews.Add(new GroundfloorBathroomView());
+            RoomViews.Add(new GarageView());
+            RoomViews.Add(new WorkshopView());
         }
 
         private static void InstantiateModels()

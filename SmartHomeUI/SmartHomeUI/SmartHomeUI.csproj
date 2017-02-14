@@ -114,6 +114,42 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\RoomViews\Basement\GarageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RoomViews\Basement\WorkshopView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RoomViews\Floor\FloorBathroomView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RoomViews\Floor\KidRoomView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RoomViews\Floor\NorthBedroomView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RoomViews\Floor\SouthBedroomView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RoomViews\Groundfloor\GroundfloorBathroomView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RoomViews\Groundfloor\KitchenView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RoomViews\Groundfloor\LivingRoomView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\TempView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -122,6 +158,33 @@
   <ItemGroup>
     <Compile Include="Views\LockView.xaml.cs">
       <DependentUpon>LockView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomViews\Basement\GarageView.xaml.cs">
+      <DependentUpon>GarageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomViews\Basement\WorkshopView.xaml.cs">
+      <DependentUpon>WorkshopView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomViews\Floor\FloorBathroomView.xaml.cs">
+      <DependentUpon>FloorBathroomView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomViews\Floor\KidRoomView.xaml.cs">
+      <DependentUpon>KidRoomView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomViews\Floor\NorthBedroomView.xaml.cs">
+      <DependentUpon>NorthBedroomView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomViews\Floor\SouthBedroomView.xaml.cs">
+      <DependentUpon>SouthBedroomView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomViews\Groundfloor\GroundfloorBathroomView.xaml.cs">
+      <DependentUpon>GroundfloorBathroomView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomViews\Groundfloor\KitchenView.xaml.cs">
+      <DependentUpon>KitchenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomViews\Groundfloor\LivingRoomView.xaml.cs">
+      <DependentUpon>LivingRoomView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\TempView.xaml.cs">
       <DependentUpon>TempView.xaml</DependentUpon>
@@ -153,65 +216,73 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\whouse.png" />
+    <Resource Include="Images\MenuBarIcons\wlist.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\wlist.png" />
+    <Resource Include="Images\MenuBarIcons\wclock.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\wclock.png" />
+    <Resource Include="Images\MenuBarIcons\wtemp.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\wtemp.png" />
+    <Resource Include="Images\MenuBarIcons\wlock.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\wlock.png" />
+    <Resource Include="Images\MenuBarIcons\wgear.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\wgear.png" />
+    <Resource Include="Images\InfoBarIcons\whouse_border.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\whouse_border.png" />
+    <Resource Include="Images\InfoBarIcons\whippolyt.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\whippolyt.png" />
+    <Resource Include="Images\ScenarioIcons\sunmode.png" />
+    <Resource Include="Images\ScenarioIcons\vacationmode.png" />
+    <Resource Include="Images\MenuBarIcons\whouse.png" />
+    <Resource Include="Images\MenuBarIcons\wrooms.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\sunmode.png" />
-    <Resource Include="Images\vacationmode.png" />
-    <Resource Include="Images\whouse_full.png" />
-    <Resource Include="Images\wrooms.png" />
-    <Resource Include="Images\wrooms2.png" />
+    <Resource Include="Images\ScenarioIcons\favmode.png" />
+    <Resource Include="Images\ScenarioIcons\lockmode.png" />
+    <Resource Include="Images\ScenarioIcons\nightmode.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\favmode.png" />
-    <Resource Include="Images\lockmode.png" />
-    <Resource Include="Images\nightmode.png" />
+    <Resource Include="Images\RoomIcons\bathroom.png" />
+    <Resource Include="Images\RoomIcons\bedroom.png" />
+    <Resource Include="Images\DeviceIcons\curtain.png" />
+    <Resource Include="Images\RoomIcons\diningroom.png" />
+    <Resource Include="Images\RoomIcons\kidroom.png" />
+    <Resource Include="Images\RoomIcons\kitchen.png" />
+    <Resource Include="Images\DeviceIcons\light.png" />
+    <Resource Include="Images\RoomIcons\livingroom.png" />
+    <Resource Include="Images\RoomIcons\livingroom2.png" />
+    <Resource Include="Images\DeviceIcons\temp.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\bathroom.png" />
-    <Resource Include="Images\bedroom.png" />
-    <Resource Include="Images\curtain.png" />
-    <Resource Include="Images\diningroom.png" />
-    <Resource Include="Images\kidroom.png" />
-    <Resource Include="Images\kitchen.png" />
-    <Resource Include="Images\light.png" />
-    <Resource Include="Images\livingroom.png" />
-    <Resource Include="Images\livingroom2.png" />
-    <Resource Include="Images\temp.png" />
+    <Resource Include="Images\WeatherIcons\snow.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\snow.png" />
+    <Resource Include="Images\WeatherIcons\broken_clouds.png" />
+    <Resource Include="Images\WeatherIcons\few_clouds.png" />
+    <Resource Include="Images\WeatherIcons\mist.png" />
+    <Resource Include="Images\WeatherIcons\rain.png" />
+    <Resource Include="Images\WeatherIcons\scattered_clouds.png" />
+    <Resource Include="Images\WeatherIcons\shower_rain.png" />
+    <Resource Include="Images\WeatherIcons\sunny.png" />
+    <Resource Include="Images\WeatherIcons\thunderstorm.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\broken_clouds.png" />
-    <Resource Include="Images\few_clouds.png" />
-    <Resource Include="Images\mist.png" />
-    <Resource Include="Images\rain.png" />
-    <Resource Include="Images\scattered_clouds.png" />
-    <Resource Include="Images\shower_rain.png" />
-    <Resource Include="Images\sunny.png" />
-    <Resource Include="Images\thunderstorm.png" />
+    <Resource Include="Images\WeatherIcons\night_few_clouds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WeatherIcons\night_clear_sky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WeatherIcons\night_shower_rain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\HomeIcons\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -216,9 +216,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuBarIcons\wlist.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\MenuBarIcons\wclock.png" />
   </ItemGroup>
   <ItemGroup>
@@ -288,6 +285,9 @@
     <Resource Include="Images\HomeIcons\actual_electricity.png" />
     <Resource Include="Images\HomeIcons\month_electricity.png" />
     <Resource Include="Images\HomeIcons\water_consumption.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MenuBarIcons\wlist.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

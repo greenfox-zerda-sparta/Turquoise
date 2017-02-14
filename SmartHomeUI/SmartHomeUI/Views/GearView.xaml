@@ -15,8 +15,5 @@
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="182" Margin="216,365,0,0" VerticalAlignment="Top" Width="205"/>
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="537" Margin="9,10,0,0" VerticalAlignment="Top" Width="202"/>
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="158" Margin="9,552,0,0" VerticalAlignment="Top" Width="831"/>
-        <TextBlock x:Name="Location" HorizontalAlignment="Left" Margin="40,40,0,0" TextWrapping="Wrap" Text="Location" VerticalAlignment="Top" Height="40" Width="141" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
-        <TextBox x:Name="setLocation" Text="{Binding Town, Mode=OneWay}" HorizontalAlignment="Left" Height="23" Margin="61,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textBox_TextChanged" FontSize="18" FontWeight="Bold"/>
-        <Button x:Name="ok" Content="Ok" HorizontalAlignment="Left" Margin="85,135,0,0" VerticalAlignment="Top" Width="75" Click="button_Click" FontWeight="Bold"/>
     </Grid>
 </UserControl>

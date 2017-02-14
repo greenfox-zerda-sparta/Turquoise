@@ -20,7 +20,7 @@ namespace SmartHomeUI
         public ICommand GarageCommand { get; set; }
         public ICommand WorkshopCommand { get; set; }
 
-        private object selectedRoom = Instances.ViewModels[(int)ViewModels.HomeVM];
+        private object selectedRoom = Instances.RoomViews[(int)RoomViews.NorthBedroom];
 
         public object SelectedRoom
         {
@@ -48,47 +48,47 @@ namespace SmartHomeUI
 
         private void OpenNBedroom(object obj)
         {
-            SelectedRoom = Instances.ViewModels[(int)ViewModels.HomeVM];
+            SelectedRoom = Instances.RoomViews[(int)RoomViews.NorthBedroom];
         }
 
         private void OpenSBedroom(object obj)
         {
-            SelectedRoom = Instances.ViewModels[(int)ViewModels.HistVM];
+            SelectedRoom = Instances.RoomViews[(int)RoomViews.SouthBedroom];
         }
 
         private void OpenKidRoom(object obj)
         {
-
+            SelectedRoom = Instances.RoomViews[(int)RoomViews.KidRoom];
         }
 
         private void OpenFloorBathroom(object obj)
         {
-
+            SelectedRoom = Instances.RoomViews[(int)RoomViews.FloorBathroom];
         }
 
         private void OpenLivingRoom(object obj)
         {
-
+            SelectedRoom = Instances.RoomViews[(int)RoomViews.LivingRoom];
         }
 
         private void OpenKitchen(object obj)
         {
-
+            SelectedRoom = Instances.RoomViews[(int)RoomViews.Kitchen];
         }
 
         private void OpenGroundfloorBathroom(object obj)
         {
-
+            SelectedRoom = Instances.RoomViews[(int)RoomViews.GroundfloorBathroom];
         }
 
         private void OpenGarage(object obj)
         {
-
+            SelectedRoom = Instances.RoomViews[(int)RoomViews.Garage];
         }
 
         private void OpenWorkshop(object obj)
         {
-
+            SelectedRoom = Instances.RoomViews[(int)RoomViews.Workshop];
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

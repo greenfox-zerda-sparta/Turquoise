@@ -1,5 +1,4 @@
-﻿  
-    <Window x:Class="SmartHomeUI.MainWindow"
+﻿<Window x:Class="SmartHomeUI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -274,23 +273,23 @@
             <Button x:Name="MenuBarLock" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.LockCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,464,0,0" ToolTip="Alarm"/>
             <Button x:Name="MenuBarGear" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.GearCommand}" Height="100" Width="108" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,564,0,0" ToolTip="Settings"/>
 
-            <Image x:Name="img_home" Height="65" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="18,69,0,0"  Source="Images/whouse_full.png" IsHitTestVisible="False"/>
-            <Image x:Name="img_rooms" Height="65" Width="63" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,172,0,0"  Source="Images/wrooms2.png" IsHitTestVisible="False"/>
-            <Image x:Name="img_list" Height="70.00" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="18,268,0,0" Source="Images/wlist.png"  IsHitTestVisible="False"/>
-            <Image x:Name="img_hist" Width="70" HorizontalAlignment="Left" Margin="19,0,0,283" Source="Images/wclock.png" IsHitTestVisible="False" Height="70" VerticalAlignment="Bottom"/>
-            <Image x:Name="img_lock" Height="78" Width="55" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="27,474,0,0" Source="Images/wlock.png"  IsHitTestVisible="False"/>
-            <Image x:Name="img_gear" Height="52.00" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="19,589,0,0" Source="Images/wgear.png"  IsHitTestVisible="False"/>
+            <Image x:Name="img_home" Height="65" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="18,69,0,0"  Source="Images/MenuBarIcons/whouse.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_rooms" Height="65" Width="63" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,172,0,0"  Source="Images/MenuBarIcons/wrooms.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_list" Height="70" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="18,268,0,0" Source="Images/MenuBarIcons/wlist.png"  IsHitTestVisible="False"/>
+            <Image x:Name="img_hist" Height="70" Width="70" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="19,0,0,283" Source="Images/MenuBarIcons/wclock.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_lock" Height="78" Width="55" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="27,474,0,0" Source="Images/MenuBarIcons/wlock.png"  IsHitTestVisible="False"/>
+            <Image x:Name="img_gear" Height="52.00" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="19,589,0,0" Source="Images/MenuBarIcons/wgear.png"  IsHitTestVisible="False"/>
         </Grid>
 
         <Grid x:Name="InfoBar">
             <Rectangle Fill="#FFDDDDDD" HorizontalAlignment="Left" Height="718" Margin="107,1,0,1" Stroke="#00000000" VerticalAlignment="Center" Width="231" IsHitTestVisible="False"/>
             <Rectangle Fill="#FF7F7F7F" HorizontalAlignment="Left" Height="184" Margin="117,11,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="221" IsHitTestVisible="False"/>
             <Rectangle Fill="#FF20B2AA" HorizontalAlignment="Left" Height="508" Margin="117,204,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="221"/>
-            <Image x:Name="img_home_border" Height="161" Width="201" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="126,23,0,0"  Source="Images/whouse_border.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_home_border" Height="161" Width="201" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="126,23,0,0"  Source="Images/InfoBarIcons/whouse_border.png" IsHitTestVisible="False"/>
             <TextBlock Text="{Binding IB.CurrentTime}" Foreground="White" FontSize="60" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,206,942,448" Width="221" Height="66"/>
             <TextBlock Text="{Binding IB.CurrentDate}" Foreground="White" FontSize="20" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,276,942,411" Width="221" Height="33"/>
             <TextBlock Text="Weather Condition" Foreground="White" FontSize="20" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,315,942,377" Width="221" Height="28"/>
-            <Image x:Name="conditions" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="167,342,993,258" Width="120" Height="120" Source="Images/few_clouds.png" ToolTip="{Binding IB.Conditions}"/>
+            <Image x:Name="conditions" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="167,343,993,257" Width="120" Height="120" Source="Images/WeatherIcons/night_shower_rain.png" ToolTip="{Binding IB.Conditions}"/>
             <TextBlock Text="Temperature" Foreground="White" FontSize="20" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,468,942,224" Width="221" Height="28"/>
             <TextBlock Text="{Binding IB.OutdoorTemperature}" Foreground="White" FontSize="60" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,484,942,167" Width="221" Height="69"/>
             <TextBlock Text="Humidity" Foreground="White" FontSize="20" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,570,942,122" Width="221" Height="28"/>
@@ -308,13 +307,13 @@
             <Button x:Name="ScenarioVac" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="94" HorizontalAlignment="Right" Margin="0,0,0,280" ToolTip="Vacation Mode" Height="72" VerticalAlignment="Bottom"/>
             <Button x:Name="ScenarioFav" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,0,0,207" ToolTip="Favorite Mode" Height="72" VerticalAlignment="Bottom"/>
 
-            <Image x:Name="img_scen_sun" Height="63" Width="63" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,153,16,0"  Source="Images/sunmode.png" IsHitTestVisible="False"/>
-            <Image x:Name="img_scen_night" Height="63" Width="63" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,226,16,0"  Source="Images/nightmode.png" IsHitTestVisible="False"/>
-            <Image x:Name="img_scen_lock" Width="63" HorizontalAlignment="Right" Margin="0,298,16,359"  Source="Images/lockmode.png" IsHitTestVisible="False" Height="63"/>
-            <Image x:Name="img_scen_vac" Width="63" HorizontalAlignment="Right" Margin="0,0,16,287"  Source="Images/vacationmode.png" IsHitTestVisible="False" Height="63" VerticalAlignment="Bottom"/>
-            <Image x:Name="img_scen_fav" Height="63" Width="63" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,16,214"  Source="Images/favmode.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_scen_sun" Height="63" Width="63" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,153,16,0"  Source="Images/ScenarioIcons/sunmode.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_scen_night" Height="63" Width="63" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,226,16,0"  Source="Images/ScenarioIcons/nightmode.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_scen_lock" Width="63" HorizontalAlignment="Right" Margin="0,298,16,359"  Source="Images/ScenarioIcons/lockmode.png" IsHitTestVisible="False" Height="63"/>
+            <Image x:Name="img_scen_vac" Width="63" HorizontalAlignment="Right" Margin="0,0,16,287"  Source="Images/ScenarioIcons/vacationmode.png" IsHitTestVisible="False" Height="63" VerticalAlignment="Bottom"/>
+            <Image x:Name="img_scen_fav" Height="63" Width="63" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,16,214"  Source="Images/ScenarioIcons/favmode.png" IsHitTestVisible="False"/>
 
-            <Image x:Name="hippolyt1" Height="104" Width="83" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1191,607,0,0"  Source="Images/whippolyt.png" IsHitTestVisible="False"/>
+            <Image x:Name="hippolyt1" Height="104" Width="83" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1191,607,0,0"  Source="Images/InfoBarIcons/whippolyt.png" IsHitTestVisible="False"/>
         </Grid>
 
         <Grid x:Name="Frame" Width="847" Height="718" HorizontalAlignment="Right" Margin="0,0,96,0">

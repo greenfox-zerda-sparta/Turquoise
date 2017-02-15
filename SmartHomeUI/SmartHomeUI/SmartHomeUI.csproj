@@ -216,13 +216,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuBarIcons\wlist.png" />
+    <Resource Include="Images\MenuBarIcons\wcalendar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuBarIcons\wclock.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\MenuBarIcons\wtemp.png" />
+    <Resource Include="Images\MenuBarIcons\wstats.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\MenuBarIcons\wlock.png" />
@@ -250,14 +247,11 @@
   <ItemGroup>
     <Resource Include="Images\RoomIcons\bathroom.png" />
     <Resource Include="Images\RoomIcons\bedroom.png" />
-    <Resource Include="Images\DeviceIcons\curtain.png" />
     <Resource Include="Images\RoomIcons\diningroom.png" />
     <Resource Include="Images\RoomIcons\kidroom.png" />
     <Resource Include="Images\RoomIcons\kitchen.png" />
-    <Resource Include="Images\DeviceIcons\light.png" />
     <Resource Include="Images\RoomIcons\livingroom.png" />
     <Resource Include="Images\RoomIcons\livingroom2.png" />
-    <Resource Include="Images\DeviceIcons\temp.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\WeatherIcons\snow.png" />
@@ -288,6 +282,15 @@
     <Resource Include="Images\HomeIcons\actual_electricity.png" />
     <Resource Include="Images\HomeIcons\month_electricity.png" />
     <Resource Include="Images\HomeIcons\water_consumption.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DeviceIcons\airco.png" />
+    <Resource Include="Images\DeviceIcons\blinds.png" />
+    <Resource Include="Images\DeviceIcons\garage.png" />
+    <Resource Include="Images\DeviceIcons\heater.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DeviceIcons\light.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

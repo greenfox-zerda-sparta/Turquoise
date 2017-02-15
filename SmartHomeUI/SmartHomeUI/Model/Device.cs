@@ -10,107 +10,42 @@ namespace SmartHomeUI
 
     class Device : INotifyPropertyChanged
     {
-        private string DeviceID;
-        private string DeviceType;
-        private string Floor;
-        private string Room;
-        private string Status;
-        private string OnOff;
+        private string deviceID, deviceType, floor, room, status, onOff;
 
-        public string deviceID
+        public string DeviceID
         {
-            get
-            {
-                return DeviceID;
-            }
-            set
-            {
-                if (DeviceID != value)
-                {
-                    DeviceID = value;
-                    RaisePropertyChanged("DeviceID");
-                }
-            }
+            get { return deviceID; }
+            set { deviceID = value; RaisePropertyChanged("DeviceID"); }
         }
 
-        public string deviceType
+        public string DeviceType
         {
-            get
-            {
-                return DeviceType;
-            }
-            set
-            {
-                if (DeviceType != value)
-                {
-                    DeviceType = value;
-                    this.RaisePropertyChanged("DeviceType");
-                }
-            }
+            get { return deviceType; }
+            set { deviceType = value; RaisePropertyChanged("DeviceType"); }
         }
 
-        public string floor
+        public string Floor
         {
-            get
-            {
-                return Floor;
-            }
-            set
-            {
-                if (Floor != value)
-                {
-                    Floor = value;
-                    RaisePropertyChanged("Floor");
-                }
-            }
+            get { return floor; }
+            set { floor = value; RaisePropertyChanged("Floor"); }
         }
 
-        public string room
+        public string Room
         {
-            get
-            {
-                return Room;
-            }
-            set
-            {
-                if (Room != value)
-                {
-                    Room = value;
-                    RaisePropertyChanged("Room");
-                }
-            }
+            get { return room; }
+            set { room = value; RaisePropertyChanged("Room"); }
         }
 
-        public string status
+        public string Status
         {
-            get
-            {
-                return Status;
-            }
-            set
-            {
-                if (Status != value)
-                {
-                    Status = value;
-                    RaisePropertyChanged("Status");
-                }
-            }
+            get { return status; }
+            set { status = value; RaisePropertyChanged("Status"); }
         }
 
-        public string onOff
+        public string OnOff
         {
-            get
-            {
-                return OnOff;
-            }
-            set
-            {
-                if (OnOff != value)
-                {
-                    OnOff = value;
-                    RaisePropertyChanged("OnOff");
-                }
-            }
+            get { return onOff; }
+            set { onOff = value; RaisePropertyChanged("OnOff"); }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -275,8 +275,8 @@
 
             <Image x:Name="img_home" Height="65" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="18,69,0,0"  Source="Images/MenuBarIcons/whouse.png" IsHitTestVisible="False"/>
             <Image x:Name="img_rooms" Height="65" Width="63" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,172,0,0"  Source="Images/MenuBarIcons/wrooms.png" IsHitTestVisible="False"/>
-            <Image x:Name="img_list" Height="70" Width="64" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,268,0,0" Source="Images/MenuBarIcons/wlist.png"  IsHitTestVisible="False"/>
-            <Image x:Name="img_hist" Height="70" Width="70" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="21,0,0,283" Source="Images/MenuBarIcons/wclock.png" IsHitTestVisible="False"/>
+            <Image x:Name="img_list" Height="70" Width="64" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,268,0,0" Source="Images/MenuBarIcons/wcalendar.png"  IsHitTestVisible="False"/>
+            <Image x:Name="img_hist" Height="70" Width="70" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="21,0,0,283" Source="Images/MenuBarIcons/wstats.png" IsHitTestVisible="False"/>
             <Image x:Name="img_lock" Height="73" Width="52" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="27,463,0,0" Source="Images/MenuBarIcons/wlock.png"  IsHitTestVisible="False"/>
             <Image x:Name="img_gear" Height="52.00" Width="70" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="19,577,0,0" Source="Images/MenuBarIcons/wgear.png"  IsHitTestVisible="False"/>
         </Grid>
@@ -289,11 +289,11 @@
             <TextBlock Text="{Binding IB.CurrentTime}" Foreground="White" FontSize="60" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,206,942,448" Width="221" Height="66"/>
             <TextBlock Text="{Binding IB.CurrentDate}" Foreground="White" FontSize="20" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,276,942,411" Width="221" Height="33"/>
             <TextBlock Text="Weather Condition" Foreground="White" FontSize="20" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,315,942,377" Width="221" Height="28"/>
-            <Image x:Name="conditions" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="167,343,993,257" Width="120" Height="120" Source="Images/WeatherIcons/night_shower_rain.png" ToolTip="{Binding IB.Conditions}"/>
+            <Image x:Name="conditions" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="167,343,993,257" Width="120" Height="120" Source="{Binding IB.ConditionIcon}" ToolTip="{Binding IB.Condition}"/>
             <TextBlock Text="Temperature" Foreground="White" FontSize="20" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,468,942,224" Width="221" Height="28"/>
-            <TextBlock Text="{Binding IB.OutdoorTemperature}" Foreground="White" FontSize="60" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,484,942,167" Width="221" Height="69"/>
+            <TextBlock Text="{Binding IB.OutdoorTemperature, StringFormat='\{0\}°C'}" Foreground="White" FontSize="60" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,484,942,167" Width="221" Height="69"/>
             <TextBlock Text="Humidity" Foreground="White" FontSize="20" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,570,942,122" Width="221" Height="28"/>
-            <TextBlock Text="{Binding IB.Humidity}" Foreground="White" FontSize="30" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,593,942,57" Width="221" Height="70"/>
+            <TextBlock Text="{Binding IB.Humidity, StringFormat='\{0\}%'}" Foreground="White" FontSize="30" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,593,942,57" Width="221" Height="70"/>
             <TextBlock Text="{Binding IB.City}" Foreground="White" FontSize="30" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,648,942,22" Width="221" Height="50"/>
             <TextBlock Text="Last Updated:" Foreground="White" FontSize="12" TextAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="139,688,940,10" Width="201" Height="22"/>
             <TextBlock Text="{Binding IB.LastUpdate}" Foreground="White" FontSize="12" TextAlignment="Right" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="105,688,962,10" Width="213" Height="22"/>

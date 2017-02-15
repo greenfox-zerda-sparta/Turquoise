@@ -15,5 +15,9 @@
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="182" Margin="216,365,0,0" VerticalAlignment="Top" Width="205"/>
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="537" Margin="9,10,0,0" VerticalAlignment="Top" Width="202"/>
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="158" Margin="9,552,0,0" VerticalAlignment="Top" Width="831"/>
+        <TextBox HorizontalAlignment="Left" Height="45" Margin="437,51,0,0" TextAlignment="Center" Text="{Binding City}" FontSize="30" VerticalAlignment="Top" Width="317"/>
+        <Button Content="Apply" HorizontalAlignment="Left" Margin="764,51,0,0" VerticalAlignment="Top" Width="67" Height="45"/>
+        <Label Content="Change the city for weather informations" FontSize="21" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="437,12,0,0" VerticalAlignment="Top" Height="35" Width="394"/>
+
     </Grid>
 </UserControl>

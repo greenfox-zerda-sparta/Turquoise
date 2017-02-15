@@ -20,7 +20,7 @@ namespace SmartHomeUI
 
     public enum Models
     {
-        InfoBar, Communication, Log
+        Log, InfoBar, Communication
     }
 
     public enum Timers
@@ -72,9 +72,9 @@ namespace SmartHomeUI
         private static void InstantiateModels()
         {
             Models = new List<object>();
+            Models.Add(new Logger());
             Models.Add(new InfoBar());
             Models.Add(new Communication());
-            Models.Add(new Logger());
         }
 
         public static void refreshData(Action timedMethod, object targetData, int waitSeconds)

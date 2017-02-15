@@ -21,7 +21,7 @@ namespace SmartHomeUI
         {
             w.WriteLine("{0} {1}", DateTime.Now.ToString("yyyy-MM-dd"), DateTime.Now.ToLongTimeString());
             w.WriteLine("Log: {0}", logMessage);
-            w.WriteLine("-------------------------------");
+            w.WriteLine("-------------------");
         }
     }
 }

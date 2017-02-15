@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace SmartHomeUI {
     class HomeViewModel
     {
-        public ObservableCollection<double> Consumptions { get; set; }
+        public ObservableCollection<string> Consumptions { get; set; }
 
         public HomeViewModel()
         {
@@ -20,13 +20,26 @@ namespace SmartHomeUI {
 
         public void getConsumptions()
         {
-            ObservableCollection<double> consumptions = new ObservableCollection<double>();
+            ObservableCollection<string> consumptions = new ObservableCollection<string>();
+            //(Instances.Models[(int)Models.Communication] as Communication).connectToBroadcast();
 
-            consumptions.Add(3.9);
-            consumptions.Add(31.67);
-            consumptions.Add(613);
+            //(Instances.Models[(int)Models.Communication] as Communication).send("watercons_cmd");
+            //consumptions.Add(((Instances.Models[(int)Models.Communication] as Communication).recieve()).ToString());
+
+            //(Instances.Models[(int)Models.Communication] as Communication).send("month_electricity_cmd");
+            //consumptions.Add(((Instances.Models[(int)Models.Communication] as Communication).recieve()).ToString());
+
+            //(Instances.Models[(int)Models.Communication] as Communication).send("actual_electricity_cmd");
+            //consumptions.Add(((Instances.Models[(int)Models.Communication] as Communication).recieve()).ToString());
+
+            //(Instances.Models[(int)Models.Communication] as Communication).closeConnection();
+
+            consumptions.Add((3.9).ToString());
+            consumptions.Add((4.17).ToString());
+            consumptions.Add((613).ToString());
 
             Consumptions = consumptions;
+            (Instances.Models[(int)Models.Log] as Logger).logToFile("Home screen: Fetched consumption data from server");
         }
     }
 }

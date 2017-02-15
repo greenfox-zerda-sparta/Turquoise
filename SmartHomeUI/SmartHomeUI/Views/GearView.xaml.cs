@@ -23,6 +23,7 @@ namespace SmartHomeUI
         public GearView()
         {
             InitializeComponent();
+            this.DataContext = Instances.Models[(int)Models.InfoBar];
         }
     }
 }

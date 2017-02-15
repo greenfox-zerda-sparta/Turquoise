@@ -13,15 +13,13 @@
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="195.6" Margin="426,10,0,0" VerticalAlignment="Top" Width="414"/>
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="336.4" Margin="636,210.6,0,0" VerticalAlignment="Top" Width="204"/>
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="336.4" Margin="426,210.6,0,0" VerticalAlignment="Top" Width="204"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="162" Margin="9,385,0,0" VerticalAlignment="Top" Width="410"/>
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="537" Margin="9,10,0,0" VerticalAlignment="Top" Width="410"/>
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="158" Margin="9,552,0,0" VerticalAlignment="Top" Width="831"/>
 
-        <Viewbox HorizontalAlignment="Left" Margin="-16.338,-41,0,331" Width="437.338" d:LayoutOverrides="HorizontalAlignment">
-            <Calendar Margin="8.698,16.94,0,0" Height="166" VerticalAlignment="Stretch" Width="181" RenderTransformOrigin="0.474,0.58" FontFamily="Microsoft YaHei UI Light"/>
-        </Viewbox>
+
         <TextBlock x:Name="MainTask" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Daily Tasks" Width="174.4" Margin="0,15.015,243.6,0" FontSize="30" FontFamily="Microsoft YaHei UI Light" Height="40.069" VerticalAlignment="Top"/>
         <TextBlock x:Name="Notes" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Notes" Width="174.4" Margin="10,0,0,127.931" FontSize="30" FontFamily="Microsoft YaHei UI Light" Height="40.069" VerticalAlignment="Bottom"/>
-        <TextBlock x:Name="ShoppingList" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Shopping List" Width="204.8" Margin="10,0,0,289.131" FontSize="30" FontFamily="Microsoft YaHei UI Light" Height="36.869" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="ShoppingList" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Shopping List" Width="205" Margin="9,0,0,668" FontSize="30" FontFamily="Microsoft YaHei UI Light" Height="37" VerticalAlignment="Bottom"/>
         <TextBlock x:Name="Todo1" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Jane's ToDo" Width="164.2" Margin="0,212.696,255.8,0" FontSize="24" FontFamily="Microsoft YaHei UI Light" Height="38.469" VerticalAlignment="Top"/>
         <TextBlock x:Name="Todo2" HorizontalAlignment="Right" TextWrapping="Wrap" Width="164.2" Margin="0,212.6,45.8,0" FontSize="24" FontFamily="Microsoft YaHei UI Light" Height="38.469" VerticalAlignment="Top"><Run Text="Joe"/><Run Text="'s ToDo"/></TextBlock>
     </Grid>

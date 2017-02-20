@@ -90,9 +90,17 @@
     <Compile Include="ViewModels\HistViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\RoomNavigationViewModel.cs" />
-    <Compile Include="ViewModels\RoomViewModel.cs" />
     <Compile Include="ViewModels\LockViewModel.cs" />
     <Compile Include="ViewModels\MainNavigationViewModel.cs" />
+    <Compile Include="ViewModels\RoomViewModels\Basement\GarageViewModel.cs" />
+    <Compile Include="ViewModels\RoomViewModels\Basement\WorkshopViewModel.cs" />
+    <Compile Include="ViewModels\RoomViewModels\Floor\FloorBathroomViewModel.cs" />
+    <Compile Include="ViewModels\RoomViewModels\Floor\KidRoomViewModel.cs" />
+    <Compile Include="ViewModels\RoomViewModels\Floor\NorthBedroomViewModel.cs" />
+    <Compile Include="ViewModels\RoomViewModels\Floor\SouthBedroomViewModel.cs" />
+    <Compile Include="ViewModels\RoomViewModels\Groundfloor\GroundfloorBathroomViewModel.cs" />
+    <Compile Include="ViewModels\RoomViewModels\Groundfloor\KitchenViewModel.cs" />
+    <Compile Include="ViewModels\RoomViewModels\Groundfloor\LivingRoomViewModel.cs" />
     <Compile Include="ViewModels\TempViewModel.cs" />
     <Compile Include="Views\GearView.xaml.cs">
       <DependentUpon>GearView.xaml</DependentUpon>
@@ -292,6 +300,7 @@
   <ItemGroup>
     <Resource Include="Images\DeviceIcons\light.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

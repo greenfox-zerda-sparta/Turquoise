@@ -10,39 +10,39 @@ namespace SmartHomeUI
 
     class Device : INotifyPropertyChanged
     {
-        private string deviceID, deviceType, floor, room, status, onOff;
+        private int deviceID, deviceType, floor, room, status, onOff;
 
-        public string DeviceID
+        public int DeviceID
         {
             get { return deviceID; }
             set { deviceID = value; RaisePropertyChanged("DeviceID"); }
         }
 
-        public string DeviceType
+        public int DeviceType
         {
             get { return deviceType; }
             set { deviceType = value; RaisePropertyChanged("DeviceType"); }
         }
 
-        public string Floor
+        public int Floor
         {
             get { return floor; }
             set { floor = value; RaisePropertyChanged("Floor"); }
         }
 
-        public string Room
+        public int Room
         {
             get { return room; }
             set { room = value; RaisePropertyChanged("Room"); }
         }
 
-        public string Status
+        public int Status
         {
             get { return status; }
             set { status = value; RaisePropertyChanged("Status"); }
         }
 
-        public string OnOff
+        public int OnOff
         {
             get { return onOff; }
             set { onOff = value; RaisePropertyChanged("OnOff"); }

@@ -8,6 +8,35 @@
       d:DesignHeight="720" d:DesignWidth="850">
 
     <UserControl.Resources>
+
+        <DataTemplate DataType="{x:Type local:NorthBedroomViewModel}">
+            <local:NorthBedroomView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:SouthBedroomViewModel}">
+            <local:SouthBedroomView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:KidRoomViewModel}">
+            <local:KidRoomView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:FloorBathroomViewModel}">
+            <local:FloorBathroomView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:LivingRoomViewModel}">
+            <local:LivingRoomView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:KitchenViewModel}">
+            <local:KitchenView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:GroundfloorBathroomViewModel}">
+            <local:GroundfloorBathroomView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:GarageViewModel}">
+            <local:GarageView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:WorkshopViewModel}">
+            <local:WorkshopView/>
+        </DataTemplate>
+
         <Style TargetType="{x:Type Button}">
             <Setter Property="Background" Value="#20B2AC"/>
             <Setter Property="Foreground" Value="#FFFFFF"/>

@@ -14,9 +14,9 @@
             <Grid Height="150" Width="580">
                 <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="580"/>
                 <Image HorizontalAlignment="Left" Height="150" Margin="10,0,0,0" VerticalAlignment="Top" Width="150" Source="../../../Images/DeviceIcons/light.png"/>
-                <Button Content="-" HorizontalAlignment="Center" Margin="290,10,230,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="30" FontWeight="Bold" Foreground="White" Background="DarkGray" />
-                <TextBlock Text="100" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="360,10,90,80" Width="130" Height="60" RenderTransformOrigin="0.038,0.24" Background="#FFEEEEEE" FontFamily="Segoe UI Semibold"/>
-                <Button Content="+" HorizontalAlignment="Center" Margin="500,10,20,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="30" FontWeight="Bold"  Background="Yellow" />
+                <Button Content="-" Command="{Binding DecrementLightCommand}" HorizontalAlignment="Center" Margin="290,10,230,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="30" FontWeight="Bold" Foreground="White" Background="DarkGray" />
+                <TextBlock Text="{Binding NorthBedroom[0].Status, StringFormat='\{0\}%'}" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="360,10,90,80" Width="130" Height="60" RenderTransformOrigin="0.038,0.24" Background="#FFEEEEEE" FontFamily="Segoe UI Semibold"/>
+                <Button Content="+" Command="{Binding IncrementLightCommand}" HorizontalAlignment="Center" Margin="500,10,20,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="30" FontWeight="Bold"  Background="Yellow" />
                 <TextBlock Text="Connected" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="290,80,20,10" Width="270" Height="60" Background="#FFD0E4B4"/>
             </Grid>
         </Viewbox>
@@ -24,9 +24,9 @@
             <Grid Height="150" Width="580">
                 <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="580"/>
                 <Image HorizontalAlignment="Left" Height="150" Margin="10,0,0,0" VerticalAlignment="Top" Width="150" Source="/SmartHomeUI;component/Images/DeviceIcons/heater.png"/>
-                <Button Content="-" HorizontalAlignment="Center" Margin="290,10,230,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="30" FontWeight="Bold" Foreground="White" Background="Orange" />
-                <TextBlock Text="21 °C" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="360,10,90,80" Width="130" Height="60" RenderTransformOrigin="0.038,0.24" Background="#FFEEEEEE" FontFamily="Segoe UI Semibold"/>
-                <Button Content="+" HorizontalAlignment="Center" Margin="500,10,20,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="30" FontWeight="Bold" Foreground="White" Background="Red" />
+                <Button Content="-" Command="{Binding DecrementTemperatureCommand}" HorizontalAlignment="Center" Margin="290,10,230,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="30" FontWeight="Bold" Foreground="White" Background="Orange" />
+                <TextBlock Text="{Binding NorthBedroom[1].Status, StringFormat='\{0\}°C'}" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="360,10,90,80" Width="130" Height="60" RenderTransformOrigin="0.038,0.24" Background="#FFEEEEEE" FontFamily="Segoe UI Semibold"/>
+                <Button Content="+" Command="{Binding IncrementTemperatureCommand}" HorizontalAlignment="Center" Margin="500,10,20,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="30" FontWeight="Bold" Foreground="White" Background="Red" />
                 <TextBlock Text="Connected" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="290,80,20,10" Width="270" Height="60" Background="#FFD0E4B4"/>
             </Grid>
         </Viewbox>

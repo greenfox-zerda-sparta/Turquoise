@@ -23,6 +23,7 @@ namespace SmartHomeUI
         public NorthBedroomView()
         {
             InitializeComponent();
+            this.DataContext = Instances.RoomViews[(int)RoomViews.NorthBedroom];
         }
     }
 }

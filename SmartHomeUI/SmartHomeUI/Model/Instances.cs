@@ -10,7 +10,7 @@ namespace SmartHomeUI
 {
     public enum ViewModels
     {
-        HomeVM, RoomVM, HistVM, TempVM, LockVM, GearVM, RoomNavVM, NavVM
+        HomeVM, HistVM, TempVM, LockVM, GearVM, RoomNavVM, NavVM
     }
 
     public enum RoomViews
@@ -45,7 +45,6 @@ namespace SmartHomeUI
         {
             ViewModels = new List<object>();
             ViewModels.Add(new HomeViewModel());
-            ViewModels.Add(new RoomViewModel());
             ViewModels.Add(new HistViewModel());
             ViewModels.Add(new TempViewModel());
             ViewModels.Add(new LockViewModel());
@@ -58,15 +57,15 @@ namespace SmartHomeUI
         private static void InstantiateRoomViews()
         {
             RoomViews = new List<object>();
-            RoomViews.Add(new NorthBedroomView());
-            RoomViews.Add(new SouthBedroomView());
-            RoomViews.Add(new KidRoomView());
-            RoomViews.Add(new FloorBathroomView());
-            RoomViews.Add(new LivingRoomView());
-            RoomViews.Add(new KitchenView());
-            RoomViews.Add(new GroundfloorBathroomView());
-            RoomViews.Add(new GarageView());
-            RoomViews.Add(new WorkshopView());
+            RoomViews.Add(new NorthBedroomViewModel());
+            RoomViews.Add(new SouthBedroomViewModel());
+            RoomViews.Add(new KidRoomViewModel());
+            RoomViews.Add(new FloorBathroomViewModel());
+            RoomViews.Add(new LivingRoomViewModel());
+            RoomViews.Add(new KitchenViewModel());
+            RoomViews.Add(new GroundfloorBathroomViewModel());
+            RoomViews.Add(new GarageViewModel());
+            RoomViews.Add(new WorkshopViewModel());
         }
 
         private static void InstantiateModels()
@@ -87,6 +86,18 @@ namespace SmartHomeUI
             timer.Interval = TimeSpan.FromSeconds(waitSeconds);
             timer.IsEnabled = true;
             timer.Tick += (s, e) => { timedMethod(); };
+        }
+
+        public static void LoadDevicesToRoom(ObservableCollection<Device> room, ObservableCollection<Device> devices, int floorID, int roomID)
+        {
+            room = new ObservableCollection<Device>();
+            for (int i = 0; i < devices.Count; i++)
+            {
+                if (devices[i].Floor == floorID && devices[i].Room == roomID)
+                {
+                    room.Add(devices[i]);
+                }
+            }
         }
     }
 }

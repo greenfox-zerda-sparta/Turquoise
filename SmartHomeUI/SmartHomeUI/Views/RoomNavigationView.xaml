@@ -67,13 +67,13 @@
             <Label x:Name="floor" Content="Floor" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="178"/>
             <Button x:Name="bedroom1" Command="{Binding NBedroomCommand}" Content="North Bedroom" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="178" Height="50"/>
             <Button x:Name="bedroom2" Command="{Binding SBedroomCommand}" Content="South Bedroom" HorizontalAlignment="Left" Margin="10,95,0,0" VerticalAlignment="Top" Width="178" Height="50"/>
-            <Button x:Name="kidroom" Command="{Binding KidRoomCommand}" Content="Kid's Room" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="178" Height="50"/>
+            <Button x:Name="kidroom" Command="{Binding KidRoomCommand}" Content="Kids' Room" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="178" Height="50"/>
             <Button x:Name="bathroom_fl" Command="{Binding FloorBathroomCommand}" Content="Bathroom" HorizontalAlignment="Left" Margin="10,205,0,0" VerticalAlignment="Top" Width="178" Height="50"/>
 
             <Label x:Name="groundfloor" Content="Groundfloor" FontWeight="Bold" FontSize="24" HorizontalAlignment="Left" Margin="10,300,0,0" VerticalAlignment="Top" Width="178"/>
             <Button x:Name="livingroom" Command="{Binding LivingRoomCommand}" Content="Living room" HorizontalAlignment="Left" Margin="10,340,0,0" VerticalAlignment="Top" Width="178" Height="50"/>
             <Button x:Name="kitchen" Command="{Binding KitchenCommand}" Content="Kitchen" HorizontalAlignment="Left" Margin="10,395,0,0" VerticalAlignment="Top" Width="178" Height="50"/>
-            <Button x:Name="bathroom_gf" Command="{Binding GroundfloorBathroomCommand}" Content="Bathroom" HorizontalAlignment="Left" Margin="10,450,0,0" VerticalAlignment="Top" Width="178" Height="50"/>
+            <Button x:Name="bathroom_gf" Command="{Binding GroundfloorBathroomCommand}" Content="Half Bathroom" HorizontalAlignment="Left" Margin="10,450,0,0" VerticalAlignment="Top" Width="178" Height="50"/>
 
             <Label x:Name="basement" Content="Basement" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,546,0,0" VerticalAlignment="Top" Width="178"/>
             <Button x:Name="garage" Command="{Binding GarageCommand}" Content="Garage" HorizontalAlignment="Left" Margin="10,586,0,0" VerticalAlignment="Top" Width="178" Height="50"/>

@@ -9,48 +9,58 @@
     <Grid>
 
         <Rectangle Fill="#FFdddddd" IsHitTestVisible="False" Margin="0,0,0,0"/>
-        <Label Content="Half Bathroom" FontWeight="Bold" FontSize="35" HorizontalAlignment="Left" Margin="30,5,0,0" VerticalAlignment="Top" Height="52" Width="320" IsHitTestVisible="False" FontFamily="Segoe UI Semibold"/>
+        <Label Content="Half Bathroom" FontWeight="Bold" FontSize="35" HorizontalAlignment="Left" Margin="30,0,290,0" VerticalAlignment="Top" Height="57" Width="320" IsHitTestVisible="False" FontFamily="Segoe UI Semibold"/>
         <Viewbox Margin="30,68,30,500" Stretch="Fill">
             <Grid Height="150" Width="580">
                 <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="580"/>
                 <Image HorizontalAlignment="Left" Height="150" Margin="10,0,0,0" VerticalAlignment="Top" Width="150" Source="../../../Images/DeviceIcons/light.png"/>
-                <Button Content="-" HorizontalAlignment="Center" Margin="290,10,230,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="30" FontWeight="Bold" Foreground="White" Background="DarkGray" />
-                <TextBlock Text="100" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="360,10,90,80" Width="130" Height="60" RenderTransformOrigin="0.038,0.24" Background="#FFEEEEEE" FontFamily="Segoe UI Semibold"/>
-                <Button Content="+" HorizontalAlignment="Center" Margin="500,10,20,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="30" FontWeight="Bold"  Background="Yellow" />
-                <TextBlock Text="Connected" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="290,80,20,10" Width="270" Height="60" Background="#FFD0E4B4"/>
+                <Button Command="{Binding TurnLightOnOffCommand}" Background="Transparent" HorizontalAlignment="Center" Margin="190,45,330,45" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" />
+                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="60" Margin="190,45,330,45" IsHitTestVisible="False" Source="../../../Images/DeviceIcons/onoff.png"/>
+                <Button Command="{Binding DecrementLightCommand}" Background="Transparent" HorizontalAlignment="Center" Margin="290,10,230,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" />
+                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="60" Margin="290,10,230,80" IsHitTestVisible="False" Source="../../../Images/DeviceIcons/minusbutton.png"/>
+                <TextBlock Text="{Binding GroundfloorBathroom[0].Status, StringFormat='\{0\}%'}" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="360,10,90,80" Width="130" Height="60" RenderTransformOrigin="0.038,0.24" Background="#FFEEEEEE" FontFamily="Segoe UI Semibold"/>
+                <TextBlock Text="{Binding ConnectionStatus[0]}" Foreground="White" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="290,80,20,10" Width="270" Height="60" Background="#FF20B2AC"/>
+                <Button Content="" Command="{Binding IncrementLightCommand}" Background="Transparent" HorizontalAlignment="Center" Margin="500,10,20,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" />
+                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="60" Margin="500,10,20,80" IsHitTestVisible="False" Source="../../../Images/DeviceIcons/plusbutton.png"/>
             </Grid>
         </Viewbox>
         <Viewbox Margin="30,228,30,340" Stretch="Fill">
             <Grid Height="150" Width="580">
                 <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="580"/>
                 <Image HorizontalAlignment="Left" Height="150" Margin="10,0,0,0" VerticalAlignment="Top" Width="150" Source="/SmartHomeUI;component/Images/DeviceIcons/heater.png"/>
-                <Button Content="-" HorizontalAlignment="Center" Margin="290,10,230,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="30" FontWeight="Bold" Foreground="White" Background="Orange" />
-                <TextBlock Text="20 °C" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="360,10,90,80" Width="130" Height="60" RenderTransformOrigin="0.038,0.24" Background="#FFEEEEEE" FontFamily="Segoe UI Semibold"/>
-                <Button Content="+" HorizontalAlignment="Center" Margin="500,10,20,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="30" FontWeight="Bold" Foreground="White" Background="Red" />
-                <TextBlock Text="Connected" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="290,80,20,10" Width="270" Height="60" Background="#FFD0E4B4"/>
+                <Button Command="{Binding DecrementHeatingCommand}" Background="Transparent" HorizontalAlignment="Center" Margin="290,10,230,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" />
+                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="60" Margin="290,10,230,80" IsHitTestVisible="False" Source="../../../Images/DeviceIcons/minusbutton.png"/>
+                <TextBlock Text="{Binding GroundfloorBathroom[1].Status, StringFormat='\{0\}°C'}" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="360,10,90,80" Width="130" Height="60" RenderTransformOrigin="0.038,0.24" Background="#FFEEEEEE" FontFamily="Segoe UI Semibold"/>
+                <TextBlock Text="{Binding ConnectionStatus[1]}" Foreground="White" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="290,80,20,10" Width="270" Height="60" Background="#FF20B2AC"/>
+                <Button Content="" Command="{Binding IncrementHeatingCommand}" Background="Transparent" HorizontalAlignment="Center" Margin="500,10,20,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" />
+                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="60" Margin="500,10,20,80" IsHitTestVisible="False" Source="../../../Images/DeviceIcons/plusbutton.png"/>
             </Grid>
         </Viewbox>
         <Viewbox Margin="30,388,30,180" Stretch="Fill">
             <Grid Height="150" Width="580">
                 <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="580"/>
                 <Image HorizontalAlignment="Left" Height="150" Margin="10,0,0,0" VerticalAlignment="Top" Width="150" Source="/SmartHomeUI;component/Images/DeviceIcons/airco.png"/>
-                <Button Content="-" HorizontalAlignment="Center" Margin="290,10,230,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="30" FontWeight="Bold" Foreground="White" Background="DarkBlue" />
-                <TextBlock Text="20 °C" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="360,10,90,80" Width="130" Height="60" RenderTransformOrigin="0.038,0.24" Background="#FFEEEEEE" FontFamily="Segoe UI Semibold"/>
-                <Button Content="+" HorizontalAlignment="Center" Margin="500,10,20,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="30" FontWeight="Bold" Foreground="White"  Background="LightBlue" />
-                <TextBlock Text="OFF" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="290,80,20,10" Width="270" Height="60" Background="#FFF0FDDF"/>
+                <Button Command="{Binding DecrementCoolingCommand}" Background="Transparent" HorizontalAlignment="Center" Margin="290,10,230,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" />
+                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="60" Margin="290,10,230,80" IsHitTestVisible="False" Source="../../../Images/DeviceIcons/minusbutton.png"/>
+                <TextBlock Text="{Binding GroundfloorBathroom[2].Status, StringFormat='\{0\}°C'}" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="360,10,90,80" Width="130" Height="60" RenderTransformOrigin="0.038,0.24" Background="#FFEEEEEE" FontFamily="Segoe UI Semibold"/>
+                <TextBlock Text="{Binding ConnectionStatus[2]}" Foreground="White" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="290,80,20,10" Width="270" Height="60" Background="#FF20B2AC"/>
+                <Button Content="" Command="{Binding IncrementCoolingCommand}" Background="Transparent" HorizontalAlignment="Center" Margin="500,10,20,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" />
+                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="60" Margin="500,10,20,80" IsHitTestVisible="False" Source="../../../Images/DeviceIcons/plusbutton.png"/>
             </Grid>
         </Viewbox>
-        <Viewbox Margin="30,548,30,10" Stretch="Fill">
+        <Viewbox Margin="30,548,30,20" Stretch="Fill">
             <Grid Height="150" Width="580">
                 <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="580"/>
                 <Image HorizontalAlignment="Left" Height="150" Margin="10,0,0,0" VerticalAlignment="Top" Width="150" Source="/SmartHomeUI;component/Images/DeviceIcons/blinds.png"/>
-                <Button Content="-" HorizontalAlignment="Center" Margin="290,10,230,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="30" FontWeight="Bold" Foreground="White" Background="LightBlue" />
-                <TextBlock Text="0 %" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="360,10,90,80" Width="130" Height="60" RenderTransformOrigin="0.038,0.24" Background="#FFEEEEEE" FontFamily="Segoe UI Semibold"/>
-                <Button Content="+" HorizontalAlignment="Center" Margin="500,10,20,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="30" FontWeight="Bold" Foreground="White"  Background="DarkBlue" />
-                <TextBlock Text="Connected" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="290,80,20,10" Width="270" Height="60" Background="#FFD0E4B4"/>
+                <Button Command="{Binding TurnBlindsOnOffCommand}" Background="Transparent" HorizontalAlignment="Center" Margin="190,45,330,45" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" />
+                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="60" Margin="190,45,330,45" IsHitTestVisible="False" Source="../../../Images/DeviceIcons/onoff.png"/>
+                <Button Command="{Binding DecrementBlindsCommand}" Background="Transparent" HorizontalAlignment="Center" Margin="290,10,230,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" />
+                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="60" Margin="290,10,230,80" IsHitTestVisible="False" Source="../../../Images/DeviceIcons/minusbutton.png"/>
+                <TextBlock Text="{Binding GroundfloorBathroom[3].Status, StringFormat='\{0\}%'}" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="360,10,90,80" Width="130" Height="60" RenderTransformOrigin="0.038,0.24" Background="#FFEEEEEE" FontFamily="Segoe UI Semibold"/>
+                <TextBlock Text="{Binding ConnectionStatus[3]}" Foreground="White" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="290,80,20,10" Width="270" Height="60" Background="#FF20B2AC"/>
+                <Button Content="" Command="{Binding IncrementBlindsCommand}" Background="Transparent" HorizontalAlignment="Center" Margin="500,10,20,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" />
+                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="60" Margin="500,10,20,80" IsHitTestVisible="False" Source="../../../Images/DeviceIcons/plusbutton.png"/>
             </Grid>
         </Viewbox>
-
     </Grid>
 </UserControl>
-

@@ -10,7 +10,7 @@ namespace SmartHomeUI
 
     class Device : INotifyPropertyChanged
     {
-        private int deviceID, deviceType, floor, room, status, onOff;
+        private int deviceID, deviceType, floor, room, status, onOff, connected;
 
         public int DeviceID
         {
@@ -39,13 +39,26 @@ namespace SmartHomeUI
         public int Status
         {
             get { return status; }
-            set { status = value; RaisePropertyChanged("Status"); }
-        }
+            set 
+            {
+                if(value <= 100 && value >= 0) 
+                {
+                    status = value;
+                    RaisePropertyChanged("Status");
+                }
+            }
+    }
 
         public int OnOff
         {
             get { return onOff; }
             set { onOff = value; RaisePropertyChanged("OnOff"); }
+        }
+        
+        public int Connected 
+        {
+            get { return connected; }
+            set { connected = value; RaisePropertyChanged("Connected"); }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

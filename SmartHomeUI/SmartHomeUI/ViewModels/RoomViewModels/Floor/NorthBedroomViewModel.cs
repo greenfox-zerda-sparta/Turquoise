@@ -12,6 +12,7 @@ namespace SmartHomeUI
     {
         public ICommand IncrementLightCommand { get; set; }
         public ICommand DecrementLightCommand { get; set; }
+        public ICommand TurnLightOnOffCommand { get; set; }
         public ICommand IncrementTemperatureCommand { get; set; }
         public ICommand DecrementTemperatureCommand { get; set; }
 
@@ -32,6 +33,7 @@ namespace SmartHomeUI
         {
             IncrementLightCommand = new NavigationCommands(param => ChangeStatusProperty(NorthBedroom, 0, 10));
             DecrementLightCommand = new NavigationCommands(param => ChangeStatusProperty(NorthBedroom, 0, -10));
+            TurnLightOnOffCommand = new NavigationCommands(param => ChangeOnOffProperty(NorthBedroom, 0, 100));
             IncrementTemperatureCommand = new NavigationCommands(param => ChangeStatusProperty(NorthBedroom, 1, 1));
             DecrementTemperatureCommand = new NavigationCommands(param => ChangeStatusProperty(NorthBedroom, 1, -1));
         }
@@ -43,7 +45,14 @@ namespace SmartHomeUI
 
         private void ChangeOnOffProperty(ObservableCollection<Device> room, int deviceIndex, int changeAmount)
         {
-            room[deviceIndex].OnOff += changeAmount;
+            if (room[deviceIndex].Status == 0)
+            {
+                room[deviceIndex].Status += 100;
+            }
+            else
+            {
+                room[deviceIndex].Status = 0;
+            }
         }
     }
 }

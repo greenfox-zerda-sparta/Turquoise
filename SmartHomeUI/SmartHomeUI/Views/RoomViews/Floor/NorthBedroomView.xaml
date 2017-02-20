@@ -14,6 +14,7 @@
             <Grid Height="150" Width="580">
                 <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="580"/>
                 <Image HorizontalAlignment="Left" Height="150" Margin="10,0,0,0" VerticalAlignment="Top" Width="150" Source="../../../Images/DeviceIcons/light.png"/>
+                <Button Content="ON/OFF" Command="{Binding TurnLightOnOffCommand}" HorizontalAlignment="Center" Margin="196,43,324,47" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="15" FontWeight="Bold" Foreground="White" Background="DarkGray" />
                 <Button Content="-" Command="{Binding DecrementLightCommand}" HorizontalAlignment="Center" Margin="290,10,230,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="30" FontWeight="Bold" Foreground="White" Background="DarkGray" />
                 <TextBlock Text="{Binding NorthBedroom[0].Status, StringFormat='\{0\}%'}" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="360,10,90,80" Width="130" Height="60" RenderTransformOrigin="0.038,0.24" Background="#FFEEEEEE" FontFamily="Segoe UI Semibold"/>
                 <Button Content="+" Command="{Binding IncrementLightCommand}" HorizontalAlignment="Center" Margin="500,10,20,80" VerticalAlignment="Center" Width="60" Height="60" Cursor="Hand" FontSize="30" FontWeight="Bold"  Background="Yellow" />

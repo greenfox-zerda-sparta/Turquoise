@@ -12,19 +12,19 @@ namespace SmartHomeUI
     {
         private int deviceID, deviceType, floor, room, status, onOff, connected;
 
-        public int DeviceID
-        {
-            get { return deviceID; }
-            set { deviceID = value; RaisePropertyChanged("DeviceID"); }
-        }
-
         public int DeviceType
         {
             get { return deviceType; }
             set { deviceType = value; RaisePropertyChanged("DeviceType"); }
         }
 
-        public int Floor
+        public int DeviceID 
+        {
+            get { return deviceID; }
+            set { deviceID = value; RaisePropertyChanged("DeviceID"); }
+        }
+
+    public int Floor
         {
             get { return floor; }
             set { floor = value; RaisePropertyChanged("Floor"); }

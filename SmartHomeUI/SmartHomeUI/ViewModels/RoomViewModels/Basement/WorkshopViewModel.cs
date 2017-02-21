@@ -26,14 +26,10 @@ namespace SmartHomeUI
 
 
     public WorkshopViewModel() {
-      InstantiateCommands();
+            Workshop = new ObservableCollection<Device>(Instances.LoadDevicesToRoom(Instances.AllDevice, 2));
+            InstantiateCommands();
 
-      //Instances.LoadDevicesToRoom(Workshop, ..., 02, 00);
-      Workshop = new ObservableCollection<Device>();
-      Workshop.Add(new Device { DeviceID = 01, DeviceType = 01, Floor = 03, Room = 01, Status = 70, OnOff = 1, Connected = 1 });
-      Workshop.Add(new Device { DeviceID = 01, DeviceType = 03, Floor = 03, Room = 01, Status = 99, OnOff = 1, Connected = 1 });
-      Workshop.Add(new Device { DeviceID = 01, DeviceType = 04, Floor = 03, Room = 01, Status = 18, OnOff = 1, Connected = 0 });
-      Workshop.Add(new Device { DeviceID = 01, DeviceType = 02, Floor = 03, Room = 01, Status = 10, OnOff = 1, Connected = 1 });
+    
       InstantiateConnectionStatus();
     }
 

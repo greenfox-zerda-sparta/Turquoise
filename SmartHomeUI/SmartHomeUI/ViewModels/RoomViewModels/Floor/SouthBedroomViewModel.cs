@@ -24,14 +24,8 @@ namespace SmartHomeUI {
 
 
     public SouthBedroomViewModel() {
+      SouthBedroom = new ObservableCollection<Device>(Instances.LoadDevicesToRoom(Instances.AllDevice, 7));
       InstantiateCommands();
-
-      //Instances.LoadDevicesToRoom(SouthBedroom, ..., 02, 00);
-      SouthBedroom = new ObservableCollection<Device>();
-      SouthBedroom.Add(new Device { DeviceID = 01, DeviceType = 01, Floor = 02, Room = 00, Status = 80, OnOff = 1, Connected = 1 });
-      SouthBedroom.Add(new Device { DeviceID = 01, DeviceType = 03, Floor = 02, Room = 00, Status = 23, OnOff = 1, Connected = 1 });
-      SouthBedroom.Add(new Device { DeviceID = 01, DeviceType = 04, Floor = 02, Room = 00, Status = 23, OnOff = 1, Connected = 0 });
-      SouthBedroom.Add(new Device { DeviceID = 01, DeviceType = 02, Floor = 02, Room = 00, Status = 10, OnOff = 1, Connected = 1 });
       InstantiateConnectionStatus();
     }
 

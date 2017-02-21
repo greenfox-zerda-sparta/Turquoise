@@ -26,14 +26,8 @@ namespace SmartHomeUI
 
 
     public FloorBathroomViewModel() {
+      FloorBathroom = new ObservableCollection<Device>(Instances.LoadDevicesToRoom(Instances.AllDevice, 9));
       InstantiateCommands();
-
-      //Instances.LoadDevicesToRoom(FloorBathroom, ..., 02, 00);
-      FloorBathroom = new ObservableCollection<Device>();
-      FloorBathroom.Add(new Device { DeviceID = 01, DeviceType = 01, Floor = 02, Room = 00, Status = 80, OnOff = 1, Connected = 1 });
-      FloorBathroom.Add(new Device { DeviceID = 01, DeviceType = 03, Floor = 02, Room = 03, Status = 23, OnOff = 1, Connected = 1 });
-      FloorBathroom.Add(new Device { DeviceID = 01, DeviceType = 04, Floor = 02, Room = 03, Status = 23, OnOff = 1, Connected = 0 });
-      FloorBathroom.Add(new Device { DeviceID = 01, DeviceType = 02, Floor = 02, Room = 03, Status = 10, OnOff = 1, Connected = 1 });
       InstantiateConnectionStatus();
     }
 

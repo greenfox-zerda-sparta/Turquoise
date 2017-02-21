@@ -25,15 +25,11 @@ namespace SmartHomeUI
     public ObservableCollection<string> ConnectionStatus { get; set; }
 
 
-    public KitchenViewModel() {
-      InstantiateCommands();
+    public KitchenViewModel() 
+    {
+            Kitchen = new ObservableCollection<Device>(Instances.LoadDevicesToRoom(Instances.AllDevice, 3));
+            InstantiateCommands();
 
-      //Instances.LoadDevicesToRoom(Kitchen, ..., 02, 00);
-      Kitchen = new ObservableCollection<Device>();
-      Kitchen.Add(new Device { DeviceID = 01, DeviceType = 01, Floor = 01, Room = 01, Status = 80, OnOff = 1, Connected = 1 });
-      Kitchen.Add(new Device { DeviceID = 01, DeviceType = 03, Floor = 01, Room = 01, Status = 23, OnOff = 1, Connected = 1 });
-      Kitchen.Add(new Device { DeviceID = 01, DeviceType = 04, Floor = 01, Room = 01, Status = 23, OnOff = 1, Connected = 0 });
-      Kitchen.Add(new Device { DeviceID = 01, DeviceType = 02, Floor = 01, Room = 01, Status = 10, OnOff = 1, Connected = 1 });
       InstantiateConnectionStatus();
     }
 

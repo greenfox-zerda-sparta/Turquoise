@@ -10,37 +10,27 @@ namespace SmartHomeUI
 {
     class GarageViewModel 
     { 
-    public ICommand IncrementLightCommand { get; set; }
-  public ICommand DecrementLightCommand { get; set; }
-  public ICommand TurnLightOnOffCommand { get; set; }
-  public ICommand IncrementHeatingCommand { get; set; }
-  public ICommand DecrementHeatingCommand { get; set; }
-  public ICommand IncrementCoolingCommand { get; set; }
-  public ICommand DecrementCoolingCommand { get; set; }
-  public ICommand IncrementBlindsCommand { get; set; }
-  public ICommand DecrementBlindsCommand { get; set; }
-  public ICommand TurnBlindsOnOffCommand { get; set; }
-  public ICommand GarageDoorCommand { get; set; }
-
-
-  public ObservableCollection<Device> Garage { get; set; }
-  public ObservableCollection<string> ConnectionStatus { get; set; }
-  public ObservableCollection<string> GarageDoorStatus { get; set; }
+        public ICommand IncrementLightCommand { get; set; }
+        public ICommand DecrementLightCommand { get; set; }
+        public ICommand TurnLightOnOffCommand { get; set; }
+        public ICommand IncrementHeatingCommand { get; set; }
+        public ICommand DecrementHeatingCommand { get; set; }
+        public ICommand IncrementCoolingCommand { get; set; }
+        public ICommand DecrementCoolingCommand { get; set; }
+        public ICommand IncrementBlindsCommand { get; set; }
+        public ICommand DecrementBlindsCommand { get; set; }
+        public ICommand TurnBlindsOnOffCommand { get; set; }
+        public ICommand GarageDoorCommand { get; set; }
+    
+        public ObservableCollection<Device> Garage { get; set; }
+        public ObservableCollection<string> ConnectionStatus { get; set; }
+        public ObservableCollection<string> GarageDoorStatus { get; set; }
 
 
     public GarageViewModel() {
-
-      Instances.LoadDevicesToRoom2(Garage, Instances.AllDevice, 01);
+      Garage = new ObservableCollection<Device>(Instances.LoadDevicesToRoom(Instances.AllDevice, 1));
       InstantiateCommands();
 
-    /*
-    Instances.LoadDevicesToRoom(Garage, ..., 02, 00);
-    Garage = new ObservableCollection<Device>();
-    Garage.Add(new Device { DeviceID = 01, DeviceType = 01, Floor = 03, Room = 02, Status = 70, OnOff = 1, Connected = 1 });
-    Garage.Add(new Device { DeviceID = 01, DeviceType = 03, Floor = 03, Room = 02, Status = 18, OnOff = 1, Connected = 1 });
-    Garage.Add(new Device { DeviceID = 01, DeviceType = 04, Floor = 03, Room = 02, Status = 18, OnOff = 1, Connected = 0 });
-    Garage.Add(new Device { DeviceID = 01, DeviceType = 02, Floor = 03, Room = 02, Status = 100, OnOff = 1, Connected = 1 });
-    */
     InstantiateConnectionStatus();
     InstantiateGarageDoorStatus();
   }

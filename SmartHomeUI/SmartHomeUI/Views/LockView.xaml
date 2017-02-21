@@ -16,5 +16,12 @@
         <Rectangle Fill="#FFFFFFFF" Margin="9,274,0,193" HorizontalAlignment="Left" Width="411"/>
         <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="16,278,0,0" TextWrapping="Wrap" Text="Garage door" Width="304" FontFamily="Microsoft YaHei UI Light" FontSize="30" RenderTransformOrigin="1.789,0.758" Height="66" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Right" Height="66" Margin="0,14,115,0" TextWrapping="Wrap" Text="CCTV feed" VerticalAlignment="Top" Width="304" FontFamily="Microsoft YaHei UI Light" FontSize="30" RenderTransformOrigin="1.789,0.758"/>
+        <MediaElement x:Name="door" 
+    MediaEnded="door_MediaEnded" 
+    UnloadedBehavior="Manual"     
+    Source="file:../Images/Others/opendoor.gif" 
+    LoadedBehavior="Play" 
+    Stretch="None" 
+    Visibility="Visible"/>
     </Grid>
 </UserControl>

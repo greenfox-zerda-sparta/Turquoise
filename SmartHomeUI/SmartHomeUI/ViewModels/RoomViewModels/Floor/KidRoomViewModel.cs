@@ -25,14 +25,8 @@ namespace SmartHomeUI {
 
 
     public KidRoomViewModel() {
+      KidBedroom = new ObservableCollection<Device>(Instances.LoadDevicesToRoom(Instances.AllDevice, 8));
       InstantiateCommands();
-
-      //Instances.LoadDevicesToRoom(KidBedroom, ..., 02, 00);
-      KidBedroom = new ObservableCollection<Device>();
-      KidBedroom.Add(new Device { DeviceID = 01, DeviceType = 01, Floor = 02, Room = 00, Status = 80, OnOff = 1, Connected = 1 });
-      KidBedroom.Add(new Device { DeviceID = 01, DeviceType = 03, Floor = 02, Room = 00, Status = 23, OnOff = 1, Connected = 1 });
-      KidBedroom.Add(new Device { DeviceID = 01, DeviceType = 04, Floor = 02, Room = 00, Status = 23, OnOff = 1, Connected = 0 });
-      KidBedroom.Add(new Device { DeviceID = 01, DeviceType = 02, Floor = 02, Room = 00, Status = 10, OnOff = 1, Connected = 1 });
       InstantiateConnectionStatus();
     }
 

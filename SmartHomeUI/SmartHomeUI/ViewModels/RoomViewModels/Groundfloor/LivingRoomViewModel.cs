@@ -26,14 +26,8 @@ namespace SmartHomeUI
 
 
     public LivingRoomViewModel() {
+     LivingRoom = new ObservableCollection<Device>(Instances.LoadDevicesToRoom(Instances.AllDevice, 4));
       InstantiateCommands();
-
-      //Instances.LoadDevicesToRoom(LivingRoom, ..., 02, 00);
-      LivingRoom = new ObservableCollection<Device>();
-      LivingRoom.Add(new Device { DeviceID = 01, DeviceType = 01, Floor = 01, Room = 00, Status = 80, OnOff = 1, Connected = 1 });
-      LivingRoom.Add(new Device { DeviceID = 01, DeviceType = 03, Floor = 01, Room = 00, Status = 23, OnOff = 1, Connected = 1 });
-      LivingRoom.Add(new Device { DeviceID = 01, DeviceType = 04, Floor = 01, Room = 00, Status = 23, OnOff = 1, Connected = 0 });
-      LivingRoom.Add(new Device { DeviceID = 01, DeviceType = 02, Floor = 01, Room = 00, Status = 10, OnOff = 1, Connected = 1 });
       InstantiateConnectionStatus();
     }
 

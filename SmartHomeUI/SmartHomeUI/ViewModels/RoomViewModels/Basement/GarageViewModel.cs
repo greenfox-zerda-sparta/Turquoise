@@ -29,14 +29,18 @@ namespace SmartHomeUI
 
 
     public GarageViewModel() {
-    InstantiateCommands();
 
-    //Instances.LoadDevicesToRoom(Garage, ..., 02, 00);
+      Instances.LoadDevicesToRoom2(Garage, Instances.AllDevice, 01);
+      InstantiateCommands();
+
+    /*
+    Instances.LoadDevicesToRoom(Garage, ..., 02, 00);
     Garage = new ObservableCollection<Device>();
     Garage.Add(new Device { DeviceID = 01, DeviceType = 01, Floor = 03, Room = 02, Status = 70, OnOff = 1, Connected = 1 });
     Garage.Add(new Device { DeviceID = 01, DeviceType = 03, Floor = 03, Room = 02, Status = 18, OnOff = 1, Connected = 1 });
     Garage.Add(new Device { DeviceID = 01, DeviceType = 04, Floor = 03, Room = 02, Status = 18, OnOff = 1, Connected = 0 });
     Garage.Add(new Device { DeviceID = 01, DeviceType = 02, Floor = 03, Room = 02, Status = 100, OnOff = 1, Connected = 1 });
+    */
     InstantiateConnectionStatus();
     InstantiateGarageDoorStatus();
   }

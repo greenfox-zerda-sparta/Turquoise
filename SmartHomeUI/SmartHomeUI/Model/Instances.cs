@@ -117,14 +117,14 @@ namespace SmartHomeUI
             AllDevice.Add(new Device { DeviceType = 02, DeviceID = 07, Floor = 03, Room = 07, Status = 21, OnOff = 1, Connected = 1 });
             AllDevice.Add(new Device { DeviceType = 02, DeviceID = 08, Floor = 03, Room = 08, Status = 21, OnOff = 1, Connected = 1 });
             //Cooling
-            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 01, Floor = 01, Room = 01, Status = 21, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 02, Floor = 01, Room = 02, Status = 21, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 03, Floor = 02, Room = 03, Status = 21, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 04, Floor = 02, Room = 04, Status = 21, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 05, Floor = 02, Room = 05, Status = 21, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 06, Floor = 03, Room = 06, Status = 21, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 07, Floor = 03, Room = 07, Status = 21, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 08, Floor = 03, Room = 08, Status = 21, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 01, Floor = 01, Room = 01, Status = 21, OnOff = 0, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 02, Floor = 01, Room = 02, Status = 21, OnOff = 0, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 03, Floor = 02, Room = 03, Status = 21, OnOff = 0, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 04, Floor = 02, Room = 04, Status = 21, OnOff = 0, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 05, Floor = 02, Room = 05, Status = 21, OnOff = 0, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 06, Floor = 03, Room = 06, Status = 21, OnOff = 0, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 07, Floor = 03, Room = 07, Status = 21, OnOff = 0, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 08, Floor = 03, Room = 08, Status = 21, OnOff = 0, Connected = 1 });
             //Blinds
             AllDevice.Add(new Device { DeviceType = 04, DeviceID = 01, Floor = 01, Room = 01, Status = 21, OnOff = 1, Connected = 1 });
             AllDevice.Add(new Device { DeviceType = 04, DeviceID = 02, Floor = 01, Room = 02, Status = 21, OnOff = 1, Connected = 1 });

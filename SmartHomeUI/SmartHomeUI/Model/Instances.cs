@@ -50,13 +50,12 @@ namespace SmartHomeUI
         static public List<object> Models;
         static public ObservableCollection<Device> AllDevice;
 
-    static Instances()
+        static Instances()
         {
             InstantiateModels();
             InstantiateAllDevice();
             InstantiateRoomViews();
             InstantiateViewModels();
-
         }
 
         private static void InstantiateViewModels()
@@ -97,76 +96,79 @@ namespace SmartHomeUI
         {
             AllDevice = new ObservableCollection<Device>(); 
             //Alarm
-            AllDevice.Add(new Device { DeviceType = 05, DeviceID = 01, Floor = 00, Room = 00, Status = 0, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Alarm, DeviceID = 01, Floor = (int)Floor.All, Room = (int)Room.All, Status = 0, OnOff = 1, Connected = 1 });
             //Lamps
-            AllDevice.Add(new Device { DeviceType = 01, DeviceID = 01, Floor = 01, Room = 01, Status = 100, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 01, DeviceID = 02, Floor = 01, Room = 02, Status = 100, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 01, DeviceID = 03, Floor = 02, Room = 03, Status = 100, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 01, DeviceID = 04, Floor = 02, Room = 04, Status = 100, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 01, DeviceID = 05, Floor = 02, Room = 05, Status = 100, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 01, DeviceID = 06, Floor = 03, Room = 06, Status = 100, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 01, DeviceID = 07, Floor = 03, Room = 07, Status = 100, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 01, DeviceID = 08, Floor = 03, Room = 08, Status = 100, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 01, DeviceID = 09, Floor = 03, Room = 09, Status = 100, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Lamps, DeviceID = 01, Floor = (int)Floor.Basement, Room = (int)Room.Garage, Status = 100, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Lamps, DeviceID = 02, Floor = (int)Floor.Basement, Room = (int)Room.Workshop, Status = 100, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Lamps, DeviceID = 03, Floor = (int)Floor.Groundfloor, Room = (int)Room.Kitchen, Status = 100, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Lamps, DeviceID = 04, Floor = (int)Floor.Groundfloor, Room = (int)Room.LivingRoom, Status = 100, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Lamps, DeviceID = 05, Floor = (int)Floor.Groundfloor, Room = (int)Room.HalfBathroom, Status = 100, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Lamps, DeviceID = 06, Floor = (int)Floor.FirstFloor, Room = (int)Room.NorthBedroom, Status = 100, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Lamps, DeviceID = 07, Floor = (int)Floor.FirstFloor, Room = (int)Room.SouthBedroom, Status = 100, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Lamps, DeviceID = 08, Floor = (int)Floor.FirstFloor, Room = (int)Room.KidRoom, Status = 100, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Lamps, DeviceID = 09, Floor = (int)Floor.FirstFloor, Room = (int)Room.Bathroom, Status = 100, OnOff = 1, Connected = 1 });
 
             //Heating
-            AllDevice.Add(new Device { DeviceType = 02, DeviceID = 01, Floor = 01, Room = 01, Status = 21, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 02, DeviceID = 02, Floor = 01, Room = 02, Status = 21, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 02, DeviceID = 03, Floor = 02, Room = 03, Status = 21, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 02, DeviceID = 04, Floor = 02, Room = 04, Status = 21, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 02, DeviceID = 05, Floor = 02, Room = 05, Status = 21, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 02, DeviceID = 06, Floor = 03, Room = 06, Status = 21, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 02, DeviceID = 07, Floor = 03, Room = 07, Status = 21, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 02, DeviceID = 08, Floor = 03, Room = 08, Status = 21, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 02, DeviceID = 09, Floor = 03, Room = 09, Status = 21, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Heating, DeviceID = 01, Floor = (int)Floor.Basement, Room = (int)Room.Garage, Status = 21, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Heating, DeviceID = 02, Floor = (int)Floor.Basement, Room = (int)Room.Workshop, Status = 22, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Heating, DeviceID = 03, Floor = (int)Floor.Groundfloor, Room = (int)Room.Kitchen, Status = 22, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Heating, DeviceID = 04, Floor = (int)Floor.Groundfloor, Room = (int)Room.LivingRoom, Status = 23, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Heating, DeviceID = 05, Floor = (int)Floor.Groundfloor, Room = (int)Room.HalfBathroom, Status = 21, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Heating, DeviceID = 06, Floor = (int)Floor.FirstFloor, Room = (int)Room.NorthBedroom, Status = 23, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Heating, DeviceID = 07, Floor = (int)Floor.FirstFloor, Room = (int)Room.SouthBedroom, Status = 22, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Heating, DeviceID = 08, Floor = (int)Floor.FirstFloor, Room = (int)Room.KidRoom, Status = 20, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Heating, DeviceID = 09, Floor = (int)Floor.FirstFloor, Room = (int)Room.Bathroom, Status = 20, OnOff = 1, Connected = 1 });
 
             //Cooling
-            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 01, Floor = 01, Room = 01, Status = 21, OnOff = 0, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 02, Floor = 01, Room = 02, Status = 21, OnOff = 0, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 03, Floor = 02, Room = 03, Status = 21, OnOff = 0, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 04, Floor = 02, Room = 04, Status = 21, OnOff = 0, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 05, Floor = 02, Room = 05, Status = 21, OnOff = 0, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 06, Floor = 03, Room = 06, Status = 21, OnOff = 0, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 07, Floor = 03, Room = 07, Status = 21, OnOff = 0, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 08, Floor = 03, Room = 08, Status = 21, OnOff = 0, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 03, DeviceID = 09, Floor = 03, Room = 09, Status = 21, OnOff = 0, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Cooling, DeviceID = 01, Floor = (int)Floor.Basement, Room = (int)Room.Garage, Status = 21, OnOff = 0, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Cooling, DeviceID = 02, Floor = (int)Floor.Basement, Room = (int)Room.Workshop, Status = 21, OnOff = 0, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Cooling, DeviceID = 03, Floor = (int)Floor.Groundfloor, Room = (int)Room.Kitchen, Status = 21, OnOff = 0, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Cooling, DeviceID = 04, Floor = (int)Floor.Groundfloor, Room = (int)Room.LivingRoom, Status = 21, OnOff = 0, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Cooling, DeviceID = 05, Floor = (int)Floor.Groundfloor, Room = (int)Room.HalfBathroom, Status = 21, OnOff = 0, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Cooling, DeviceID = 06, Floor = (int)Floor.FirstFloor, Room = (int)Room.NorthBedroom, Status = 21, OnOff = 0, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Cooling, DeviceID = 07, Floor = (int)Floor.FirstFloor, Room = (int)Room.SouthBedroom, Status = 21, OnOff = 0, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Cooling, DeviceID = 08, Floor = (int)Floor.FirstFloor, Room = (int)Room.KidRoom, Status = 21, OnOff = 0, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Cooling, DeviceID = 09, Floor = (int)Floor.FirstFloor, Room = (int)Room.Bathroom, Status = 21, OnOff = 0, Connected = 1 });
 
             //Blinds
-            AllDevice.Add(new Device { DeviceType = 04, DeviceID = 01, Floor = 01, Room = 01, Status = 10, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 04, DeviceID = 02, Floor = 01, Room = 02, Status = 10, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 04, DeviceID = 03, Floor = 02, Room = 03, Status = 10, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 04, DeviceID = 04, Floor = 02, Room = 04, Status = 10, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 04, DeviceID = 05, Floor = 02, Room = 05, Status = 10, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 04, DeviceID = 06, Floor = 03, Room = 06, Status = 10, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 04, DeviceID = 07, Floor = 03, Room = 07, Status = 10, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 04, DeviceID = 08, Floor = 03, Room = 08, Status = 10, OnOff = 1, Connected = 1 });
-            AllDevice.Add(new Device { DeviceType = 04, DeviceID = 09, Floor = 03, Room = 09, Status = 10, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Blinds, DeviceID = 01, Floor = (int)Floor.Basement, Room = (int)Room.Garage, Status = 100, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Blinds, DeviceID = 02, Floor = (int)Floor.Basement, Room = (int)Room.Workshop, Status = 0, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Blinds, DeviceID = 03, Floor = (int)Floor.Groundfloor, Room = (int)Room.Kitchen, Status = 0, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Blinds, DeviceID = 04, Floor = (int)Floor.Groundfloor, Room = (int)Room.LivingRoom, Status = 0, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Blinds, DeviceID = 05, Floor = (int)Floor.Groundfloor, Room = (int)Room.HalfBathroom, Status = 0, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Blinds, DeviceID = 06, Floor = (int)Floor.FirstFloor, Room = (int)Room.NorthBedroom, Status = 0, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Blinds, DeviceID = 07, Floor = (int)Floor.FirstFloor, Room = (int)Room.SouthBedroom, Status = 0, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Blinds, DeviceID = 08, Floor = (int)Floor.FirstFloor, Room = (int)Room.KidRoom, Status = 0, OnOff = 1, Connected = 1 });
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.Blinds, DeviceID = 09, Floor = (int)Floor.FirstFloor, Room = (int)Room.Bathroom, Status = 0, OnOff = 1, Connected = 1 });
 
-            //All device ?
-            //AllDevice.Add(new Device { DeviceType = 00, DeviceID = 00, Floor = 00, Room = 00, Status = 0, OnOff = 0, Connected = 1 });
+            //All device
+            AllDevice.Add(new Device { DeviceType = (int)DeviceType.All, DeviceID = 00, Floor = (int)Floor.All, Room = (int)Room.All, Status = 0, OnOff = 0, Connected = 1 });
         }
 
 
         public static ObservableCollection<Device> LoadDevicesToRoom(ObservableCollection<Device> AllDevice, int roomID) 
-      {
-      ObservableCollection<Device> room = new ObservableCollection<Device>();
-      for(int i = 1; i < AllDevice.Count; ++i) {
-        if(AllDevice[i].Room == roomID) {
-          room.Add(AllDevice[i]);
-        }
-      }
-      return room;
-    }
-
-    public static void refreshData(Action timedMethod, object targetData, int waitSeconds) 
         {
-          if(targetData == null) {
-            timedMethod();
-          }
-          DispatcherTimer timer = new DispatcherTimer(DispatcherPriority.Background);
-          timer.Interval = TimeSpan.FromSeconds(waitSeconds);
-          timer.IsEnabled = true;
-          timer.Tick += (s, e) => { timedMethod(); };
+            ObservableCollection<Device> room = new ObservableCollection<Device>();
+            for(int i = 1; i < AllDevice.Count; ++i)
+            {
+                if(AllDevice[i].Room == roomID)
+                {
+                  room.Add(AllDevice[i]);
+                }
+            }
+          return room;
         }
-  }
+
+        public static void refreshData(Action timedMethod, object targetData, int waitSeconds) 
+        {
+            if(targetData == null)
+            {
+                timedMethod();
+            }
+            DispatcherTimer timer = new DispatcherTimer(DispatcherPriority.Background);
+            timer.Interval = TimeSpan.FromSeconds(waitSeconds);
+            timer.IsEnabled = true;
+            timer.Tick += (s, e) => { timedMethod(); };
+        }
+    }
 }

@@ -58,10 +58,10 @@ namespace SmartHomeUI
     } else {
       room[deviceIndex].Status = 0;
     }
-    if(room[deviceIndex].DeviceType == 02 && room[deviceIndex].Status == 100) {
+    if(room[deviceIndex].DeviceType == 04 && room[deviceIndex].Status == 100) {
         GarageDoorStatus[0] = "Closed";
     }
-    else if (room[deviceIndex].DeviceType == 02 && room[deviceIndex].Status == 0) {
+    else if (room[deviceIndex].DeviceType == 04 && room[deviceIndex].Status == 0) {
         GarageDoorStatus[0] = "Open";
     }
   }

@@ -22,6 +22,6 @@
     Source="file:../Images/Others/opendoor.gif" 
     LoadedBehavior="Play" 
     Stretch="None" 
-    Visibility="Visible"/>
+    Visibility="Visible" Margin="355,60,0,195"/>
     </Grid>
 </UserControl>

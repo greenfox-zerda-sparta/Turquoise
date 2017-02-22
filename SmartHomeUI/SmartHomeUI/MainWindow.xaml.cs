@@ -34,6 +34,7 @@ namespace SmartHomeUI
 
         private void CloseButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
+            (Instances.Models[(int)Models.XMLHandler] as XMLHandler).devicesToXML(Instances.AllDevice, "Devices.xml");
             Close();
         }
 

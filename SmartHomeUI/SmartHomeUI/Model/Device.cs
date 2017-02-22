@@ -4,38 +4,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using System.Xml.Serialization;
 
 namespace SmartHomeUI
-{
-
-    class Device : INotifyPropertyChanged
+{ 
+    [XmlRoot("Devices")]
+    public class Device : INotifyPropertyChanged
     {
         private int deviceID, deviceType, floor, room, status, onOff, connected;
 
+        [XmlElement("DeviceType")]
         public int DeviceType
         {
             get { return deviceType; }
             set { deviceType = value; RaisePropertyChanged("DeviceType"); }
         }
 
+        [XmlElement("DeviceID")]
         public int DeviceID 
         {
             get { return deviceID; }
             set { deviceID = value; RaisePropertyChanged("DeviceID"); }
         }
 
-    public int Floor
+        [XmlElement("Floor")]
+        public int Floor
         {
             get { return floor; }
             set { floor = value; RaisePropertyChanged("Floor"); }
         }
 
+        [XmlElement("Room")]
         public int Room
         {
             get { return room; }
             set { room = value; RaisePropertyChanged("Room"); }
         }
 
+        [XmlElement("Status")]
         public int Status
         {
             get { return status; }
@@ -47,14 +53,16 @@ namespace SmartHomeUI
                     RaisePropertyChanged("Status");
                 }
             }
-    }
+        }
 
+        [XmlElement("OnOff")]
         public int OnOff
         {
             get { return onOff; }
             set { onOff = value; RaisePropertyChanged("OnOff"); }
         }
-        
+
+        [XmlElement("Connected")]
         public int Connected 
         {
             get { return connected; }

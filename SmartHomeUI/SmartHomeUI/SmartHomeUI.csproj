@@ -86,6 +86,7 @@
     <Compile Include="Model\Instances.cs" />
     <Compile Include="Model\Logger.cs" />
     <Compile Include="Model\NavigationCommands.cs" />
+    <Compile Include="Model\XMLHandler.cs" />
     <Compile Include="ViewModels\GearViewModel.cs" />
     <Compile Include="ViewModels\HistViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />

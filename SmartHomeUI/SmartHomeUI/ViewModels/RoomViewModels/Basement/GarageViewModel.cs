@@ -80,8 +80,15 @@ namespace SmartHomeUI
   }
 
     private void InstantiateGarageDoorStatus() {
-      GarageDoorStatus = new ObservableCollection<string>();
-      GarageDoorStatus.Add("Closed");
-    }
+        GarageDoorStatus = new ObservableCollection<string>();
+        if (Garage[3].DeviceType == 04 && Garage[3].Status == 100)
+        {
+            GarageDoorStatus.Add("Closed");
+        }
+        else if (Garage[3].DeviceType == 04 && Garage[3].Status == 0)
+        {
+            GarageDoorStatus.Add("Open");
+        }
+     }
   }
 }

@@ -7,6 +7,7 @@ using System.Windows.Threading;
 using System.ComponentModel;
 using System.Net;
 using System.Xml.Linq;
+using System.Collections.ObjectModel;
 
 namespace SmartHomeUI
 {
@@ -14,9 +15,10 @@ namespace SmartHomeUI
     {
         private string currentTime = DateTime.Now.ToString("HH:mm"),
                        currentDate = DateTime.Now.ToString("yyyy-MM-dd"),
-                       city = "Budapest", sunset, sunrise, humidity,
+                       city = "Józsefváros", sunset, sunrise, humidity,
                        outdoorTemperature, lastUpdate, condition, icon;
 
+        public ObservableCollection<string> AlarmStatus { get; set; }
         Dictionary<string, string> WeatherDaylightConditionIcons;
         Dictionary<string, string> WeatherNightConditionIcons;
         private const string CurrentUrl = "http://api.openweathermap.org/data/2.5/weather?" + "q=@LOC@&mode=xml&units=metric&APPID=943e2efdf23a6323a04150361b9aeca7";
@@ -27,6 +29,7 @@ namespace SmartHomeUI
             Instances.refreshData(WeatherConditions, OutdoorTemperature, (int)Timers.oneMinute);
             Instances.refreshData(Clock, CurrentTime, (int)Timers.oneSecond);
             Instances.refreshData(Date, CurrentDate, (int)Timers.oneDay);
+            setAlarmStatus();
         }
 
         public string CurrentTime
@@ -251,6 +254,21 @@ namespace SmartHomeUI
         private void Date()
         {
             CurrentDate = DateTime.Now.ToString("yyyy-MM-dd");
+        }
+
+        private void setAlarmStatus()
+        {
+            AlarmStatus = new ObservableCollection<string>() { "Disarmed", "Images/InfoBarIcons/lockout.png" };
+            if(Instances.AllDevice[0].Status == 1)
+            {
+                AlarmStatus[0] = ("Armed");
+                AlarmStatus[1] = ("Images/InfoBarIcons/lockin.png");
+            }
+            else if (Instances.AllDevice[0].Status == 0)
+            {
+                AlarmStatus[0] = ("Disarmed");
+                AlarmStatus[1] = ("Images/InfoBarIcons/lockout.png");
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

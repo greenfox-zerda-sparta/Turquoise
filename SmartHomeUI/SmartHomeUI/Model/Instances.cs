@@ -52,8 +52,8 @@ namespace SmartHomeUI
 
         static Instances()
         {
-            InstantiateModels();
             InstantiateAllDevice();
+            InstantiateModels();
             InstantiateRoomViews();
             InstantiateViewModels();
         }

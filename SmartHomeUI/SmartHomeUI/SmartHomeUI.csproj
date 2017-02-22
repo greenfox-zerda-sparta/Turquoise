@@ -312,6 +312,10 @@
   <ItemGroup>
     <Resource Include="Images\Others\opendoor.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InfoBarIcons\lockin.png" />
+    <Resource Include="Images\InfoBarIcons\lockout.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

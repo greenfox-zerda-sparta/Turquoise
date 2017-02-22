@@ -23,5 +23,14 @@ namespace SmartHomeUI
             w.WriteLine("Log: {0}", logMessage);
             w.WriteLine("-------------------");
         }
+
+        public string fileContent(string filename)
+        {
+            string Text = File.ReadAllText(filename);
+            return Text;
+        }
+       
+
+        
     }
 }

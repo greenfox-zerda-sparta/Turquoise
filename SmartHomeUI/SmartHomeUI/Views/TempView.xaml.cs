@@ -24,5 +24,10 @@ namespace SmartHomeUI
         {
             InitializeComponent();
         }
+
+    private void tb_TextChanged(object sender, TextChangedEventArgs e)
+    {
+
     }
+  }
 }

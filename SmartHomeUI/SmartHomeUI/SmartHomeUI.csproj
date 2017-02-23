@@ -86,6 +86,7 @@
     <Compile Include="Model\Instances.cs" />
     <Compile Include="Model\Logger.cs" />
     <Compile Include="Model\NavigationCommands.cs" />
+    <Compile Include="Model\Scenarios.cs" />
     <Compile Include="Model\ToDo.cs" />
     <Compile Include="Model\XMLHandler.cs" />
     <Compile Include="ViewModels\GearViewModel.cs" />
@@ -103,6 +104,7 @@
     <Compile Include="ViewModels\RoomViewModels\Groundfloor\GroundfloorBathroomViewModel.cs" />
     <Compile Include="ViewModels\RoomViewModels\Groundfloor\KitchenViewModel.cs" />
     <Compile Include="ViewModels\RoomViewModels\Groundfloor\LivingRoomViewModel.cs" />
+    <Compile Include="ViewModels\ScenariosViewModel.cs" />
     <Compile Include="ViewModels\TempViewModel.cs" />
     <Compile Include="Views\GearView.xaml.cs">
       <DependentUpon>GearView.xaml</DependentUpon>

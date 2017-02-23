@@ -303,11 +303,12 @@
         </Grid>
 
         <Grid x:Name="ScenarioBar">
-            <Button x:Name="ScenarioSun" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,150,0,0" ToolTip="Home Mode" Height="72" VerticalAlignment="Top"/>
-            <Button x:Name="ScenarioNight" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,223,0,0" ToolTip="Night Mode" Height="72" VerticalAlignment="Top"/>
-            <Button x:Name="ScenarioLock" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,296,0,352" ToolTip="Away Mode" Height="72" VerticalAlignment="Top"/>
-            <Button x:Name="ScenarioVac" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="94" HorizontalAlignment="Right" Margin="0,0,0,280" ToolTip="Vacation Mode" Height="72" VerticalAlignment="Bottom"/>
-            <Button x:Name="ScenarioFav" Style="{StaticResource ButtonStyle}" Command="{Binding NAV.HomeCommand}" Width="95" HorizontalAlignment="Right" Margin="0,0,0,207" ToolTip="Favorite Mode" Height="72" VerticalAlignment="Bottom"/>
+            <Button x:Name="ScenarioSun" Style="{StaticResource ButtonStyle}" Command="{Binding SC.HomeScenarioCommand}" Width="95" HorizontalAlignment="Right" Margin="0,150,0,0" ToolTip="Home Mode" Height="72" VerticalAlignment="Top"/>
+            <Button x:Name="ScenarioNight" Style="{StaticResource ButtonStyle}" Command="{Binding SC.NightScenarioCommand}" Width="95" HorizontalAlignment="Right" Margin="0,223,0,0" ToolTip="Night Mode" Height="72" VerticalAlignment="Top"/>
+            <Button x:Name="ScenarioLock" Style="{StaticResource ButtonStyle}" Command="{Binding SC.AwayScenarioCommand}" Width="95" HorizontalAlignment="Right" Margin="0,296,0,352" ToolTip="Away Mode" Height="72" VerticalAlignment="Top"/>
+            <Button x:Name="ScenarioVac" Style="{StaticResource ButtonStyle}" Command="{Binding SC.VacationScenarioCommand}" Width="94" HorizontalAlignment="Right" Margin="0,0,0,280" ToolTip="Vacation Mode" Height="72" VerticalAlignment="Bottom"/>
+            <Button x:Name="ScenarioFav" Style="{StaticResource ButtonStyle}" Command="{Binding SC.FavoriteScenarioCommand}" Width="95" HorizontalAlignment="Right" Margin="0,0,0,207" ToolTip="Favorite Mode" Height="72" VerticalAlignment="Bottom"/>
+
 
             <Image x:Name="img_scen_sun" Height="63" Width="63" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,153,16,0"  Source="Images/ScenarioIcons/sunmode.png" IsHitTestVisible="False"/>
             <Image x:Name="img_scen_night" Height="63" Width="63" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,226,16,0"  Source="Images/ScenarioIcons/nightmode.png" IsHitTestVisible="False"/>

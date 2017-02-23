@@ -24,6 +24,7 @@ namespace SmartHomeUI
             {
                 IB = Instances.Models[(int)Models.InfoBar],
                 NAV = Instances.ViewModels[(int)ViewModels.NavVM],
+                SC = Instances.ViewModels[(int)ViewModels.ScenVM]
             };
         }
 

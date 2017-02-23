@@ -10,7 +10,7 @@ namespace SmartHomeUI
 {
     public enum ViewModels
     {
-        HistVM, HomeVM, TempVM, LockVM, GearVM, RoomNavVM, NavVM
+        HistVM, HomeVM, TempVM, LockVM, GearVM, RoomNavVM, NavVM, ScenVM
     }
 
     public enum RoomViews
@@ -20,7 +20,7 @@ namespace SmartHomeUI
 
     public enum Models
     {
-        XMLHandler, Log, InfoBar, Communication
+        XMLHandler, Log, InfoBar, Communication, Scenarios
     }
 
     public enum DeviceType 
@@ -67,6 +67,7 @@ namespace SmartHomeUI
             ViewModels.Add(new GearViewModel());
             ViewModels.Add(new RoomNavigationViewModel());
             ViewModels.Add(new MainNavigationViewModel());
+            ViewModels.Add(new ScenarioViewModel());
         }
 
         private static void InstantiateRoomViews()
@@ -87,14 +88,14 @@ namespace SmartHomeUI
             Models.Add(new Logger());
             Models.Add(new InfoBar());
             Models.Add(new Communication());
+            Models.Add(new Scenarios());
         }
 
         private static void InstantiateAllDevice() 
         {
             Models.Add(new XMLHandler());
             AllDevice = new ObservableCollection<Device>();
-            XMLHandler test = new XMLHandler();
-            test.devicesFromXML(ref AllDevice, "Devices.xml");
+            (Models[0] as XMLHandler).devicesFromXML(ref AllDevice, "Devices.xml");
         }
 
 

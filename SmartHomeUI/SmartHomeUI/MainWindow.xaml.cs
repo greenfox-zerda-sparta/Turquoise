@@ -36,6 +36,10 @@ namespace SmartHomeUI
         private void CloseButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             (Instances.Models[(int)Models.XMLHandler] as XMLHandler).devicesToXML(Instances.AllDevice, "Devices.xml");
+            (Instances.Models[(int)Models.XMLHandler] as XMLHandler).tasksToXML((Instances.ViewModels[(int)ViewModels.HistVM] as HistViewModel).ShoppingList, "Tasks/ShoppingList.xml");
+            (Instances.Models[(int)Models.XMLHandler] as XMLHandler).tasksToXML((Instances.ViewModels[(int)ViewModels.HistVM] as HistViewModel).DailyTasks, "Tasks/DailyTasks.xml");
+            (Instances.Models[(int)Models.XMLHandler] as XMLHandler).tasksToXML((Instances.ViewModels[(int)ViewModels.HistVM] as HistViewModel).JaneToDo, "Tasks/JaneTodos.xml");
+            (Instances.Models[(int)Models.XMLHandler] as XMLHandler).tasksToXML((Instances.ViewModels[(int)ViewModels.HistVM] as HistViewModel).JoeToDo, "Tasks/JoeTodos.xml");
             Close();
         }
 

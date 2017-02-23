@@ -12,7 +12,7 @@
         <Viewbox Margin="288,0,-0.4,205">
             <Calendar Height="169" Width="181"/>
         </Viewbox>
-              
+
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="234" Margin="9,10,0,0" VerticalAlignment="Top" Width="283"/>
         <TextBlock x:Name="MainTasks" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Daily Tasks" TextAlignment="Center" Width="198" Margin="0,15,598.6,0" FontSize="40" FontFamily="Microsoft YaHei UI Light" Height="56" VerticalAlignment="Top"/>
         <ListBox Margin="15,71,557.6,476" ItemsSource="{Binding DailyTasks}" BorderThickness="0">
@@ -44,6 +44,8 @@
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="206" Margin="566,504,0,0" VerticalAlignment="Top" Width="274"/>
         <Image x:Name="actual_electricity" HorizontalAlignment="Left" Height="115" Margin="642,519,0,0" VerticalAlignment="Top" Width="115" Source="../Images/HomeIcons/actual_electricity.png"/>
         <TextBlock Text="{Binding Consumptions[2], StringFormat='\{0\} Wh'}" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="586,632,14.6,22" Width="249" Height="66"/>
+
+        <Image x:Name="alarm" HorizontalAlignment="Left" Height="190" Margin="59,305,0,0" VerticalAlignment="Top" Width="178" Source="/Images/HomeIcons/alarm.png"/>
 
     </Grid>
 

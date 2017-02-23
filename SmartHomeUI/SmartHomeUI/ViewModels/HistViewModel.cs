@@ -94,14 +94,7 @@ namespace SmartHomeUI
         public HistViewModel()
         {
             InstantiateCommands();
-            ShoppingList.Add(new Task("Milk"));
-            ShoppingList.Add(new Task("Apple"));
-            ShoppingList.Add(new Task("Orange"));
-            ShoppingList.Add(new Task("Cucumber"));
-            DailyTasks.Add(new Task("Change bulb in living room"));
-            DailyTasks.Add(new Task("Bring out Garbage"));
-            JaneToDo.Add(new Task("Do homework"));
-            JoeToDo.Add(new Task("Play GTA V"));
+            LoadToDoLists();
         }
 
         public void InstantiateCommands()
@@ -111,6 +104,14 @@ namespace SmartHomeUI
             RemoveFromJaneToDoCommand = new NavigationCommands(param => RemoveTaskAtIndex(JaneToDo, SelectedJaneTaskIndex));
             RemoveFromJoeToDoCommand = new NavigationCommands(param => RemoveTaskAtIndex(JoeToDo, SelectedJoeTaskIndex));
             AddTaskCommand = new NavigationCommands(param => AddTask(NewTask));
+        }
+
+        public void LoadToDoLists()
+        {
+            (Instances.Models[(int)Models.XMLHandler] as XMLHandler).tasksFromXML(ref shoppingList, "Tasks/ShoppingList.xml");
+            (Instances.Models[(int)Models.XMLHandler] as XMLHandler).tasksFromXML(ref dailyTasks, "Tasks/DailyTasks.xml");
+            (Instances.Models[(int)Models.XMLHandler] as XMLHandler).tasksFromXML(ref janeToDo, "Tasks/JaneTodos.xml");
+            (Instances.Models[(int)Models.XMLHandler] as XMLHandler).tasksFromXML(ref joeToDo, "Tasks/JoeTodos.xml");
         }
 
         public void AddTask(string newTask)

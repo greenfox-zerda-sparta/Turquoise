@@ -24,5 +24,19 @@ namespace SmartHomeUI
             FileStream fileReader = new FileStream(filename, FileMode.Open);
             list = (ObservableCollection<Device>)serializer.Deserialize(fileReader);
         }
+
+        public void tasksToXML(ObservableCollection<Task> list, string filename)
+        {
+            XmlSerializer serializer = new XmlSerializer(list.GetType());
+            StreamWriter fileWriter = new StreamWriter(filename);
+            serializer.Serialize(fileWriter, list);
+        }
+
+        public void tasksFromXML(ref ObservableCollection<Task> list, string filename)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(ObservableCollection<Task>));
+            FileStream fileReader = new FileStream(filename, FileMode.Open);
+            list = (ObservableCollection<Task>)serializer.Deserialize(fileReader);
+        }
     }
 }

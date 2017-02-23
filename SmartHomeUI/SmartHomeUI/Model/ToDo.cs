@@ -10,7 +10,7 @@ namespace SmartHomeUI
 {
     [Serializable()]
     [XmlRoot("Tasks")]
-    class Task : INotifyPropertyChanged
+    public class Task : INotifyPropertyChanged
     {
         private string taskName;
 
@@ -20,6 +20,8 @@ namespace SmartHomeUI
             get { return taskName; }
             set { taskName = value; RaisePropertyChanged("TaskName"); }
         }
+
+        public Task() { }
 
         public Task(string taskname)
         {

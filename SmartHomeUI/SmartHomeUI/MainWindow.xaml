@@ -286,8 +286,8 @@
             <Rectangle Fill="#FF7F7F7F" HorizontalAlignment="Left" Height="184" Margin="117,11,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="221" IsHitTestVisible="False"/>
             <Rectangle Fill="#FF20B2AA" HorizontalAlignment="Left" Height="508" Margin="117,204,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="221"/>
             <Image x:Name="img_home_border" Height="161" Width="201" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="126,23,0,0"  Source="Images/InfoBarIcons/whouse_border.png" IsHitTestVisible="False"/>
-            <Image x:Name="img_alarmlock" Height="40" Width="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="206,90,0,0"  Source="{Binding IB.AlarmStatus[1]}" IsHitTestVisible="False" RenderTransformOrigin="2.725,1.975"/>
-            <TextBlock Text="{Binding IB.AlarmStatus[0]}" Foreground="White" FontSize="25" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="127,135,953,545" Width="200" Height="40"/>
+            <Image x:Name="img_alarmlock" Height="92" Width="92" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="181,57,0,0"  Source="{Binding IB.AlarmStatus[1]}" IsHitTestVisible="False" RenderTransformOrigin="2.725,1.975"/>
+            <TextBlock Text="{Binding IB.AlarmStatus[0]}" Foreground="White" FontSize="25" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="127,149,953,531" Width="200" Height="40"/>
             <TextBlock Text="{Binding IB.CurrentTime}" Foreground="White" FontSize="60" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,206,942,448" Width="221" Height="66"/>
             <TextBlock Text="{Binding IB.CurrentDate}" Foreground="White" FontSize="20" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,276,942,411" Width="221" Height="33"/>
             <TextBlock Text="Weather Condition" Foreground="White" FontSize="20" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="117,315,942,377" Width="221" Height="28"/>

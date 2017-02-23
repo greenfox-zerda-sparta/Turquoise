@@ -74,7 +74,6 @@ namespace SmartHomeUI
             }
         }
 
-
         private void InstantiateConnectionStatus() 
         {
             ConnectionStatus = new ObservableCollection<string>();

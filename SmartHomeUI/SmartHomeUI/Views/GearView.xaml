@@ -40,7 +40,7 @@
 
         <TextBlock x:Name="AddDevice" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Add new device..." TextAlignment="Left" Width="402" Margin="0,15,428.6,0" FontSize="40" FontFamily="Microsoft YaHei UI Light" Height="56" VerticalAlignment="Top"/>
         <Label Content="Change the city for weather informations" FontSize="21" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="437,64,0,0" VerticalAlignment="Top" Height="40" Width="394"/>
-        <ListBox ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.CanContentScroll="False" Margin="18,100,436.6,440" ItemsSource="{Binding GEARVM.DeviceTypes}" BorderThickness="0" SelectedIndex="{Binding GEARVM.DeviceTypeIndex}">
+        <ListBox ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.CanContentScroll="False" Margin="18,108,436.6,432" ItemsSource="{Binding GEARVM.DeviceTypes}" BorderThickness="0" SelectedIndex="{Binding GEARVM.DeviceTypeIndex}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -55,7 +55,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <ListBox Margin="18,321,436.6,74" ItemsSource="{Binding GEARVM.Rooms}" BorderThickness="0" SelectedIndex="{Binding GEARVM.RoomIndex}">
+        <ListBox Margin="18,333,436.6,87" ItemsSource="{Binding GEARVM.Rooms}" BorderThickness="0" SelectedIndex="{Binding GEARVM.RoomIndex}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -71,16 +71,16 @@
         </ListBox>
 
         <TextBlock x:Name="Weather" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Weather Settings" TextAlignment="Center" Width="317" Margin="0,15,97.6,0" FontSize="40" FontFamily="Microsoft YaHei UI Light" Height="56" VerticalAlignment="Top"/>
-        <Label Content="Select type of device" FontSize="21" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="14,63,0,0" VerticalAlignment="Top" Height="40" Width="394"/>
+        <Label Content="Select type of device" FontSize="21" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="14,71,0,0" VerticalAlignment="Top" Height="40" Width="394"/>
         <TextBox HorizontalAlignment="Left" Height="75" Margin="437,103,0,0" TextAlignment="Center" Text="{Binding IB.City}" FontSize="50" VerticalAlignment="Top" Width="392"/>
         <Button Content="Apply" HorizontalAlignment="Left" Margin="437,191,0,0" VerticalAlignment="Top" Width="392" Height="45"/>
 
         <TextBlock x:Name="FavScenario" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Favorite Scenario" TextAlignment="Left" Width="317" Margin="0,252,95.6,0" FontSize="40" FontFamily="Microsoft YaHei UI Light" Height="56" VerticalAlignment="Top"/>
         <Label Content="Save current settings as the Favorite Scenario" FontSize="19" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="432,301,0,0" VerticalAlignment="Top" Height="40" Width="394"/>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="437,344,0,0" VerticalAlignment="Top" Width="392" Height="45"/>
+        <Button Content="Save" Command="{Binding GEARVM.SetFavScenarioCommand}" HorizontalAlignment="Left" Margin="437,344,0,0" VerticalAlignment="Top" Width="392" Height="45"/>
 
         <TextBlock x:Name="Credits" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Credits" TextAlignment="Left" Width="131" Margin="0,407,281.6,0" FontSize="40" FontFamily="Microsoft YaHei UI Light" Height="56" VerticalAlignment="Top"/>
-        <Label Content="Select room" FontSize="21" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="14,281,0,0" VerticalAlignment="Top" Height="40" Width="394"/>
+        <Label Content="Select room" FontSize="21" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="14,295,0,0" VerticalAlignment="Top" Height="40" Width="394"/>
         <Button Content="Add Device" Command="{Binding GEARVM.AddDeviceCommand}" HorizontalAlignment="Left" Margin="16,653,0,0" VerticalAlignment="Top" Width="392" Height="45"/>
 
 

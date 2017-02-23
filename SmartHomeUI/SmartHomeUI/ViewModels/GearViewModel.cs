@@ -28,6 +28,7 @@ namespace SmartHomeUI
         }
 
         public ICommand AddDeviceCommand { get; set; }
+        public ICommand SetFavScenarioCommand { get; set; }
 
         public GearViewModel()
         {
@@ -39,11 +40,17 @@ namespace SmartHomeUI
             Rooms = new ObservableCollection<string>() { "All", "Garage", "Workshop", "Kitchen", "Living Room", "Half Bathroom", "North Bedroom", "South Bedroom", "Kid's Room", "Bathroom" };
             DeviceTypes = new ObservableCollection<string>() { "All", "Lamp", "Heating", "Cooling", "Blinds", "Alarm" };
             AddDeviceCommand = new NavigationCommands(param => AddDevice(Instances.AllDevice));
+            SetFavScenarioCommand = new NavigationCommands(SetFavScenario);
         }
 
         public void AddDevice(ObservableCollection<Device> AllDevice)
         {
             Instances.AllDevice.Add(new Device() { DeviceType = DeviceTypeIndex, Room = RoomIndex });
+        }
+
+        public void SetFavScenario(object obj)
+        {
+            (Instances.Models[(int)Models.XMLHandler] as XMLHandler).devicesToXML(Instances.AllDevice, "Scenarios/Favorite.xml");
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

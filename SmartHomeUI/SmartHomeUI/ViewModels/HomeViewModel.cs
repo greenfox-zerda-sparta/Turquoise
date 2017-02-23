@@ -12,10 +12,17 @@ namespace SmartHomeUI {
     class HomeViewModel
     {
         public ObservableCollection<string> Consumptions { get; set; }
+        public ObservableCollection<Task> DailyTasks { get; set; }
 
         public HomeViewModel()
         {
             Instances.refreshData(getConsumptions, Consumptions, (int)Timers.halfHour);
+            getDailyTasks();
+        }
+
+        public void getDailyTasks()
+        {
+            DailyTasks = (Instances.ViewModels[(int)ViewModels.HistVM] as HistViewModel).DailyTasks;
         }
 
         public void getConsumptions()

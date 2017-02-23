@@ -8,6 +8,7 @@ using System.Xml.Serialization;
 
 namespace SmartHomeUI
 { 
+    [Serializable()]
     [XmlRoot("Devices")]
     public class Device : INotifyPropertyChanged
     {

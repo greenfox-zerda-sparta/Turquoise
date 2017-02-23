@@ -10,7 +10,7 @@ namespace SmartHomeUI
 {
     public enum ViewModels
     {
-        HomeVM, HistVM, TempVM, LockVM, GearVM, RoomNavVM, NavVM
+        HistVM, HomeVM, TempVM, LockVM, GearVM, RoomNavVM, NavVM
     }
 
     public enum RoomViews
@@ -60,8 +60,8 @@ namespace SmartHomeUI
 
         private static void InstantiateViewModels()
         {
-            ViewModels.Add(new HomeViewModel());
             ViewModels.Add(new HistViewModel());
+            ViewModels.Add(new HomeViewModel());
             ViewModels.Add(new TempViewModel());
             ViewModels.Add(new LockViewModel());
             ViewModels.Add(new GearViewModel());

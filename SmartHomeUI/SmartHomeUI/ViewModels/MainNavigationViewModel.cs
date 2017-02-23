@@ -43,7 +43,6 @@ namespace SmartHomeUI
         private void OpenHome(object obj)
         {
             SelectedViewModel = Instances.ViewModels[(int)ViewModels.HomeVM];
-            (Instances.Models[(int)Models.Log] as Logger).logToFile("Changed to Home screen");
         }
 
         private void OpenRoom(object obj)

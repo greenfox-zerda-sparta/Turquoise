@@ -11,7 +11,7 @@
         <Viewbox HorizontalAlignment="Left" Margin="-16.338,-32,0,329.2" Width="426.159" d:LayoutOverrides="HorizontalAlignment"/>
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="404" Margin="30,20,30,0" VerticalAlignment="Top" Width="790"/>
 
-        <TextBox x:Name="tb" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True" HorizontalAlignment="Left" Text="{Binding fileContent}" IsReadOnly="True" Width="750" Background="#FFEDEDDE" Margin="50,100,50,320" FontSize="30" Height="300" VerticalAlignment="Bottom" TextChanged="tb_TextChanged" BorderThickness="0"/>
+        <TextBox x:Name="tb" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" HorizontalAlignment="Left" Text="{Binding fileContent}" IsReadOnly="True" Width="750" Background="#FFEDEDDE" Margin="50,0,0,314" FontSize="30" Height="322" VerticalAlignment="Bottom" BorderThickness="0"/>
 
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="248" Margin="30,446.4,0,20" VerticalAlignment="Top" Width="250" d:LayoutOverrides="HorizontalAlignment"/>
         <TextBlock x:Name="MainTask" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Current Activity" Width="245" Margin="50,35,0,0" FontSize="30" Height="44" VerticalAlignment="Top" FontWeight="Bold"/>

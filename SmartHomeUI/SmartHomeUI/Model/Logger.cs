@@ -11,7 +11,7 @@ namespace SmartHomeUI
     {
         public void logToFile(string logmsg)
         {
-            using (StreamWriter w = File.AppendText("log.txt"))
+            using (StreamWriter w = File.AppendText("LogFile.txt"))
             {
                 Log(logmsg, w);
             }
@@ -19,18 +19,15 @@ namespace SmartHomeUI
 
         public void Log(string logMessage, TextWriter w)
         {
-            w.WriteLine("{0} {1}", DateTime.Now.ToString("yyyy-MM-dd"), DateTime.Now.ToLongTimeString());
-            w.WriteLine("Log: {0}", logMessage);
             w.WriteLine("-------------------");
+            w.WriteLine("Log: {0}", logMessage);
+            w.WriteLine("{0} {1}", DateTime.Now.ToString("yyyy-MM-dd"), DateTime.Now.ToLongTimeString());
         }
 
         public string fileContent(string filename)
         {
             string Text = File.ReadAllText(filename);
             return Text;
-        }
-       
-
-        
+        }    
     }
 }

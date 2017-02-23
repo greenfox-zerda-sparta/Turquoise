@@ -26,7 +26,7 @@ namespace SmartHomeUI
         public InfoBar()
         {
             instantiateWeatherConditionDictionaries();
-            Instances.refreshData(WeatherConditions, OutdoorTemperature, (int)Timers.oneMinute);
+            Instances.refreshData(WeatherConditions, OutdoorTemperature, (int)Timers.halfHour);
             Instances.refreshData(Clock, CurrentTime, (int)Timers.oneSecond);
             Instances.refreshData(Date, CurrentDate, (int)Timers.oneDay);
             setAlarmStatus();
@@ -107,7 +107,7 @@ namespace SmartHomeUI
                 Sunset = (xml_document.Root.Element("city").Element("sun").Attribute("set")).ToString().Replace("set=", null).Replace("\"", "").Replace(":", "").Remove(0, 11);
                 LastUpdate = DateTime.Now.ToString("yyyy-MM-dd, HH:mm");
                 setConditionIcon(ConditionIcon);
-                (Instances.Models[(int)Models.Log] as Logger).logToFile("MainWindow - InfoBar: Fetched weather data from openweathermap.org");
+                (Instances.Models[(int)Models.Log] as Logger).logToFile("InfoBar: Fetched weather data from openweathermap.org");
             }
         }
 

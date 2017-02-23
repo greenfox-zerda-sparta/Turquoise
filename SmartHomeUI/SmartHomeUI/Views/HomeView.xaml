@@ -12,10 +12,27 @@
         <Viewbox Margin="288,0,-0.4,205">
             <Calendar Height="169" Width="181"/>
         </Viewbox>
-
+        
+        
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="234" Margin="9,10,0,0" VerticalAlignment="Top" Width="283"/>
+        <TextBlock x:Name="MainTasks" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Daily Tasks" TextAlignment="Center" Width="198" Margin="0,15,598.6,0" FontSize="40" FontFamily="Microsoft YaHei UI Light" Height="56" VerticalAlignment="Top"/>
+        <ListBox Margin="15,71,557.6,476" ItemsSource="{Binding DailyTasks}" BorderThickness="0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <BulletDecorator>
+                            <BulletDecorator.Bullet>
+                                <Ellipse Height="6" Width="6" Fill="Black"/>
+                            </BulletDecorator.Bullet>
+                            <TextBlock ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" HorizontalAlignment="Left" Text="{Binding Path=TaskName, StringFormat=' \{0\}'}" FontSize="20" FontFamily="Microsoft YaHei UI Light" VerticalAlignment="Top"/>
+                        </BulletDecorator>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="250" Margin="9,249,0,0" VerticalAlignment="Top" Width="283"/>
+        <TextBlock x:Name="SetAlarm" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Set Alarm" TextAlignment="Center" Width="198" Margin="0,253,598.6,0" FontSize="40" FontFamily="Microsoft YaHei UI Light" Height="56" VerticalAlignment="Top"/>
 
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="206" Margin="9,504,0,0" VerticalAlignment="Top" Width="283"/>
         <Image x:Name="water_consumption" HorizontalAlignment="Left" Height="115" Margin="90,521,0,0" VerticalAlignment="Top" Width="115" Source="../Images/HomeIcons/water_consumption.png"/>

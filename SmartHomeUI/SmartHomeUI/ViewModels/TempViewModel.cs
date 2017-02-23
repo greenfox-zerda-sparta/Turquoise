@@ -18,7 +18,13 @@ namespace SmartHomeUI
 
         public TempViewModel()
         {
-            fileContent = (Instances.Models[(int)Models.Log] as Logger).fileContent("log.txt");
+            Instances.refreshData(RefreshLogList, fileContent, (int)Timers.oneSecond);
+        }
+
+        public void RefreshLogList()
+        {
+            fileContent = (Instances.Models[(int)Models.Log] as Logger).fileContent("LogFile.txt");
+            fileContent = string.Join("\r\n", fileContent.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries).Reverse());
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

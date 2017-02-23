@@ -6,7 +6,29 @@
       xmlns:local="clr-namespace:SmartHomeUI"
       mc:Ignorable="d" 
       d:DesignHeight="720" d:DesignWidth="850">
-
+    <UserControl.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#20B2AC"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="15" BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF7F7F7F"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <Rectangle Fill="#FFDDDDDD" IsHitTestVisible="False"/>
 
@@ -16,11 +38,86 @@
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="537" Margin="9,10,0,0" VerticalAlignment="Top" Width="410"/>
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="158" Margin="9,552,0,0" VerticalAlignment="Top" Width="831"/>
 
+        <TextBlock x:Name="MainTask" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Daily Tasks" Width="198" Margin="0,15,216.6,0" FontSize="40" FontFamily="Microsoft YaHei UI Light" Height="56" VerticalAlignment="Top"/>
+        <TextBlock x:Name="ShoppingList" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Shopping List" Width="205" Margin="16,0,0,649" FontSize="40" FontWeight="Bold" FontFamily="Microsoft YaHei UI Light" Height="56" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="Todo1" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Jane's Tasks" Width="164" Margin="0,213,251.6,0" FontSize="30" FontFamily="Microsoft YaHei UI Light" Height="38" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Todo2" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Joe's Tasks" Width="160" Margin="0,213,44.6,0" FontSize="30" FontFamily="Microsoft YaHei UI Light" Height="38" VerticalAlignment="Top"/>
 
-        <TextBlock x:Name="MainTask" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Daily Tasks" Width="174.4" Margin="0,15.015,243.6,0" FontSize="30" FontFamily="Microsoft YaHei UI Light" Height="40.069" VerticalAlignment="Top"/>
-        <TextBlock x:Name="Notes" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Notes" Width="174.4" Margin="10,0,0,127.931" FontSize="30" FontFamily="Microsoft YaHei UI Light" Height="40.069" VerticalAlignment="Bottom"/>
-        <TextBlock x:Name="ShoppingList" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Shopping List" Width="205" Margin="9,0,0,668" FontSize="30" FontFamily="Microsoft YaHei UI Light" Height="37" VerticalAlignment="Bottom"/>
-        <TextBlock x:Name="Todo1" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Jane's ToDo" Width="164.2" Margin="0,212.696,255.8,0" FontSize="24" FontFamily="Microsoft YaHei UI Light" Height="38.469" VerticalAlignment="Top"/>
-        <TextBlock x:Name="Todo2" HorizontalAlignment="Right" TextWrapping="Wrap" Width="164.2" Margin="0,212.6,45.8,0" FontSize="24" FontFamily="Microsoft YaHei UI Light" Height="38.469" VerticalAlignment="Top"><Run Text="Joe"/><Run Text="'s ToDo"/></TextBlock>
+        <Button x:Name="ShoppingListRemove" Command="{Binding RemoveFromShoppingListCommand}" Content="Remove Selected" HorizontalAlignment="Left" Margin="258,23,0,0" VerticalAlignment="Top" Width="150" Height="37"/>
+        <ListBox Margin="16,76,430.6,173" ItemsSource="{Binding ShoppingList}" BorderThickness="0" SelectedIndex="{Binding SelectedShoppingListIndex}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <BulletDecorator>
+                            <BulletDecorator.Bullet>
+                                <Ellipse Height="6" Width="6" Fill="Black"/>
+                            </BulletDecorator.Bullet>
+                            <TextBlock ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" HorizontalAlignment="Left" Text="{Binding Path=TaskName, StringFormat=' \{0\}'}" FontSize="25" FontFamily="Microsoft YaHei UI Light" VerticalAlignment="Top"/>
+                        </BulletDecorator>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Button x:Name="DailyTaskRemove" Command="{Binding RemoveFromDailyTasksCommand}" Content="Remove Selected" HorizontalAlignment="Left" Margin="680,24,0,0" VerticalAlignment="Top" Width="150" Height="37"/>
+        <ListBox Margin="434,76,12.6,514" ItemsSource="{Binding DailyTasks}" BorderThickness="0" SelectedIndex="{Binding SelectedDailyTaskIndex}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <BulletDecorator>
+                            <BulletDecorator.Bullet>
+                                <Ellipse Height="6" Width="6" Fill="Black"/>
+                            </BulletDecorator.Bullet>
+                            <TextBlock ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" HorizontalAlignment="Left" Text="{Binding Path=TaskName, StringFormat=' \{0\}'}" FontSize="25" FontFamily="Microsoft YaHei UI Light" VerticalAlignment="Top"/>
+                        </BulletDecorator>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Button x:Name="JaneTaskRemove" Command="{Binding RemoveFromJaneToDoCommand}" Content="Remove Selected" HorizontalAlignment="Left" Margin="453,500,0,0" VerticalAlignment="Top" Width="150" Height="37"/>
+        <ListBox Margin="434,256,219.6,225" ItemsSource="{Binding JaneToDo}" BorderThickness="0" SelectedIndex="{Binding SelectedJaneTaskIndex}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <BulletDecorator>
+                            <BulletDecorator.Bullet>
+                                <Ellipse Height="6" Width="6" Fill="Black"/>
+                            </BulletDecorator.Bullet>
+                            <TextBlock ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" HorizontalAlignment="Left" Text="{Binding Path=TaskName, StringFormat=' \{0\}'}" FontSize="25" FontFamily="Microsoft YaHei UI Light" VerticalAlignment="Top"/>
+                        </BulletDecorator>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Button x:Name="JoeTaskRemove" Command="{Binding RemoveFromJoeToDoCommand}" Content="Remove Selected" HorizontalAlignment="Left" Margin="663,500,0,0" VerticalAlignment="Top" Width="150" Height="37"/>
+        <ListBox Margin="644,256,9.6,225" ItemsSource="{Binding JoeToDo}" BorderThickness="0" SelectedIndex="{Binding SelectedJoeTaskIndex}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <BulletDecorator>
+                            <BulletDecorator.Bullet>
+                                <Ellipse Height="6" Width="6" Fill="Black"/>
+                            </BulletDecorator.Bullet>
+                            <TextBlock ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" HorizontalAlignment="Left" Text="{Binding Path=TaskName, StringFormat=' \{0\}'}" FontSize="25" FontFamily="Microsoft YaHei UI Light" VerticalAlignment="Top"/>
+                        </BulletDecorator>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <TextBox Text="{Binding NewTask}" HorizontalAlignment="Left" VerticalContentAlignment="Center" FontSize="45" TextAlignment="Center" Height="70" Margin="436,564,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390"/>
+        <Button x:Name="AddTask" Command="{Binding AddTaskCommand}" Content="Add new task" HorizontalAlignment="Left" Margin="434,639,0,0" VerticalAlignment="Top" Width="396" Height="60"/>
+        <ListBox x:Name="TaskList" ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="25,564,441.6,18" ItemsSource="{Binding TaskListNames}" BorderThickness="1" SelectedIndex="{Binding SelectedTaskListNameIndex}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock ScrollViewer.CanContentScroll="True" HorizontalAlignment="Left" Text="{Binding StringFormat=' \{0\}'}" FontSize="23" FontFamily="Microsoft YaHei UI Light" VerticalAlignment="Top"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
     </Grid>
 </UserControl>

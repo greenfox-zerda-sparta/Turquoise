@@ -7,17 +7,82 @@
       mc:Ignorable="d" 
       d:DesignHeight="720" d:DesignWidth="850">
 
+    <UserControl.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#20B2AC"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="15" BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF7F7F7F"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
     <Grid>
         <Rectangle Fill="#FFDDDDDD" IsHitTestVisible="False"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="350" Margin="216,10,0,0" VerticalAlignment="Top" Width="205"/>
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="234" Margin="426,10,0,0" VerticalAlignment="Top" Width="414"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="298" Margin="426,249,0,0" VerticalAlignment="Top" Width="414"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="182" Margin="216,365,0,0" VerticalAlignment="Top" Width="205"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="537" Margin="9,10,0,0" VerticalAlignment="Top" Width="202"/>
-        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="158" Margin="9,552,0,0" VerticalAlignment="Top" Width="831"/>
-        <TextBox HorizontalAlignment="Left" Height="45" Margin="437,51,0,0" TextAlignment="Center" Text="{Binding City}" FontSize="30" VerticalAlignment="Top" Width="317"/>
-        <Button Content="Apply" HorizontalAlignment="Left" Margin="764,51,0,0" VerticalAlignment="Top" Width="67" Height="45"/>
-        <Label Content="Change the city for weather informations" FontSize="21" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="437,12,0,0" VerticalAlignment="Top" Height="35" Width="394"/>
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="150" Margin="426,249,0,0" VerticalAlignment="Top" Width="414"/>
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="700" Margin="9,10,0,0" VerticalAlignment="Top" Width="412"/>
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="306" Margin="426,404,0,0" VerticalAlignment="Top" Width="414"/>
+
+        <TextBlock x:Name="AddDevice" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Add new device..." TextAlignment="Left" Width="402" Margin="0,15,428.6,0" FontSize="40" FontFamily="Microsoft YaHei UI Light" Height="56" VerticalAlignment="Top"/>
+        <Label Content="Change the city for weather informations" FontSize="21" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="437,64,0,0" VerticalAlignment="Top" Height="40" Width="394"/>
+        <ListBox ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.CanContentScroll="False" Margin="18,100,436.6,440" ItemsSource="{Binding GEARVM.DeviceTypes}" BorderThickness="0" SelectedIndex="{Binding GEARVM.DeviceTypeIndex}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <BulletDecorator>
+                            <BulletDecorator.Bullet>
+                                <Ellipse Height="6" Width="6" Fill="Black"/>
+                            </BulletDecorator.Bullet>
+                            <TextBlock HorizontalAlignment="Left" Text="{Binding StringFormat=' \{0\}'}" FontSize="20" FontFamily="Microsoft YaHei UI Light" VerticalAlignment="Top"/>
+                        </BulletDecorator>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <ListBox Margin="18,321,436.6,74" ItemsSource="{Binding GEARVM.Rooms}" BorderThickness="0" SelectedIndex="{Binding GEARVM.RoomIndex}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <BulletDecorator>
+                            <BulletDecorator.Bullet>
+                                <Ellipse Height="6" Width="6" Fill="Black"/>
+                            </BulletDecorator.Bullet>
+                            <TextBlock ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" HorizontalAlignment="Left" Text="{Binding StringFormat=' \{0\}'}" FontSize="20" FontFamily="Microsoft YaHei UI Light" VerticalAlignment="Top"/>
+                        </BulletDecorator>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <TextBlock x:Name="Weather" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Weather Settings" TextAlignment="Center" Width="317" Margin="0,15,97.6,0" FontSize="40" FontFamily="Microsoft YaHei UI Light" Height="56" VerticalAlignment="Top"/>
+        <Label Content="Select type of device" FontSize="21" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="14,63,0,0" VerticalAlignment="Top" Height="40" Width="394"/>
+        <TextBox HorizontalAlignment="Left" Height="75" Margin="437,103,0,0" TextAlignment="Center" Text="{Binding IB.City}" FontSize="50" VerticalAlignment="Top" Width="392"/>
+        <Button Content="Apply" HorizontalAlignment="Left" Margin="437,191,0,0" VerticalAlignment="Top" Width="392" Height="45"/>
+
+        <TextBlock x:Name="FavScenario" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Favorite Scenario" TextAlignment="Left" Width="317" Margin="0,252,95.6,0" FontSize="40" FontFamily="Microsoft YaHei UI Light" Height="56" VerticalAlignment="Top"/>
+        <Label Content="Save current settings as the Favorite Scenario" FontSize="19" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="432,301,0,0" VerticalAlignment="Top" Height="40" Width="394"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="437,344,0,0" VerticalAlignment="Top" Width="392" Height="45"/>
+
+        <TextBlock x:Name="Credits" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Credits" TextAlignment="Left" Width="131" Margin="0,407,281.6,0" FontSize="40" FontFamily="Microsoft YaHei UI Light" Height="56" VerticalAlignment="Top"/>
+        <Label Content="Select room" FontSize="21" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="14,281,0,0" VerticalAlignment="Top" Height="40" Width="394"/>
+        <Button Content="Add Device" Command="{Binding GEARVM.AddDeviceCommand}" HorizontalAlignment="Left" Margin="16,653,0,0" VerticalAlignment="Top" Width="392" Height="45"/>
+
 
     </Grid>
 </UserControl>

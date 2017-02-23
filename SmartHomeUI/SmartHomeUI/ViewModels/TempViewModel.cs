@@ -18,7 +18,7 @@ namespace SmartHomeUI
 
         public TempViewModel()
         {
-            Instances.refreshData(RefreshLogList, fileContent, (int)Timers.oneSecond);
+            Instances.refreshData(RefreshLogList, fileContent, (int)Timers.oneMinute);
         }
 
         public void RefreshLogList()

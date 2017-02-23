@@ -12,8 +12,7 @@
         <Viewbox Margin="288,0,-0.4,205">
             <Calendar Height="169" Width="181"/>
         </Viewbox>
-        
-        
+              
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="234" Margin="9,10,0,0" VerticalAlignment="Top" Width="283"/>
         <TextBlock x:Name="MainTasks" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Daily Tasks" TextAlignment="Center" Width="198" Margin="0,15,598.6,0" FontSize="40" FontFamily="Microsoft YaHei UI Light" Height="56" VerticalAlignment="Top"/>
         <ListBox Margin="15,71,557.6,476" ItemsSource="{Binding DailyTasks}" BorderThickness="0">

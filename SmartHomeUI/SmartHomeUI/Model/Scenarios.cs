@@ -22,7 +22,6 @@ namespace SmartHomeUI
 
         public void ReloadAllDeviceToRoom()
         {
-            (Instances.RoomViews[(int)RoomViews.Garage] as GarageViewModel).Garage.Clear();
             (Instances.RoomViews[(int)RoomViews.Garage] as GarageViewModel).Garage = Instances.LoadDevicesToRoom(Instances.AllDevice, 1);
             Instances.LoadDevicesToRoom(Instances.AllDevice, 2);
             Instances.LoadDevicesToRoom(Instances.AllDevice, 3);
@@ -34,5 +33,4 @@ namespace SmartHomeUI
             Instances.LoadDevicesToRoom(Instances.AllDevice, 9);
         }
     }
-
 }

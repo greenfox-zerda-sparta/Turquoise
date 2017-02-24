@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using System.ComponentModel;
 
 namespace SmartHomeUI
 {
-    class GarageViewModel 
+    class GarageViewModel : INotifyPropertyChanged
     { 
         public ICommand IncrementLightCommand { get; set; }
         public ICommand DecrementLightCommand { get; set; }
@@ -21,11 +22,15 @@ namespace SmartHomeUI
         public ICommand DecrementBlindsCommand { get; set; }
         public ICommand TurnBlindsOnOffCommand { get; set; }
         public ICommand GarageDoorCommand { get; set; }
-    
-        public ObservableCollection<Device> Garage { get; set; }
+
+        private ObservableCollection<Device> garage = new ObservableCollection<Device>();
+        public ObservableCollection<Device> Garage
+        {
+            get { return garage; }
+            set { garage = value; RaisePropertyChanged("Garage"); }
+        }
         public ObservableCollection<string> ConnectionStatus { get; set; }
         public ObservableCollection<string> GarageDoorStatus { get; set; }
-
 
         public GarageViewModel()
         {
@@ -34,8 +39,6 @@ namespace SmartHomeUI
             InstantiateConnectionStatus();
             InstantiateGarageDoorStatus();
         }
-
-
 
         private void InstantiateCommands()
         {
@@ -99,6 +102,16 @@ namespace SmartHomeUI
             else if (Garage[3].DeviceType == 04 && Garage[3].Status == 0)
             {
                 GarageDoorStatus.Add("Open");
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void RaisePropertyChanged(string property)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(property));
             }
         }
     }

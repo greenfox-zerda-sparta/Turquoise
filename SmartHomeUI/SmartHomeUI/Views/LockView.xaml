@@ -37,8 +37,24 @@
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Margin="425,10,0,193" Width="415"/>
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="180" Margin="9,530,0,0" VerticalAlignment="Top" Width="831"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="66" Margin="16,14,0,0" TextWrapping="Wrap" Text="Alarm system" VerticalAlignment="Top" Width="304" FontFamily="Microsoft YaHei UI Light" FontSize="30"/>
+        <Button Command="{Binding SetAlarmCommand}" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" Margin="133,64,0,0" VerticalAlignment="Top" Width="178" Height="190">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}"/>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Image x:Name="alarm" HorizontalAlignment="Left" Height="190" Margin="133,64,0,0" VerticalAlignment="Top" Width="178" Source="/Images/HomeIcons/alarm.png" IsHitTestVisible="False"/>
+
         <Rectangle Fill="#FFFFFFFF" Margin="9,274,0,193" HorizontalAlignment="Left" Width="411"/>
         <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="16,278,0,0" TextWrapping="Wrap" Text="Garage door" Width="304" FontFamily="Microsoft YaHei UI Light" FontSize="30" RenderTransformOrigin="1.789,0.758" Height="66" VerticalAlignment="Top"/>
+        <Image Source="../Images/Others/garage.jpg" Margin="16,319,429.6,201"/>
 
         <Image gif:ImageBehavior.AnimatedSource="../Images/Others/bedroom.gif" Margin="435,44,17.6,449"/>
         <Image gif:ImageBehavior.AnimatedSource="../Images/Others/livingroom.gif" Margin="435,290,17.6,190"/>

@@ -82,6 +82,9 @@
         <TextBlock x:Name="Credits" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Credits" TextAlignment="Left" Width="131" Margin="0,407,281.6,0" FontSize="40" FontFamily="Microsoft YaHei UI Light" Height="56" VerticalAlignment="Top"/>
         <Label Content="Select room" FontSize="21" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="14,295,0,0" VerticalAlignment="Top" Height="40" Width="394"/>
         <Button Content="Add Device" Command="{Binding GEARVM.AddDeviceCommand}" HorizontalAlignment="Left" Margin="16,653,0,0" VerticalAlignment="Top" Width="392" Height="45"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="156" Margin="437,542,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="361" FontSize="13" FontFamily="Microsoft YaHei UI Light"><Run Text="Team members:"/><LineBreak/><Run Text="Éva Médea Ferencz"/><LineBreak/><Run Text="Blanka Kovács"/><LineBreak/><Run Text="Ákos Módis"/><LineBreak/><Run Text="Mentor:"/><LineBreak/><Run Text="Istán Süvöltős"/><LineBreak/><Run/><LineBreak/><Run Text="More information:"/><LineBreak/><Run Text="https://github.com/greenfox-zerda-sparta/Turquoise"/></TextBlock>
+        <TextBlock x:Name="textBlock_hippolyt" HorizontalAlignment="Left" Height="32" Margin="437,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" FontFamily="Microsoft YaHei UI" FontSize="20" FontWeight="Bold"><Run Text="hippolyt Smart Home"/><LineBreak/></TextBlock>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="37" Margin="437,505,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" FontFamily="Microsoft YaHei UI" FontSize="10"><Run Text="Copyright 2017 Team Turquoise."/><LineBreak/><Run Text="Version 1.0"/></TextBlock>
 
 
     </Grid>

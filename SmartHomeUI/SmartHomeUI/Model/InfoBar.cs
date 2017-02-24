@@ -15,7 +15,7 @@ namespace SmartHomeUI
     {
         private string currentTime = DateTime.Now.ToString("HH:mm"),
                        currentDate = DateTime.Now.ToString("yyyy-MM-dd"),
-                       city = "Józsefváros", sunset, sunrise, humidity,
+                       city = "Terézváros", sunset, sunrise, humidity,
                        outdoorTemperature, lastUpdate, condition, icon;
 
         private ObservableCollection<string> alarmStatus = new ObservableCollection<string>() { "Disarmed", "Images/InfoBarIcons/lockout.png" };

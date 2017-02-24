@@ -7,6 +7,29 @@
       xmlns:local="clr-namespace:SmartHomeUI"
       mc:Ignorable="d" 
       d:DesignHeight="720" d:DesignWidth="850">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#20B2AC"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="15" BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF7F7F7F"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
 
     <Grid>
         <Rectangle Fill="#FFDDDDDD" IsHitTestVisible="False"/>
@@ -23,5 +46,9 @@
         <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Right" Height="66" Margin="0,14,115,0" TextWrapping="Wrap" Text="CCTV feed" VerticalAlignment="Top" Width="304" FontFamily="Microsoft YaHei UI Light" FontSize="30" RenderTransformOrigin="1.789,0.758"/>
         <Label Content="North Bedroom" HorizontalContentAlignment="Center" FontSize="21" HorizontalAlignment="Left" Margin="425,46,0,0" VerticalAlignment="Top" Height="40" Width="415"/>
         <Label Content="Living Room" HorizontalContentAlignment="Center" FontSize="21" HorizontalAlignment="Left" Margin="425,264,0,0" VerticalAlignment="Top" Height="40" Width="415"/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="16,545,0,0" TextWrapping="Wrap" Width="360" FontFamily="Microsoft YaHei UI Light" FontSize="30" RenderTransformOrigin="1.789,0.758" Height="43" VerticalAlignment="Top" Text="Disalarm Security Sytem:"/>
+        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="92,616,0,0" TextWrapping="Wrap" Text="enter PIN code:" Width="215" FontFamily="Microsoft YaHei UI Light" FontSize="30" RenderTransformOrigin="1.789,0.758" Height="42" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="335,616,0,0" Height="42" Width="191" VerticalAlignment="Top" FontWeight="Bold" FontSize="24"/>
+        <Button x:Name="button" Content="OK" HorizontalAlignment="Left" Margin="563,616,0,0" VerticalAlignment="Top" Width="105" Height="42"/>
     </Grid>
 </UserControl>

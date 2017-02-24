@@ -24,9 +24,5 @@ namespace SmartHomeUI
         {
             InitializeComponent();
         }
-        private void door_MediaEnded(object sender, RoutedEventArgs e) {
-            door.Position = new TimeSpan(0, 0, 3);
-            door.Play();
-        }
     }
 }

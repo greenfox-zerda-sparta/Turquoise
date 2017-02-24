@@ -23,8 +23,8 @@
         <Image x:Name="image" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="90" Margin="732,598,0,0" Source="/SmartHomeUI;component/Images/HomeIcons/actual_electricity.png"/>
         <Image x:Name="image_Copy" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="90" Margin="186,600,0,0" Source="/SmartHomeUI;component/Images/HomeIcons/water_consumption.png"/>
         <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="71" Margin="472,598,0,0" Source="/SmartHomeUI;component/Images/HomeIcons/month_electricity.png"/>
-        <TextBlock x:Name="MainTask_Copy3" HorizontalAlignment="Left" TextWrapping="Wrap" Width="98" Margin="105,537,0,0" FontSize="60" Height="69" VerticalAlignment="Top" Text="613"/>
-        <TextBlock x:Name="MainTask_Copy4" HorizontalAlignment="Left" TextWrapping="Wrap" Width="177" Margin="337,537,0,0" FontSize="60" Height="69" VerticalAlignment="Top" RenderTransformOrigin="2.018,0.136" Text=" 1711"/>
-        <TextBlock x:Name="MainTask_Copy5" HorizontalAlignment="Left" TextWrapping="Wrap" Width="102" Margin="645,537,0,0" FontSize="60" Height="69" VerticalAlignment="Top" RenderTransformOrigin="2.018,0.136" Text="339kW"/>
+        <TextBlock x:Name="MainTask_Copy3" HorizontalAlignment="Left" TextWrapping="Wrap" Width="104" Margin="101,537,0,0" FontSize="60" FontWeight="Bold" Height="69" VerticalAlignment="Top" Text="613"/>
+        <TextBlock x:Name="MainTask_Copy4" HorizontalAlignment="Left" TextWrapping="Wrap" Width="177" Margin="339,537,0,0" FontSize="60" FontWeight="Bold" Height="69" VerticalAlignment="Top" RenderTransformOrigin="2.018,0.136" Text=" 1711"/>
+        <TextBlock x:Name="MainTask_Copy5" HorizontalAlignment="Left" TextWrapping="Wrap" Width="109" Margin="641,537,0,0" FontSize="60" FontWeight="Bold" Height="69" VerticalAlignment="Top" RenderTransformOrigin="2.018,0.136" Text="339kW"/>
     </Grid>
 </UserControl>

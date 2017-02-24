@@ -19,7 +19,7 @@ namespace SmartHomeUI
 
         public void Log(string logMessage, TextWriter w)
         {
-            w.WriteLine("-------------------");
+            w.WriteLine("-----------------------");
             w.WriteLine("Log: {0}", logMessage);
             w.WriteLine("{0} {1}", DateTime.Now.ToString("yyyy-MM-dd"), DateTime.Now.ToLongTimeString());
         }

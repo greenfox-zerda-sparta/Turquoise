@@ -45,7 +45,13 @@
         <Image x:Name="actual_electricity" HorizontalAlignment="Left" Height="115" Margin="642,519,0,0" VerticalAlignment="Top" Width="115" Source="../Images/HomeIcons/actual_electricity.png"/>
         <TextBlock Text="{Binding Consumptions[2], StringFormat='\{0\} Wh'}" Foreground="Black" TextAlignment="Center" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="586,632,14.6,22" Width="249" Height="66"/>
 
-        <Button Command="{Binding SetAlarmCommand}" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" Margin="59,299,0,0" VerticalAlignment="Top" Width="178" Height="190"/>
+        <Button Command="{Binding SetAlarmCommand}" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" Margin="59,299,0,0" VerticalAlignment="Top" Width="178" Height="190">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template"><Setter.Value><ControlTemplate TargetType="{x:Type Button}"><Border Background="{TemplateBinding Background}"/></ControlTemplate></Setter.Value></Setter>
+                </Style>
+            </Button.Style>
+        </Button>
         <Image x:Name="alarm" HorizontalAlignment="Left" Height="190" Margin="59,305,0,0" VerticalAlignment="Top" Width="178" Source="/Images/HomeIcons/alarm.png" IsHitTestVisible="False"/>
 
     </Grid>

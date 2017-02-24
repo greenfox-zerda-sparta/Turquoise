@@ -16,8 +16,12 @@
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="66" Margin="16,14,0,0" TextWrapping="Wrap" Text="Alarm system" VerticalAlignment="Top" Width="304" FontFamily="Microsoft YaHei UI Light" FontSize="30"/>
         <Rectangle Fill="#FFFFFFFF" Margin="9,274,0,193" HorizontalAlignment="Left" Width="411"/>
         <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="16,278,0,0" TextWrapping="Wrap" Text="Garage door" Width="304" FontFamily="Microsoft YaHei UI Light" FontSize="30" RenderTransformOrigin="1.789,0.758" Height="66" VerticalAlignment="Top"/>
+
+        <Image gif:ImageBehavior.AnimatedSource="../Images/Others/bedroom.gif" Margin="435,44,17.6,449"/>
+        <Image gif:ImageBehavior.AnimatedSource="../Images/Others/livingroom.gif" Margin="435,290,17.6,190"/>
+        <Rectangle Fill="#FFFFFFFF" Margin="429,36,0,639" HorizontalAlignment="Left" Width="411"/>
         <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Right" Height="66" Margin="0,14,115,0" TextWrapping="Wrap" Text="CCTV feed" VerticalAlignment="Top" Width="304" FontFamily="Microsoft YaHei UI Light" FontSize="30" RenderTransformOrigin="1.789,0.758"/>
-        
-        <Image gif:ImageBehavior.AnimatedSource="../Images/Others/opendoor.gif" Margin="433,87,19.6,260"/>
+        <Label Content="North Bedroom" HorizontalContentAlignment="Center" FontSize="21" HorizontalAlignment="Left" Margin="425,46,0,0" VerticalAlignment="Top" Height="40" Width="415"/>
+        <Label Content="Living Room" HorizontalContentAlignment="Center" FontSize="21" HorizontalAlignment="Left" Margin="425,264,0,0" VerticalAlignment="Top" Height="40" Width="415"/>
     </Grid>
 </UserControl>

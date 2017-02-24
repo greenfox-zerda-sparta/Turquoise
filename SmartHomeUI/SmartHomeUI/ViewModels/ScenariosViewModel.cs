@@ -36,6 +36,7 @@ namespace SmartHomeUI
             (Instances.Models[(int)Models.Scenarios] as Scenarios).ReloadAllDevice("Scenarios/Home.xml");
             (Instances.Models[(int)Models.Scenarios] as Scenarios).ReloadAllDeviceToRoom();
             (Instances.Models[(int)Models.Log] as Logger).logToFile("Home scenario loaded");
+            (Instances.ViewModels[(int)ViewModels.HomeVM] as HomeViewModel).SetAlarm();
         }
 
         private void LoadNightScenario(object obj)
@@ -43,6 +44,7 @@ namespace SmartHomeUI
             (Instances.Models[(int)Models.Scenarios] as Scenarios).ReloadAllDevice("Scenarios/Night.xml");
             (Instances.Models[(int)Models.Scenarios] as Scenarios).ReloadAllDeviceToRoom();
             (Instances.Models[(int)Models.Log] as Logger).logToFile("Night scenario loaded");
+            (Instances.ViewModels[(int)ViewModels.HomeVM] as HomeViewModel).SetAlarm();
         }
 
         private void LoadAwayScenario(object obj)
@@ -50,6 +52,7 @@ namespace SmartHomeUI
             (Instances.Models[(int)Models.Scenarios] as Scenarios).ReloadAllDevice("Scenarios/Away.xml");
             (Instances.Models[(int)Models.Scenarios] as Scenarios).ReloadAllDeviceToRoom();
             (Instances.Models[(int)Models.Log] as Logger).logToFile("Away scenario loaded");
+            (Instances.ViewModels[(int)ViewModels.HomeVM] as HomeViewModel).SetAlarm();
         }
 
         private void LoadVacationScenario(object obj)
@@ -57,6 +60,7 @@ namespace SmartHomeUI
             (Instances.Models[(int)Models.Scenarios] as Scenarios).ReloadAllDevice("Scenarios/Vacation.xml");
             (Instances.Models[(int)Models.Scenarios] as Scenarios).ReloadAllDeviceToRoom();
             (Instances.Models[(int)Models.Log] as Logger).logToFile("Vacation scenario loaded");
+            (Instances.ViewModels[(int)ViewModels.HomeVM] as HomeViewModel).SetAlarm();
         }
 
         private void LoadFavoriteScenario(object obj)
@@ -64,6 +68,7 @@ namespace SmartHomeUI
             (Instances.Models[(int)Models.Scenarios] as Scenarios).ReloadAllDevice("Scenarios/Favorite.xml");
             (Instances.Models[(int)Models.Scenarios] as Scenarios).ReloadAllDeviceToRoom();
             (Instances.Models[(int)Models.Log] as Logger).logToFile("Favorite scenario loaded");
+            (Instances.ViewModels[(int)ViewModels.HomeVM] as HomeViewModel).SetAlarm();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

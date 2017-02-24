@@ -19,7 +19,7 @@ namespace SmartHomeUI
 
         public HomeViewModel()
         {
-            SetAlarmCommand = new NavigationCommands(SetAlarm);
+            SetAlarmCommand = new NavigationCommands(param => SetAlarm());
             Instances.refreshData(getConsumptions, Consumptions, (int)Timers.halfHour);
             getDailyTasks();
         }
@@ -53,15 +53,15 @@ namespace SmartHomeUI
             (Instances.Models[(int)Models.Log] as Logger).logToFile("Home screen: Fetched consumption data from server");
         }
 
-        public void SetAlarm(object obj)
+        public void SetAlarm()
         {
-            if (Instances.AllDevice[0].Status == 1)
-            {
-                Instances.AllDevice[0].Status = 0;
-            }
-            else if (Instances.AllDevice[0].Status == 0)
+            if (Instances.AllDevice[0].Status == 0)
             {
                 Instances.AllDevice[0].Status = 1;
+            }
+            else if (Instances.AllDevice[0].Status == 1)
+            {
+                Instances.AllDevice[0].Status = 0;
             }
             (Instances.Models[(int)Models.InfoBar] as InfoBar).setAlarmStatus();
         }

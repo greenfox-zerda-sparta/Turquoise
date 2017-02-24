@@ -266,13 +266,14 @@ namespace SmartHomeUI
         {
             if (Instances.AllDevice[0].Status == 1)
             {
-                AlarmStatus[0] = ("Armed");
-                AlarmStatus[1] = ("Images/InfoBarIcons/lockin.png");
+                AlarmStatus[0] = ("Disarmed");
+                AlarmStatus[1] = ("Images/InfoBarIcons/lockout.png");
+
             }
             else if (Instances.AllDevice[0].Status == 0)
             {
-                AlarmStatus[0] = ("Disarmed");
-                AlarmStatus[1] = ("Images/InfoBarIcons/lockout.png");
+                AlarmStatus[0] = ("Armed");
+                AlarmStatus[1] = ("Images/InfoBarIcons/lockin.png");
             }
         }
 

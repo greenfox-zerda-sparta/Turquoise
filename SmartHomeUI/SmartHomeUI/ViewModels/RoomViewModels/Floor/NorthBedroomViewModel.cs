@@ -5,10 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using System.ComponentModel;
+
 
 namespace SmartHomeUI
 {
-    class NorthBedroomViewModel
+    class NorthBedroomViewModel : INotifyPropertyChanged
     {
         public ICommand IncrementLightCommand { get; set; }
         public ICommand DecrementLightCommand { get; set; }
@@ -21,7 +23,14 @@ namespace SmartHomeUI
         public ICommand DecrementBlindsCommand { get; set; }
         public ICommand TurnBlindsOnOffCommand { get; set; }        
 
-        public ObservableCollection<Device> NorthBedroom { get; set; }
+        public ObservableCollection<Device> northBedroom { get; set; }
+        private ObservableCollection<Device> garage = new ObservableCollection<Device>();
+        public ObservableCollection<Device> NorthBedroom
+        {
+            get { return northBedroom; }
+            set { northBedroom = value; RaisePropertyChanged("NorthBedroom"); }
+        }
+
         public ObservableCollection<string> ConnectionStatus { get; set; }
 
 
@@ -81,5 +90,14 @@ namespace SmartHomeUI
                }
            }
        }
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void RaisePropertyChanged(string property)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(property));
+            }
+        }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SmartHomeUI"
         mc:Ignorable="d"
-        ResizeMode="NoResize" Title="Hippolyt" Height="720" Width="1280" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#00000000" AllowsTransparency="True">
+        ResizeMode="NoResize" Icon="Images\Others\favicon.ico" Title="hippolyt" Height="720" Width="1280" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#00000000" AllowsTransparency="True">
 
     <Window.Resources>
 

@@ -35,6 +35,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -331,6 +335,17 @@
   <ItemGroup>
     <Resource Include="Images\Others\bedroom.gif" />
     <Resource Include="Images\Others\livingroom.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Others\favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HomeIcons\actual_electricity_t.png" />
+    <Resource Include="Images\HomeIcons\month_electricity_t.png" />
+    <Resource Include="Images\HomeIcons\water_consumption_t.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -10,7 +10,7 @@
     <Grid>
         <Rectangle Fill="#FFDDDDDD" IsHitTestVisible="False"/>
         <Viewbox Margin="288,0,-0.4,205">
-            <Calendar Height="169" Width="181"/>
+            <Calendar Height="169" Width="181" FontFamily="Microsoft YaHei UI Light"/>
         </Viewbox>
 
         <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="234" Margin="9,10,0,0" VerticalAlignment="Top" Width="283"/>

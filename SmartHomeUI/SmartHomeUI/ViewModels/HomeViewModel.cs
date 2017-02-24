@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
-namespace SmartHomeUI {
+namespace SmartHomeUI
+{
     class HomeViewModel
     {
         public ObservableCollection<string> Consumptions { get; set; }
         public ObservableCollection<Task> DailyTasks { get; set; }
+        public ICommand SetAlarmCommand { get; set; }
 
         public HomeViewModel()
         {
+            SetAlarmCommand = new NavigationCommands(SetAlarm);
             Instances.refreshData(getConsumptions, Consumptions, (int)Timers.halfHour);
             getDailyTasks();
         }
@@ -47,6 +51,19 @@ namespace SmartHomeUI {
 
             Consumptions = consumptions;
             (Instances.Models[(int)Models.Log] as Logger).logToFile("Home screen: Fetched consumption data from server");
+        }
+
+        public void SetAlarm(object obj)
+        {
+            if (Instances.AllDevice[0].Status == 1)
+            {
+                Instances.AllDevice[0].Status = 0;
+            }
+            else if (Instances.AllDevice[0].Status == 0)
+            {
+                Instances.AllDevice[0].Status = 1;
+            }
+            (Instances.Models[(int)Models.InfoBar] as InfoBar).setAlarmStatus();
         }
     }
 }

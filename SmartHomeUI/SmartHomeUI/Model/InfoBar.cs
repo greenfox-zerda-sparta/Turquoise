@@ -18,7 +18,13 @@ namespace SmartHomeUI
                        city = "Józsefváros", sunset, sunrise, humidity,
                        outdoorTemperature, lastUpdate, condition, icon;
 
-        public ObservableCollection<string> AlarmStatus { get; set; }
+        private ObservableCollection<string> alarmStatus = new ObservableCollection<string>() { "Disarmed", "Images/InfoBarIcons/lockout.png" };
+        public ObservableCollection<string> AlarmStatus
+        {
+            get { return alarmStatus; }
+            set { alarmStatus = value;  RaisePropertyChanged("AlarmStatus"); }
+        }
+
         Dictionary<string, string> WeatherDaylightConditionIcons;
         Dictionary<string, string> WeatherNightConditionIcons;
         private const string CurrentUrl = "http://api.openweathermap.org/data/2.5/weather?" + "q=@LOC@&mode=xml&units=metric&APPID=943e2efdf23a6323a04150361b9aeca7";
@@ -256,10 +262,9 @@ namespace SmartHomeUI
             CurrentDate = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
-        private void setAlarmStatus()
+        public void setAlarmStatus()
         {
-            AlarmStatus = new ObservableCollection<string>() { "Disarmed", "Images/InfoBarIcons/lockout.png" };
-            if(Instances.AllDevice[0].Status == 1)
+            if (Instances.AllDevice[0].Status == 1)
             {
                 AlarmStatus[0] = ("Armed");
                 AlarmStatus[1] = ("Images/InfoBarIcons/lockin.png");

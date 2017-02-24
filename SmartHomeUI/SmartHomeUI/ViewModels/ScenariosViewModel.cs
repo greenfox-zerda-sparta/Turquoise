@@ -64,7 +64,6 @@ namespace SmartHomeUI
             (Instances.Models[(int)Models.Scenarios] as Scenarios).ReloadAllDevice("Scenarios/Favorite.xml");
             (Instances.Models[(int)Models.Scenarios] as Scenarios).ReloadAllDeviceToRoom();
             (Instances.Models[(int)Models.Log] as Logger).logToFile("Favorite scenario loaded");
-
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

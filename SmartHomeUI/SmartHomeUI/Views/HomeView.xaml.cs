@@ -20,7 +20,6 @@ namespace SmartHomeUI
         public HomeView()
         {
             InitializeComponent();
-            this.DataContext = Instances.ViewModels[(int)ViewModels.HomeVM];
         }
     }
 }
